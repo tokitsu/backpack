@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
   end
 
   def create
-    board = Board.new(board_params)
+    board = Board.new(board_params.merge(user_id: @current_user.id))
     if board.save
       flash[:notice] = "「#{board.title}」の掲示板が作成されました。"
       redirect_to board_path(board)

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.new (comment_params)
+    @comment = Comment.new (comment_params.merge(user_id: @current_user.id))
     if @comment.save
       flash[:notice] = 'コメントを投稿しました。'
       redirect_to @comment.board
