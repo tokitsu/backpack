@@ -32,7 +32,7 @@ class BoardsController < ApplicationController
   end
 
   def update
-    if @board.update(board_params)
+    if @board.update(board_params.merge(user_id: @current_user.id))
       flash[:notice] = "「#{@board.title}」の掲示板が編集されました"
       redirect_to board_path(@board)
     else
@@ -52,7 +52,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title,:body, tag_ids: [])
+    params.require(:board).permit(:title, :body, :image, tag_ids: [])
   end
 
   def set_target_board

@@ -2,6 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
+        image: 画像
         name: ユーザー名
         email: メールアドレス
         password: パスワード
