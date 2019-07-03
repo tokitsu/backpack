@@ -33,6 +33,7 @@ gem 'bootstrap','~>4.0.0'
 gem 'mini_racer'
 gem 'kaminari'
 gem 'rails-i18n'
+gem 'ransack'
 
 
 group :development, :test do

@@ -3,8 +3,15 @@ class BoardsController < ApplicationController
   before_action :set_target_board, only: %i[show edit update destroy]
 
   def index
+    @search = Board.ransack(params[:q])
     @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
     @boards = @boards.page(params[:page])
+  end
+
+  def search
+    @search = Board.ransack(params[:q])
+    @boards = @search.result.page(params[:page])
+    render "index"
   end
 
   def new
