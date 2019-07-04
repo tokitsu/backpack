@@ -1,52 +1,63 @@
 <div class="d-flex align-items-center">
   <h2>ノート一覧</h2>
   <div class="ml-auto boards__linkBox">
-    <%= form_with url: boards_path, method: :get, class: 'boards__searchForm' do %>
-      <%= select_tag :tag_id,
-      options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
-      {
-        prompt: 'タグで絞り込み',
-        class: 'form-control boards__select',
-        onchange: 'submit(this.form);'
-      } %>
-      <%= link_to '新規作成', new_board_path, class: 'btn btn-primary' %>
-    <% end %>
+    <%= link_to '新規作成', new_board_path, class: 'btn btn-secondary' %>
   </div>
 </div>
 
 <%= search_form_for @search, url: search_path, class: "form-inline my-2 my-lg-0" do |f| %>
   <%= f.text_field :title_cont , class:"form-control mr-sm-2",placeholder: '検索するテキストを入力...' %>
   <%= f.submit ("検索") , class:"btn btn-outline-success my-2 my-sm-0"%>
-<% end %><br>
+<% end %>
+
+<%= form_with url: boards_path, method: :get, class: 'boards__searchForm' do %>
+  <%= select_tag :tag_id,
+  options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+  {
+    prompt: 'タグで絞り込み',
+    class: 'form-control boards__select',
+    onchange: 'submit(this.form);'
+  } %>
+  <% end %>
 
 <% if flash[:notice] %>
 <div class="alert alert-danger"><%= flash[:notice] %></div>
 <% end %>
-<table class="table table-hover boards__table">
-  <thead class="thead-dark">
-    <tr>
-      <th>ID</th>
-      <th>タイトル</th>
-      <th>作成日時</th>
-      <th>更新日時</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-      <% @boards.each do |board| %>
-        <tr>
-          <td><%= board.id %></td>
-          <td><%= board.title %></td>
-          <td><%= board.created_at.to_s(:datetime_jp) %></td>
-          <td><%= board.updated_at.to_s(:datetime_jp) %></td>
-          <td><%= link_to '詳細', board, class: 'btn btn-outline-dark' %></td>
-          <td><%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark' %></td>
-          <td><%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %></td>
-        </tr>
-      <% end %>
-  </tbody>
-</table>
 
+<% @boards.each do |board| %>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="profile">
+        image
+      </div>
+      <div class="">
+        name<br>
+      </div>
+      <div class="">
+        <%= board.title %><br>
+      </div>
+      <div class="">
+        <%= board.updated_at.to_s(:datetime_jp)%>
+      </div>
+      <div class="">
+        <% board.tags.each do |tag| %>
+          <span class ="badge badge-primary"><%= tag.name %></span>
+        <% end %>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="board_body">
+        <%= board.body %>
+      </div>
+      <div class="board_button">
+        <%= link_to '詳細', board, class: 'btn btn-outline-dark' %>
+        <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark' %>
+        <%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %>
+      </div>
+    </li>
+    <li class="list-group-item">
+      お気に入り コメントする
+    </li>
+  </ul><br>
+<% end %>
 <%= paginate @boards %>
