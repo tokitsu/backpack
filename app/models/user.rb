@@ -19,6 +19,8 @@ class User < ApplicationRecord
   has_secure_password
   has_many :boards
   has_many :comments
+  has_many :favorites
+  has_many :fav_boards, through: :favorites, source: :board
 
   validates :name,
     presence: true,

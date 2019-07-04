@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   root 'boards#index'
   resources :sessions
   resources :users
-  resources :boards
+  resources :boards do
+    post 'add', to: 'favorites#create'
+    delete 'add', to: 'favorites#destroy'
+  end
   resources :comments, only: %i[create destroy]
+  resources :favorites, only: %i[index]
 end

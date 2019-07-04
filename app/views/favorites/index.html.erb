@@ -1,0 +1,28 @@
+<% @favorites.each do |favorite| %>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="profile">
+        image
+      </div>
+      <div class="">
+        name<br>
+      </div>
+      <div class="">
+        <%= favorite.board.title %><br>
+      </div>
+      <div class="">
+        <%= favorite.board.updated_at.to_s(:datetime_jp)%>
+      </div>
+      <div class="">
+        <% favorite.board.tags.each do |tag| %>
+          <span class ="badge badge-primary"><%= tag.name %></span>
+        <% end %>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="board_body">
+        <%= favorite.board.body %>
+      </div>
+    </li>
+  </ul><br>
+<% end %>

@@ -56,7 +56,9 @@
       </div>
     </li>
     <li class="list-group-item">
-      お気に入り コメントする
+        <%= link_to 'お気に入り', board_add_path(board), method: :post %>
+        <%= link_to 'お気に入り解除',board_add_path(board), method: :delete %>
+      コメントする
     </li>
   </ul><br>
 <% end %>
