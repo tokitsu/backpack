@@ -20,7 +20,7 @@ class FavoritesController < ApplicationController
     user = current_user
     board = Board.find(params[:board_id])
     if favorite = Favorite.find_by(user_id: user.id,board_id: board.id)
-      Favorite.destroy
+      favorite.destroy
       redirect_to boards_path
       flash[:notice] = 'お気に入り解除しました。'
     else
