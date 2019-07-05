@@ -20,12 +20,6 @@
           <% end %>
         </div>
       </li>
-      <% if @current_user %>
-        <li class="nav-item">
-          <%= header_link_item('マイページ', user_path(@current_user)) %>
-        </li>
-      <% else %>
-      <% end %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           情報ノート
@@ -35,12 +29,14 @@
             <%= link_to '新規ノート作成', new_board_path, class: 'dropdown-item' %>
         </div>
       </li>
-
-      <li class="nav-item">
-        <%= header_link_item('旅仲間募集', root_path) %>
-      </li>
-      <li class="nav-item">
-        <%= header_link_item('質問箱', root_path) %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          質問箱
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to '質問一覧', questions_path , class: 'dropdown-item' %>
+            <%= link_to '質問作成', new_question_path, class: 'dropdown-item' %>
+        </div>
       </li>
       <li class="nav-item">
         <%= header_link_item('お気に入り', favorites_path) %>

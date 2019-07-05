@@ -47,7 +47,8 @@
     </li>
     <li class="list-group-item">
       <div class="board_body">
-        <%= board.body %>
+        <p class="card-text"><%= simple_format(board.body) %></p>
+        <p class="card-left"><%= image_tag board.image if board.image.attached? %></p>
       </div>
       <div class="board_button">
         <%= link_to '詳細', board, class: 'btn btn-outline-dark' %>

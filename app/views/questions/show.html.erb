@@ -1,0 +1,17 @@
+
+<div class="d-flex align-items-center mt-4 mb-4">
+  <div class="ml-auto boards__linkBox">
+    <%= link_to '一覧', questions_path, class: 'btn btn-outline-dark' %>
+    <%= link_to '編集', edit_question_path(@question), class: 'btn btn-outline-dark' %>
+  </div>
+</div>
+<% if flash[:notice] %>
+  <div class= "alert alert-primary"><%= flash[:notice] %></div>
+<% end %>
+<%= render @question %>
+<div class="p-comment__list">
+  <div class="p-comment_listTitle">コメント</div>
+  <%= render @question.answers %>
+</div>
+
+<%= render partial: 'answers/form', locals: { answer: @answer } %>
