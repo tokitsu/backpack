@@ -1,0 +1,52 @@
+<h2>プロフィールの編集</h2>
+<%= render 'shared/error_messages'%>
+
+<%= form_with model: @user do |f| %>
+  <div class="form-group">
+    <%= f.label :image, 'ユーザー画像' %><br>
+    <%= image_tag @current_user.image if @current_user.image.attached? %><br><br>
+    <%= f.label :image, '画像を変更する' %><br>
+    <%= f.file_field :image, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name, 'ユーザー名' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, 'メールアドレス' %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, 'パスワード（８文字以上）' %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, 'パスワード（確認用）' %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <div class="form-group__age">
+    <%= f.label :age, '年齢' %>
+    <%= f.number_field :age, in: 1...121 , class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sex, '性別' %><br>
+    <%= f.label :男 %>
+   <%= f.radio_button :sex, :男 %>
+   <%= f.label :女 %>
+   <%= f.radio_button :sex, :女 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :favorite_country, '好きな国（場所）' %>
+    <%= f.text_field :favorite_country, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :country_you_want_to_go, '行ってみたい国（場所）' %>
+    <%= f.text_field :country_you_want_to_go, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :introduction, '自己紹介' %>
+    <%= f.text_area :introduction, class: 'form-control', rows: 10%>
+  </div>
+
+  <%= f.submit '編集', class: 'btn btn-primary' %>
+<% end %>

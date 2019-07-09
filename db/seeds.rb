@@ -9,14 +9,15 @@ if Rails.env == 'development'
 
 
 Tag.create([
-  {name: 'タイ' },
-  {name: 'カンボジア' },
-  {name: 'ベトナム' },
-  {name: 'ラオス' },
-  {name: 'マレーシア' },
-  {name: 'シンガポール' },
-  {name: 'ミャンマー' },
-  {name: 'インドネシア' },
-  {name: 'フィリピン' }
+  {name: '激安' },
+  {name: '危険' },
+  {name: '治安' },
+  {name: '宿' },
+  {name: 'ビザ' },
+  {name: 'ルート' },
+  {name: '持ち物'},
+  {name: '絶景'},
+  {name: '絶品'},
+  {name: '裏技'}
 ])
 end

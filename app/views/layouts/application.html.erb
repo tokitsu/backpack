@@ -9,9 +9,20 @@
   </head>
 
   <body>
-    <%= render 'header' %>
-    <div class= "container">
+    <div class="content-all">
+
+    <header>
+      <%= render 'header' %>
+    </header>
+
+    <div class= 'container'>
       <%= yield %>
+    </div>
+
+    <footer>
+      BACK PACKER's note
+    </footer>
+
     </div>
   </body>
 </html>

@@ -20,10 +20,26 @@ class UsersController < ApplicationController
   def show
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to user_path(@user)
+    else
+      redirect_back fallback_location: edit_user_path, flash: {
+        user: @user,
+        error_messages: @user.errors.full_messages
+      }
+    end
+  end
+
   private
 
   def user_params
-  params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
+  params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :age, :sex, :favorite_country, :country_you_want_to_go, :introduction)
   end
 
 end

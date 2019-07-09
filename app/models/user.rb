@@ -2,12 +2,17 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  email           :string(255)      not null
-#  name            :string(255)      not null
-#  password_digest :string(255)      not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                     :integer          not null, primary key
+#  age                    :integer
+#  country_you_want_to_go :string(255)
+#  email                  :string(255)      not null
+#  favorite_country       :string(255)
+#  introduction           :text(65535)
+#  name                   :string(255)      not null
+#  password_digest        :string(255)      not null
+#  sex                    :integer
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
 #
 # Indexes
 #
@@ -36,5 +41,7 @@ class User < ApplicationRecord
 
   validates :password,
     length: {minimum: 8}
+
+  enum sex: { 男: 0, 女: 1}
 
 end

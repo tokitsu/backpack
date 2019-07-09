@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'login', to: 'users#'
+  get 'login', to: 'users#login'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get 'search', to: 'boards#search'

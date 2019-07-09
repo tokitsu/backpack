@@ -1,3 +1,20 @@
-<h1>マイページ</h1>
-<%= @current_user.name %>
-<%= image_tag @current_user.image if @current_user.image.attached? %>
+<h2>マイページ</h2>
+
+<%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-primary'%>
+<ul class="list-group">
+  <li class="list-group-item">
+    <%= image_tag @current_user.image if @current_user.image.attached? %><br>
+    <%= @current_user.name %>
+  </li>
+  <li class="list-group-item">
+    年齢 　: 　<%= @current_user.age %>　　　　性別 　: 　<%= @current_user.sex %>
+  </li>
+  <li class="list-group-item">
+    好きな国（場所）: <%= @current_user.favorite_country %>
+  </li>
+  <li class="list-group-item">
+    行きたい国（場所）: <%= @current_user.country_you_want_to_go %>
+  </li>
+  <li class="list-group-item">
+    自己紹介 : <%= @current_user.introduction %></li>
+</ul>
