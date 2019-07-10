@@ -1,7 +1,6 @@
 <div class="d-flex align-items-center">
-  <h2>ノート一覧</h2>
   <div class="ml-auto boards__linkBox">
-    <%= link_to '新規作成', new_board_path, class: 'btn btn-secondary' %>
+    <%= link_to '新規作成', new_board_path, class: ' btn btn-outline-dark' %>
   </div>
 </div>
 
@@ -27,33 +26,32 @@
 <% @boards.each do |board| %>
   <ul class="list-group">
     <li class="list-group-item">
-      <div class="profile">
-        image
+      <div class="board_user">
+        <%= image_tag(board.user.image,width:50)%>
+      <div class= 'board_name'><%= board.user.name %></div>
       </div>
-      <div class="">
-        name<br>
-      </div>
-      <div class="">
+      <div class="board_title">
         <%= board.title %><br>
-      </div>
-      <div class="">
+      <p class="board_update">
         <%= board.updated_at.to_s(:datetime_jp)%>
+      </p>
       </div>
-      <div class="">
+      <div class="board_tag">
         <% board.tags.each do |tag| %>
-          <span class ="badge badge-primary"><%= tag.name %></span>
+          <span class ="badge badge-success"><%= tag.name %></span>
         <% end %>
       </div>
     </li>
     <li class="list-group-item">
       <div class="board_body">
         <p class="card-text"><%= simple_format(board.body) %></p>
-        <p class="card-left"><%= image_tag board.image if board.image.attached? %></p>
-      </div>
-      <div class="board_button">
-        <%= link_to '詳細', board, class: 'btn btn-outline-dark' %>
-        <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark' %>
-        <%= link_to '削除', board, class: 'btn btn-outline-dark', method: :delete %>
+        <p class="card-left">
+          <% if board.images.attached? %>
+            <% board.images.each do |image| %>
+              <%= image_tag(image,width:200) %>
+            <% end %>
+          <% end %>
+        </p>
       </div>
     </li>
     <li class="list-group-item">
@@ -63,6 +61,11 @@
         <%= link_to 'お気に入り', board_add_path(board), method: :post %>
       <% end %>
       <%= link_to 'コメントする', board_path(board)%>
+      <div class="board_button">
+        <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>
+        <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark btn-sm' %>
+        <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete %>
+      </div>
     </li>
   </ul><br>
 <% end %>

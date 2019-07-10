@@ -23,6 +23,7 @@ header{
 .container{
   padding-top: 50px;
   padding-bottom: 70px;
+  max-width: 800px;
 }
 
 footer{
@@ -36,4 +37,8 @@ footer{
 
   position:absolute;
   bottom: 0;
+}
+
+a{
+  padding-right: 50px
 }

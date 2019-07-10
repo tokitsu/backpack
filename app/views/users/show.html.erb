@@ -1,9 +1,13 @@
 <h2>マイページ</h2>
-
-<%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-primary'%>
+<div class="edit_profile_link">
+  <%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-primary'%>
+</div>
 <ul class="list-group">
+  <div class="user_show_profile">
   <li class="list-group-item">
-    <%= image_tag @current_user.image if @current_user.image.attached? %><br>
+    <% if @current_user.image.attached? %>
+      <%= image_tag(@current_user.image,width:200) %>
+    <% end %><br>
     <%= @current_user.name %>
   </li>
   <li class="list-group-item">
@@ -17,4 +21,5 @@
   </li>
   <li class="list-group-item">
     自己紹介 : <%= @current_user.introduction %></li>
+    </div>
 </ul>
