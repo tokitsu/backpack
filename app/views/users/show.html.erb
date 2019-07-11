@@ -1,17 +1,20 @@
-<h2>マイページ</h2>
 <div class="edit_profile_link">
-  <%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-primary'%>
+  <%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-outline-secondary'%>
 </div>
-<ul class="list-group">
-  <div class="user_show_profile">
+
+<div class="profile_image">
+  <% if @current_user.image.attached? %>
+    <%= image_tag(@current_user.image,width:200) %>
+  <% end %>
+</div>
+<div class="profile_name">
+  <%= @current_user.name %>
+</div>
+
+<ul class="list-group profile_flame2">
   <li class="list-group-item">
-    <% if @current_user.image.attached? %>
-      <%= image_tag(@current_user.image,width:200) %>
-    <% end %><br>
-    <%= @current_user.name %>
-  </li>
-  <li class="list-group-item">
-    年齢 　: 　<%= @current_user.age %>　　　　性別 　: 　<%= @current_user.sex %>
+    年齢 　: 　<%= @current_user.age %>　　　
+    性別 　: 　<%= @current_user.sex %>
   </li>
   <li class="list-group-item">
     好きな国（場所）: <%= @current_user.favorite_country %>
@@ -20,6 +23,61 @@
     行きたい国（場所）: <%= @current_user.country_you_want_to_go %>
   </li>
   <li class="list-group-item">
-    自己紹介 : <%= @current_user.introduction %></li>
-    </div>
+    自己紹介 : <%= @current_user.introduction %>
+  </li>
 </ul>
+<br><br><br>
+<div class="user_boards">
+  最近の投稿
+</div>
+<hr style="width:700px; background-color:#888888;">
+<br><br>
+
+
+
+<% @user.boards.each do |board| %>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <div class="board_user">
+        <%= image_tag(board.user.image,width:50)%>
+      <div class= 'board_name'><%= board.user.name %></div>
+      </div>
+      <div class="board_title">
+        <%= board.title %><br>
+      <p class="board_update">
+        <%= board.updated_at.to_s(:datetime_jp)%>
+      </p>
+      </div>
+      <div class="board_tag">
+        <% board.tags.each do |tag| %>
+          <span class ="badge badge-success"><%= tag.name %></span>
+        <% end %>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="board_body">
+        <p class="card-text"><%= simple_format(board.body) %></p>
+        <p class="card-left">
+          <% if board.images.attached? %>
+            <% board.images.each do |image| %>
+              <%= image_tag(image,width:200) %>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <% if Favorite.exists?(user_id:@current_user.id, board_id:board.id)%>
+        <%= link_to 'お気に入り解除',board_add_path(board), method: :delete %>
+      <% else %>
+        <%= link_to 'お気に入り', board_add_path(board), method: :post %>
+      <% end %>
+      <%= link_to 'コメントする', board_path(board)%>
+      <div class="board_button">
+        <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>
+        <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark btn-sm' %>
+        <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete %>
+      </div>
+    </li>
+  </ul><br>
+<% end %>

@@ -45,7 +45,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to questions_path, flash: { notice: "「 #{@question.title}」の掲示板が作成されました"}
+    redirect_to questions_path, flash: { notice: "「 #{@question.title}」の掲示板が削除されました"}
   end
 
 

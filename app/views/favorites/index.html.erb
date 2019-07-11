@@ -1,28 +1,37 @@
 <% @favorites.each do |favorite| %>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <div class="profile">
-        image
-      </div>
-      <div class="">
-        name<br>
-      </div>
-      <div class="">
-        <%= favorite.board.title %><br>
-      </div>
-      <div class="">
-        <%= favorite.board.updated_at.to_s(:datetime_jp)%>
-      </div>
-      <div class="">
-        <% favorite.board.tags.each do |tag| %>
-          <span class ="badge badge-primary"><%= tag.name %></span>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="board_user">
+      <%= image_tag(favorite.board.user.image,width:50)%>
+    <div class= 'board_name'><%= favorite.board.user.name %></div>
+    </div>
+    <div class="board_title">
+      <%= favorite.board.title %><br>
+    <p class="board_update">
+      <%= favorite.board.updated_at.to_s(:datetime_jp)%>
+    </p>
+    </div>
+    <div class="board_tag">
+      <% favorite.board.tags.each do |tag| %>
+        <span class ="badge badge-success"><%= tag.name %></span>
+      <% end %>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="board_body">
+      <p class="card-text"><%= simple_format(favorite.board.body) %>
+      </p>
+      <p class="card-left">
+        <% if favorite.board.images.attached? %>
+          <% favorite.board.images.each do |image| %>
+            <%= image_tag(image,width:200) %>
+          <% end %>
         <% end %>
-      </div>
-    </li>
-    <li class="list-group-item">
-      <div class="board_body">
-        <%= favorite.board.body %>
-      </div>
-    </li>
-  </ul><br>
+      </p>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <%= link_to 'コメントする', board_path(favorite.board)%>
+  </li>
+</ul><br>
 <% end %>

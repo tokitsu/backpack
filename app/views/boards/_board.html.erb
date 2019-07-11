@@ -1,19 +1,38 @@
-<div class="card">
-  <div class="card-header">
-    <h4><%= @board.title %></h4>
-    <% @board.tags.each do |tag| %>
-      <span class ="badge badge-primary"><%= tag.name %></span>
-    <% end %>
-  </div>
-  <div class="card-body">
-    <p class="card-text"><%= simple_format(@board.body) %></p>
-    <p class="text-right font-weight-bold mr-10"><%= @board.user.name %></p>
-    <p class="card-left">
-      <% if @board.images.attached? %>
-        <% @board.images.each do |image| %>
-          <%= image_tag(image, width:435) %>
-        <% end %>
-      <% end %>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="board_user">
+      <%= image_tag(@board.user.image,width:50)%>
+    <div class= 'board_name'><%= @board.user.name %></div>
+    </div>
+    <div class="board_title">
+      <%= @board.title %><br>
+    <p class="board_update">
+      <%= @board.updated_at.to_s(:datetime_jp)%>
     </p>
-  </div>
-</div>
+    </div>
+    <div class="board_tag">
+      <% @board.tags.each do |tag| %>
+        <span class ="badge badge-success"><%= tag.name %></span>
+      <% end %>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="board_body">
+      <p class="card-text"><%= simple_format(@board.body) %></p>
+      <p class="card-left">
+        <% if @board.images.attached? %>
+          <% @board.images.each do |image| %>
+            <%= image_tag(image,width:435) %>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <% if Favorite.exists?(user_id:@current_user.id, board_id:board.id)%>
+      <%= link_to 'お気に入り解除',board_add_path(board), method: :delete %>
+    <% else %>
+      <%= link_to 'お気に入り', board_add_path(board), method: :post %>
+    <% end %>
+  </li>
+</ul><br>

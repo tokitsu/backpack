@@ -1,3 +1,27 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.question_title{
+  text-align: left;
+  font-size: 20px;
+}
+
+.question_update{
+  text-align: left;
+  font-size: 13px;
+  color: #AAAAAA;
+}
+
+.question_answer_button{
+  float:left;
+}
+
+.question_button{
+  float: right;
+  padding-top: 20px;
+}
+
+.answer_counter{
+  float:left;
+  padding-top: 25px;
+}

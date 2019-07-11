@@ -1,9 +1,24 @@
-<div class="card">
-  <div class="card-header">
-    <h4><%= @question.title %></h4>
-  </div>
-  <div class="card-body">
-    <p class="card-text"><%= simple_format(question.body) %></p>
-    <p class="text-right font-weight-bold mr-10"><%= @question.user.name %></p>
-  </div>
-</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="question_title">
+      <%= @question.title %><br>
+    </div>
+    <div class="question_update">
+      <%= @question.updated_at.to_s(:datetime_jp)%>
+    </div>
+  </li>
+  <li class="list-group-item">
+    <div class="board_body">
+      <p class="card-text"><%= simple_format(@question.body) %></p>
+    </div>
+    <div class="answer_counter">
+      　　回答数：０
+    </div>
+
+    <div class="question_button">
+      <%= link_to '編集', edit_question_path(@question), class: 'btn btn-outline-dark btn-sm' %>
+      <%= link_to '削除', question, class: 'btn btn-outline-dark btn-sm', method: :delete %>
+    </div>
+  </li>
+
+</ul><br>
