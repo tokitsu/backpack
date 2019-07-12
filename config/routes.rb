@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   get 'search', to: 'boards#search'
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'boards#index'
+  root 'homes#index'
   resources :sessions
   resources :users
   resources :boards do
