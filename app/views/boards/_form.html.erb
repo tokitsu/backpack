@@ -10,6 +10,14 @@
     <%= f.text_area :body, class: 'form-control', rows: 10 %>
   </div>
   <div class="form-group">
+    <%= f.label :country, '国名' %>
+    <%= f.text_field :country, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :city, '都市名' %>
+    <%= f.text_field :city, class: 'form-control' %>
+  </div>
+  <div class="form-group">
     <%= f.label :images, '画像' %>
     <%= f.file_field :images, multiple: true, class: 'form-control'%>
   </div>

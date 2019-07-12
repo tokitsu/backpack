@@ -4,7 +4,7 @@
 
 <div class="profile_image">
   <% if @current_user.image.attached? %>
-    <%= image_tag(@current_user.image,width:200) %>
+    <%= image_tag(@current_user.image.variant(auto_orient: true),width:200) %>
   <% end %>
 </div>
 <div class="profile_name">
@@ -39,7 +39,7 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <%= image_tag(board.user.image,width:50)%>
+        <%= image_tag(board.user.image.variant(auto_orient: true),width:50)%>
       <div class= 'board_name'><%= board.user.name %></div>
       </div>
       <div class="board_title">

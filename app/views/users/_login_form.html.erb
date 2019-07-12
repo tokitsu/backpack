@@ -10,4 +10,7 @@
     <%= f.password_field :password, class: 'form-control' %>
   </div>
   <%= f.submit 'ログイン', class: 'btn btn-outline-secondary' %>
+  <div class="login_back_button">
+    <%= link_to '戻る', root_path, class: 'btn btn-outline-secondary' %>
+  </div>
 <% end %>

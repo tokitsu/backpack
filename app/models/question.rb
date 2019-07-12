@@ -15,6 +15,7 @@
 #
 
 class Question < ApplicationRecord
+  default_scope ->{ order(updated_at: :desc) }
   has_many :answers, dependent: :delete_all
   belongs_to :user
 end

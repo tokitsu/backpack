@@ -3,7 +3,7 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <%= image_tag(favorite.board.user.image,width:50)%>
+        <%= image_tag(favorite.board.user.image.variant(auto_orient: true),width:50)%>
       <div class= 'board_name'><%= favorite.board.user.name %></div>
       </div>
       <div class="board_title">
@@ -25,7 +25,7 @@
         <p class="card-left">
           <% if favorite.board.images.attached? %>
             <% favorite.board.images.each do |image| %>
-              <%= image_tag(image,width:200) %>
+              <%= image_tag(image.variant(auto_orient: true),height:200) %>
             <% end %>
           <% end %>
         </p>

@@ -5,7 +5,7 @@ class BoardsController < ApplicationController
   def index
     @user = @current_user
     @search = Board.ransack(params[:q])
-    @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
+    @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]) : Board.all
     @boards = @boards.page(params[:page])
   end
 
@@ -60,7 +60,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :body, images: [], tag_ids: [])
+    params.require(:board).permit(:title, :body, :country, :city, images: [], tag_ids: [])
   end
 
   def set_target_board

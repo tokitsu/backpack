@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :favorites, only: %i[index]
   resources :questions
   resources :answers, only: %i[create destroy]
+  resources :homes
 end

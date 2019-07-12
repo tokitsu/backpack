@@ -19,5 +19,8 @@
     <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
-  <%= f.submit '作成', class: 'btn btn-outline-secondary' %>
+  <%= f.submit '新規作成', class: 'btn btn-outline-secondary' %>
+  <div class="signin_back_button">
+    <%= link_to '戻る', root_path, class: 'btn btn-outline-secondary' %>
+  </div>
 <% end %>

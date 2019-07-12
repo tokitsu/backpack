@@ -27,13 +27,14 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <%= image_tag(board.user.image,width:50)%>
+        <%= image_tag board.user.image.variant(auto_orient: true),width:50 %>
       <div class= 'board_name'><%= board.user.name %></div>
       </div>
       <div class="board_title">
         <%= board.title %><br>
       <p class="board_update">
-        <%= board.updated_at.to_s(:datetime_jp)%>
+        <%= board.updated_at.to_s(:datetime_jp)%>　　
+        <%= board.country %> <%= board.city %>
       </p>
       </div>
       <div class="board_tag">
@@ -48,7 +49,7 @@
         <p class="card-left">
           <% if board.images.attached? %>
             <% board.images.each do |image| %>
-              <%= image_tag(image,width:200) %>
+              <%= image_tag image.variant(auto_orient: true),height:200 %>
             <% end %>
           <% end %>
         </p>

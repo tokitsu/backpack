@@ -4,6 +4,8 @@
 #
 #  id         :integer          not null, primary key
 #  body       :text(65535)
+#  city       :string(255)
+#  country    :string(255)
 #  title      :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -15,6 +17,7 @@
 #
 
 class Board < ApplicationRecord
+  default_scope -> { order(updated_at: :desc) }
   has_many_attached :images
   has_many :comments, dependent: :delete_all
   has_many :board_tag_relations, dependent: :delete_all

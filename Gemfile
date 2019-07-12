@@ -34,6 +34,7 @@ gem 'mini_racer'
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'ransack'
+gem 'mini_magick'
 
 
 group :development, :test do
