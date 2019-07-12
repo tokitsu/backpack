@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
 
   def index
-    @favorites = @current_user.favorites
+    @favorites = @current_user.favorites.page(params[:page])
 
   end
 

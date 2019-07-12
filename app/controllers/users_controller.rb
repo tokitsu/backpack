@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = @current_user.boards.page(params[:page])
     @user = @current_user
   end
 
