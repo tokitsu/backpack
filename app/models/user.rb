@@ -20,14 +20,14 @@
 #
 
 class User < ApplicationRecord
-  has_one_attached :image
+  has_one_attached :image, dependent: :delete_all
   has_secure_password
-  has_many :boards
-  has_many :comments
-  has_many :favorites
+  has_many :boards, dependent: :delete_all
+  has_many :comments, dependent: :delete_all
+  has_many :favorites, dependent: :delete_all
   has_many :fav_boards, through: :favorites, source: :board
-  has_many :questions
-  has_many :answers
+  has_many :questions, dependent: :delete_all
+  has_many :answers, dependent: :delete_all
 
   validates :name,
     presence: true,

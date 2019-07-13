@@ -12,6 +12,11 @@ ja:
         body: 本文
       comment:
         comment: コメント
+      question:
+        title: タイトル
+        body: 本文
+      answer:
+        body: コメント
   views:
     pagination:
       first: 最初

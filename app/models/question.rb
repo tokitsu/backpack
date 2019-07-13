@@ -18,4 +18,6 @@ class Question < ApplicationRecord
   default_scope ->{ order(updated_at: :desc) }
   has_many :answers, dependent: :delete_all
   belongs_to :user
+  validates :title, presence: true, length: { maximum: 30}
+  validates :body, presence: true, length: { maximum: 1000}
 end

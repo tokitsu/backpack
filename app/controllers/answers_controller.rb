@@ -5,7 +5,7 @@ class AnswersController < ApplicationController
       flash[:notice] = 'コメントを投稿しました。'
       redirect_to @answer.question
     else
-      redirect_to :back, flash: {
+      redirect_back fallback_location: @answer.question, flash: {
         answer: @answer,
         error_messages: @answer.errors.full_messages
       }
