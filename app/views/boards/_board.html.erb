@@ -1,7 +1,11 @@
 <ul class="list-group">
   <li class="list-group-item">
     <div class="board_user">
-      <%= image_tag(@board.user.image.variant(auto_orient: true),width:50)%>
+      <% if @board.user.image.attached? %>
+        <%= image_tag(@board.user.image.variant(auto_orient: true),width:45)%>
+      <% else %>
+        <%= image_tag 'human.jpeg', width:40 %>
+      <% end %>
     <div class= 'board_name'><%= @board.user.name %></div>
     </div>
     <div class="board_title">

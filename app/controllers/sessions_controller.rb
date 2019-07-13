@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user_path(user.id)
     else
-      render 'home/index'
+      render 'lohin_path'
     end
   end
 
