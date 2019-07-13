@@ -75,7 +75,7 @@
       <div class="board_button">
         <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>
         <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark btn-sm' %>
-        <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete %>
+        <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete, data: { confirm: '削除してよろしいですか？'} %>
       </div>
       <% end %>
     </li>
