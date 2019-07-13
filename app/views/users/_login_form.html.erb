@@ -1,5 +1,9 @@
 <h3 class= 'login_page_word'>ログイン</h3>
-
+<% if flash[:notice] %>
+  <div class="alert alert-danger" >
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 <%= form_with scope: :session, url: login_path do |f| %>
   <div class="form-group">
     <%= f.label :email, 'メールアドレス' %>

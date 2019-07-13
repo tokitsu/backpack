@@ -5,7 +5,7 @@
 </div>
 
 <%= search_form_for @search, url: search_path, class: "form-inline my-2 my-lg-0" do |f| %>
-  <%= f.text_field :title_cont , class:"form-control mr-sm-2",placeholder: '検索するテキストを入力...' %>
+  <%= f.text_field :title_or_body_or_country_or_city_cont , class:"form-control mr-sm-2",placeholder: '検索するテキストを入力...' %>
   <%= f.submit ("検索") , class:"btn btn-outline-success my-2 my-sm-0"%>
 <% end %>
 
@@ -17,10 +17,12 @@
     class: 'form-control boards__select',
     onchange: 'submit(this.form);'
   } %>
-  <% end %>
+<% end %>
 
 <% if flash[:notice] %>
-<div class="alert alert-success"><%= flash[:notice] %></div>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
 <% end %>
 
 <% @boards.each do |board| %>
