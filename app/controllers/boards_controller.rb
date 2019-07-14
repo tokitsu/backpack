@@ -1,6 +1,8 @@
 class BoardsController < ApplicationController
-
+  before_action :current_user
+  before_action :authenticate_user
   before_action :set_target_board, only: %i[show edit update destroy]
+  before_action :board_collect_user, only: %i[edit]
 
   def index
     @user = @current_user
@@ -65,6 +67,13 @@ class BoardsController < ApplicationController
 
   def set_target_board
     @board = Board.find(params[:id])
+  end
+
+  def board_collect_user
+    if @current_user.id != @board.user_id
+      flash[:notice] = "あなたには権限がありません。"
+      redirect_to boards_path
+    end
   end
 
 end

@@ -1,4 +1,6 @@
 class AnswersController < ApplicationController
+  before_action :current_user, only: %i[create destroy]
+
   def create
     @answer = Answer.new (answer_params.merge(user_id: @current_user.id))
     if @answer.save

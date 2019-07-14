@@ -1,4 +1,6 @@
 class FavoritesController < ApplicationController
+  before_action :current_user
+  before_action :authenticate_user, only: %i[index]
 
   def index
     @favorites = @current_user.favorites.page(params[:page])

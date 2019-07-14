@@ -1,3 +1,12 @@
+<div class="profile_error">
+</div>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+
 <div class="edit_profile_link">
   <%= link_to 'プロフィールを編集する', edit_user_path ,class:'btn btn-outline-secondary'%>
 </div>
@@ -9,14 +18,14 @@
     <%= image_tag 'human.jpeg', width:160 %>
   <% end %>
 </div>
-<div class="profile_name">
-  <%= @current_user.name %>
-</div>
 
 <ul class="list-group profile_flame2">
   <li class="list-group-item">
-    年齢 　: 　<%= @current_user.age %>　　　
-    性別 　: 　<%= @current_user.sex %>
+    名前 : <%= @current_user.name %>
+  </li>
+  <li class="list-group-item">
+    年齢 :  <%= @current_user.age %>　　　
+    性別 :  <%= @current_user.sex %>
   </li>
   <li class="list-group-item">
     好きな国（場所）: <%= @current_user.favorite_country %>

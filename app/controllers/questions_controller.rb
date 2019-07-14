@@ -1,5 +1,8 @@
 class QuestionsController < ApplicationController
+  before_action :current_user
+  before_action :authenticate_user
   before_action :set_target_question, only: %i[show edit update destroy]
+  before_action :question_collect_user, only: %i[edit]
 
   def index
     @user = @current_user
@@ -57,6 +60,13 @@ class QuestionsController < ApplicationController
 
   def set_target_question
     @question = Question.find(params[:id])
+  end
+
+  def question_collect_user
+    if @current_user.id != @question.user_id
+      flash[:notice] = "あなたには権限がありません。"
+      redirect_to questions_path
+    end
   end
 
 end
