@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :current_user, only: %i[show edit]
+  before_action :current_user, only: %i[show edit index]
   before_action :authenticate_user, only: %i[edit show]
   before_action :collect_user, only: %i[edit]
 
@@ -21,8 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = @current_user
-    @users = User.all.page(params[:page])
+    @user = User.find(params[:id])
   end
 
   def edit

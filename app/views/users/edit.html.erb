@@ -3,7 +3,9 @@
 
 <%= form_with model: @user do |f| %>
   <div class="form-group">
-    <%= f.label :image, 'ユーザー画像' %><br>
+    <% if @current_user.image.attached? %>
+      <%= f.label :image, 'ユーザー画像' %><br>
+    <% end %>
     <%= image_tag @current_user.image.variant(auto_orient: true),width:200 if @current_user.image.attached? %><br><br>
     <%= f.label :image, '画像を変更する' %><br>
     <%= f.file_field :image, class: 'form-control' %>

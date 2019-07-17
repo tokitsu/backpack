@@ -4,9 +4,9 @@
     <li class="list-group-item">
       <div class="board_user">
         <% if favorite.board.user.image.attached? %>
-          <%= image_tag(favorite.board.user.image.variant(auto_orient: true),width:50)%>
+          <%=link_to image_tag(favorite.board.user.image.variant(auto_orient: true),width:45), favorite.board.user %>
         <% else %>
-          <%= image_tag 'human.jpeg', width: 40 %>
+          <%= link_to image_tag('human.jpeg', width: 40), favorite.board.user %>
         <% end %>
       <div class= 'board_name'><%= favorite.board.user.name %></div>
       </div>

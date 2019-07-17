@@ -30,9 +30,9 @@
     <li class="list-group-item">
       <div class="board_user">
         <% if board.user.image.attached? %>
-          <%= image_tag board.user.image.variant(auto_orient: true),width:45 %>
+          <%=link_to image_tag(board.user.image.variant(auto_orient: true),width:45), board.user %>
         <% else %>
-          <%= image_tag 'human.jpeg', width:40 %>
+          <%= link_to image_tag('human.jpeg', width: 40), board.user %>
         <% end %>
         <div class= 'board_name'>
           <%= board.user.name %>
