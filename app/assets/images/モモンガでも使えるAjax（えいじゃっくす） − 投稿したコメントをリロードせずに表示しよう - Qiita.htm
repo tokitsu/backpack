@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454 -->
+<html xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="react-tooltip">.__react_component_tooltip{border-radius:3px;display:inline-block;font-size:13px;left:-999em;opacity:0;padding:8px 21px;position:fixed;pointer-events:none;transition:opacity 0.3s ease-out;top:-999em;visibility:hidden;z-index:999}.__react_component_tooltip.allow_hover,.__react_component_tooltip.allow_click{pointer-events:auto}.__react_component_tooltip:before,.__react_component_tooltip:after{content:"";width:0;height:0;position:absolute}.__react_component_tooltip.show{opacity:0.9;margin-top:0px;margin-left:0px;visibility:visible}.__react_component_tooltip.type-dark{color:#fff;background-color:#222}.__react_component_tooltip.type-dark.place-top:after{border-top-color:#222;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-dark.place-bottom:after{border-bottom-color:#222;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-dark.place-left:after{border-left-color:#222;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-dark.place-right:after{border-right-color:#222;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-dark.border{border:1px solid #fff}.__react_component_tooltip.type-dark.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-dark.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-dark.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-dark.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-success{color:#fff;background-color:#8DC572}.__react_component_tooltip.type-success.place-top:after{border-top-color:#8DC572;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-success.place-bottom:after{border-bottom-color:#8DC572;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-success.place-left:after{border-left-color:#8DC572;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-success.place-right:after{border-right-color:#8DC572;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-success.border{border:1px solid #fff}.__react_component_tooltip.type-success.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-success.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-success.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-success.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-warning{color:#fff;background-color:#F0AD4E}.__react_component_tooltip.type-warning.place-top:after{border-top-color:#F0AD4E;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-warning.place-bottom:after{border-bottom-color:#F0AD4E;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-warning.place-left:after{border-left-color:#F0AD4E;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-warning.place-right:after{border-right-color:#F0AD4E;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-warning.border{border:1px solid #fff}.__react_component_tooltip.type-warning.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-warning.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-warning.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-warning.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-error{color:#fff;background-color:#BE6464}.__react_component_tooltip.type-error.place-top:after{border-top-color:#BE6464;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-error.place-bottom:after{border-bottom-color:#BE6464;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-error.place-left:after{border-left-color:#BE6464;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-error.place-right:after{border-right-color:#BE6464;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-error.border{border:1px solid #fff}.__react_component_tooltip.type-error.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-error.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-error.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-error.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-info{color:#fff;background-color:#337AB7}.__react_component_tooltip.type-info.place-top:after{border-top-color:#337AB7;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-info.place-bottom:after{border-bottom-color:#337AB7;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-info.place-left:after{border-left-color:#337AB7;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-info.place-right:after{border-right-color:#337AB7;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-info.border{border:1px solid #fff}.__react_component_tooltip.type-info.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-info.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-info.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-info.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-light{color:#222;background-color:#fff}.__react_component_tooltip.type-light.place-top:after{border-top-color:#fff;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-light.place-bottom:after{border-bottom-color:#fff;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-light.place-left:after{border-left-color:#fff;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-light.place-right:after{border-right-color:#fff;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-light.border{border:1px solid #222}.__react_component_tooltip.type-light.border.place-top:before{border-top:8px solid #222}.__react_component_tooltip.type-light.border.place-bottom:before{border-bottom:8px solid #222}.__react_component_tooltip.type-light.border.place-left:before{border-left:8px solid #222}.__react_component_tooltip.type-light.border.place-right:before{border-right:8px solid #222}.__react_component_tooltip.place-top{margin-top:-10px}.__react_component_tooltip.place-top:before{border-left:10px solid transparent;border-right:10px solid transparent;bottom:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-top:after{border-left:8px solid transparent;border-right:8px solid transparent;bottom:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-bottom{margin-top:10px}.__react_component_tooltip.place-bottom:before{border-left:10px solid transparent;border-right:10px solid transparent;top:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-bottom:after{border-left:8px solid transparent;border-right:8px solid transparent;top:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-left{margin-left:-10px}.__react_component_tooltip.place-left:before{border-top:6px solid transparent;border-bottom:6px solid transparent;right:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-left:after{border-top:5px solid transparent;border-bottom:5px solid transparent;right:-6px;top:50%;margin-top:-4px}.__react_component_tooltip.place-right{margin-left:10px}.__react_component_tooltip.place-right:before{border-top:6px solid transparent;border-bottom:6px solid transparent;left:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-right:after{border-top:5px solid transparent;border-bottom:5px solid transparent;left:-6px;top:50%;margin-top:-4px}.__react_component_tooltip .multi-line{display:block;padding:2px 0px;text-align:center}</style><title>モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita</title><meta content="width=device-width,initial-scale=1" name="viewport"><meta content="※ 「あなたがRails触る人なら見ておきたい「体系的な」豆知識」からの派生記事です。
+
+Railsでフォームに入力した文章をリロード無しで保存、描画することで最も簡単なAjaxの流れの説明を試みたいと思います。
+
+
+Ajaxとは
+
+「Ajaxとは」と検索すると大量に説明文が出てきますがよく「非同期通信の総称」とかいう記述を目にします。
+難しい話はよくわからないので「何かフォームからデータを送信した時にページをリロードせずにデータの保存・描画を行う」ことだとしましょう。..." name="description"><meta content="#55c500" name="theme-color"><meta content="JavaScript,Rails,Ajax" name="keywords"><meta content="summary" name="twitter:card"><meta content="@Qiita" name="twitter:site"><meta content="yamatoafro" name="twitter:creator"><meta content="モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita" property="og:title"><meta content="article" property="og:type"><meta content="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454" property="og:url"><meta content="https://cdn.qiita.com/assets/qiita-fb-2887e7b4aad86fd8c25cea84846f2236.png" property="og:image"><meta content="※ _「[あなたがRails触る人なら見ておきたい「体系的な」豆知識](http://qiita.com/Yama-to/items/93cd8b3a8be67b09e353)」からの派生記事です。_
+
+Railsでフォームに入力した..." property="og:description"><meta content="Qiita" property="og:site_name"><meta content="564524038" property="fb:admins"><link rel="canonical" href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454"><link rel="shortcut icon" type="image/x-icon" href="https://cdn.qiita.com/assets/favicons/public/production.ico"><link rel="apple-touch-icon" type="image/png" href="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-f9a6afad761ec2306e10db2736187c8b.png"><link href="https://qiita.com/opensearch.xml" rel="search" title="Qiita" type="application/opensearchdescription+xml"><link rel="stylesheet" media="all" href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/public-0ab9de486650d87aa8673eb5587abdf9.min.css"><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="n6A9MQKm5huSLqfORuK8U1TRxBD3GgdDH9czxWxys6rFVnHQm3dGI4RRNnCojjpBvAAt2GOCn7qQMNmK7hFFNQ=="><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/saved_resource"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/amp4ads-host-v0.js"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/pixel.js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/segmentation.js"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/pubads_impl_rendering_2019070801.js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/segmentation.js"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/uwt.js"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1469129556533591" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/2040876882868599" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1733466696949178" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/386990638325508" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/256605841418458" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/262978464137256" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/437265843064161" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/954575148009345" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/996402550503199" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/inferredEvents.js" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/809797712462041" async=""></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/fbevents.js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f.txt"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f.txt"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f.txt"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f.txt"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f.txt"></script><script type="text/javascript" charset="UTF-8" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/lift.json"></script><script type="text/javascript" charset="UTF-8" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/gpt.js"></script><script type="text/javascript" charset="UTF-8" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/lift_widget.js"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/gtm.js"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/cb=gapi.loaded_0" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/all.js" async="" crossorigin="anonymous"></script><script type="text/javascript" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/combo" async=""></script><script async="">window.a1tracker&&a1tracker.ready(function(tracker){var doh="ff9a3577423c8ed5";if(!doh)return;var params={"event":"","url":"","referrer":"","metakeywords":"","callback":""};if(params.url)tracker.setParams(doh,"url",params.url);if(params.referrer)tracker.setParams(doh,"referrer",params.referrer);if(params.metakeywords){var mk=tracker.getParams(doh,"metakeywords");Array.prototype.push.apply(mk,params.metakeywords.split(","));tracker.setParams(doh,"metakeywords",mk)}tracker.setParams(doh,"tagsource","itm_a1common");var callback=params.callback&&typeof window[params.callback]==="function"?function(err,data){if(!err&&data.segments.length>0)window[params.callback](data.segments);return}:function(){};if(params.event)tracker.send(doh,params.event.split(","),callback);else tracker.send(doh,callback)});</script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/widgets.js" id="twitter-jssdk"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/all(1).js" id="facebook-jssdk"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/plusone.js" id="google-plusone-jssdk" gapi_processed="true"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/btn.js" id="pocket-btn-js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/analytics.js"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tracking.min.js"></script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/ff9a3577423c8ed5_4330.js"></script><script type="text/javascript" async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/td.min.js"></script><script>
+  window.gtmDataLayer = [
+    {
+      'analytics.dimension5': 'false',
+      'app.env': 'production',
+      'app.layoutVersion': 1,
+      'app.userId': 434765
+    },
+    { 'gtm.start': new Date().getTime(), event: 'gtm.js' }
+  ];
+</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/gtm(1).js" async=""></script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><link rel="preload" href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(1).txt" as="script"><script type="text/javascript" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(1).txt"></script><link rel="preload" href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(2).txt" as="script"><script type="text/javascript" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(2).txt"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/pubads_impl_2019070801.js" async=""></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(3).txt"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(4).txt"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(5).txt"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(6).txt"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f(7).txt"></script><style type="text/css">#logly-lift-4279494 #logly-lift-widget {
+  
+  width: 100%;
+  
+  
+  
+}
+
+#logly-lift-4279494 #logly-lift-widget-label {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  
+  border-bottom-color: #5C97FF;
+  
+}
+
+#logly-lift-4279494 #logly-lift-widget-label-caption {
+  padding: 5px 10px;
+  
+  background-color: #5C97FF;
+  
+  float: left;
+}
+
+#logly-lift-4279494 #logly-lift-widget-label-caption a {
+  
+  color: #FFFFFF;
+  
+  
+  text-decoration: none;
+}
+
+#logly-lift-4279494 .logly-lift-ad {
+  display: inline-block;
+  zoom: 1;
+  vertical-align:top;
+  
+  width: 100%;
+  
+  margin: 5px 0;
+  padding: 0;
+}
+
+
+
+#logly-lift-4279494 .logly-lift-ad-image {
+  
+  vertical-align: top;
+  width: 120px;
+  height: 90px;
+  padding-right: 0;
+}
+
+#logly-lift-4279494 .logly-lift-ad-image-inner {
+  position: relative;
+  overflow: hidden;
+  width: 120px;
+  height: 90px;
+}
+
+#logly-lift-4279494 .logly-lift-ad-image-inner img {
+  position: absolute;
+  max-width: none;
+  max-height: none;
+  border-style:none;
+}
+
+#logly-lift-4279494 .logly-lift-ad-content {
+  
+  word-break: break-all;
+}
+
+
+
+#logly-lift-4279494 .logly-lift-ad-title {
+  
+  
+}
+
+
+
+#logly-lift-4279494 .logly-lift-ad-lead {
+  
+  
+}
+
+
+
+#logly-lift-4279494 a.logly-lift-ad-site {
+  
+  
+}
+
+
+
+
+
+#logly-lift-4279494 .logly-lift-ad-disclosure {
+  
+  
+  
+  text-align: left;
+  
+}
+
+#logly-lift-4279494 .logly-lift-ad-disclosure a {
+  
+  
+  color: #999999;
+  
+}
+
+#logly-lift-4279494 .logly-lift-clear {
+  clear: both;
+}
+
+
+
+#logly-lift-4279494 .ie-lte9 .logly-lift-ad {
+  display: inline;
+}
+
+#logly-lift-toaster .logly-lift-credit,
+#logly-lift-4279494 .logly-lift-credit {
+  clear:both;
+  padding:0 8px 10px;
+  text-align:right;
+}
+
+#logly-lift-toaster .logly-lift-credit {
+  padding-right:0;
+}
+
+#logly-lift-toaster .logly-lift-credit a,
+#logly-lift-4279494 .logly-lift-credit a {
+  color: #999;
+  text-decoration: none;
+  font-size:13px;
+}
+
+#logly-lift-toaster .logly-lift-credit a .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit a .logly-lift-credit-logo {
+  display:inline-block;
+  background: url("//cdn.logly.co.jp/spritesource-s5c12c753d2.png") no-repeat 0 -103px;
+  color:transparent;
+  margin-left:3px;
+  width:36px;
+  height:14px;
+  vertical-align:middle;
+  *display:inline;
+  *zoom:1;
+}
+
+#logly-lift-toaster .logly-lift-credit a:hover .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit a:hover .logly-lift-credit-logo {
+  background: url("//cdn.logly.co.jp/spritesource-s5c12c753d2.png") no-repeat 0 -117px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-modal-contents-inner h3 {
+  background-image: url('https://cdn.logly.co.jp/spritesource-s6c20d2e001.png');
+  background-repeat: no-repeat;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit2 a .logly-lift-credit-logo {
+  background-position: 0 -110px;
+  height: 14px;
+  width: 68px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit2 a:hover .logly-lift-credit-logo {
+  background-position: 0 -196px;
+  height: 14px;
+  width: 68px;
+}
+#logly-lift-modal-contents-inner h3 {
+  background-position: 0 -232px;
+  height: 40px;
+  width: 194px;
+}
+
+#logly-lift-toaster .logly-lift-credit2 {
+  padding-right: 0;
+}
+#logly-lift-toaster .logly-lift-credit2,
+#logly-lift-4279494 .logly-lift-credit2 {
+  clear: both;
+  padding: 0 8px 10px;
+  text-align: right;
+}
+#logly-lift-toaster .logly-lift-credit2 a,
+#logly-lift-4279494 .logly-lift-credit2 a {
+  color: #999;
+  text-decoration: none;
+  font-size: 11px;
+}
+#logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+#logly-lift-4279494 .logly-lift-credit2 a .logly-lift-credit-logo {
+  display: inline-block;
+  color: transparent;
+  margin-left: 3px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  #logly-lift-toaster .logly-lift-credit2 a .logly-lift-credit-logo,
+  #logly-lift-4279494 .logly-lift-credit2 a .logly-lift-credit-logo {
+    display: inline-block;
+    background-position: 0 -62px;
+    height: 14px;
+    width: 68px;
+    background-size: 106px 136px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  #logly-lift-toaster .logly-lift-credit2 a:hover .logly-lift-credit-logo,
+  #logly-lift-4279494 .logly-lift-credit2 a:hover .logly-lift-credit-logo {
+    display: inline-block;
+    background-position: 0 -62px;
+    height: 14px;
+    width: 68px;
+    background-size: 106px 136px;
+  }
+}
+
+
+  /*
+---
+name: Login
+category: LoglyFeed/Login
+---
+
+To reflect this design, you must copy and paste it to https://www.logly.co.jp design settings
+
+
+!![](LoglyFeed/Login.html)
+*/
+
+#logly-lift-4279494 #logly-lift-widget-header {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-feature-settings: "palt";
+  position: relative;
+}
+
+#logly-lift-4279494 #logly-lift-widget-content {
+  display: block;
+  flex-wrap: wrap;
+}
+
+#logly-lift-4279494 .logly-lift-ad {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  margin: 0;
+  padding: 16px;
+}
+
+#logly-lift-4279494 .logly-lift-ad:first-child {
+  border-top: 1px solid #e8e8e8;
+}
+
+#logly-lift-4279494 .logly-lift-ad .fa {
+  color: #55c500;
+  font-size: 40px;
+}
+
+#logly-lift-4279494 .logly-lift-ad .fa-fw {
+  width: 40px;
+  height: 40px;
+  text-align: left;
+}
+
+#logly-lift-4279494 .logly-lift-ad-icon {
+  overflow: hidden;
+  border-radius: 0.2em;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+#logly-lift-4279494 .logly-lift-ad-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+#logly-lift-4279494 .logly-lift-ad-content {
+  display: block;
+}
+
+#logly-lift-4279494 .logly-lift-ad-link {
+  margin-right: 8px;
+}
+
+#logly-lift-4279494 .logly-lift-ad-title {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-left: 8px;
+}
+
+#logly-lift-4279494 .logly-lift-ad-title:visited {
+  color: #777;
+}
+
+#logly-lift-4279494 .logly-lift-ad-link:hover .logly-lift-ad-title {
+  text-decoration: underline;
+}
+
+#logly-lift-4279494 .logly-lift-ad-author {
+  display: block;
+  color: #999;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+#logly-lift-4279494 .logly-lift-ad-adv {
+  display: block;
+  color: #999;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+
+
+</style></head><body class=" with-js"><iframe src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/sync.html" scrolling="no" style="display: none; border: none;"></iframe><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-TBQWPN" style="display:none;visibility:hidden" width="0"></iframe></noscript><script>
+  document.body.className = document.body.className.replace('without-js', '') + ' with-js';
+  window.Qiita = {"asset_host":"cdn.qiita.com","action_path":"public/items#show","flash":{},"config":{"default_locale":"en","locale":"ja"},"user":{"id":434765,"url_name":"toki2222son","profile_image_url":"https://lh4.googleusercontent.com/-YhQQuX1xVDQ/AAAAAAAAAAI/AAAAAAAAAAc/nGgW4O5qZI8/s50/photo.jpg","email":"toki2222son@gmail.com","staff":false},"GIT_BRANCH":null};
+
+  /* You are logged in */
+</script>
+<div class="st-HeaderContainer"><div id="GlobalHeaderContainer-react-component-6c2ee20c-c313-42d4-bad0-6f781ca41273"><div class="st-Header px-2 px-1@s"><div class="st-Header_container"><div class="st-Header_start"><a href="https://qiita.com/" class="st-Header_logo mr-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 26"><title>Qiita</title><path d="M24.6 12.2C24.6 6.2 20 0 12.2 0 6.2 0 0 4.6 0 12.4c0 6 4.6 12.2 12.4 12.2 2.5 0 5-.8 7.1-2.3l3.6 3.6 1.6-1.6-3.4-3.4c2.1-2.3 3.3-5.3 3.3-8.7zm-12.4-10c5.7 0 10.2 4.4 10.2 10.1 0 4.9-3.8 10.1-10.1 10.1s-10.1-5.1-10.1-10c0-6.4 5.1-10.2 10-10.2zM30.5 7.1h2.1v17h-2.1zM31.5 4.8c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zM40 4.8c-1 0-1.8-.8-1.8-1.8S39 1.2 40 1.2s1.8.8 1.8 1.8S41 4.8 40 4.8zM39 7.1h2.1v17H39zM53.7 24.4c-3.9 0-6.2-3-6.2-6v-16h2.1v4.7H57v2.1h-7.4v9.3c0 1.9 1.5 3.9 4.1 3.9.7 0 1.4-.2 2-.6l.2-.1 1 1.8-.2.1c-.9.5-2 .8-3 .8zM67.6 24.5c-5.7 0-9.1-4.5-9.1-8.9 0-5.7 4.5-9.1 8.9-9.1 2.3 0 4.1.8 5.4 2.3V7.1h2.1v17h-2.1v-1.9c-1.2 1.5-3 2.3-5.2 2.3zm-.2-15.9c-3.4 0-6.8 2.6-6.8 7 0 3.4 2.6 6.8 7 6.8 2 0 4-.9 5.3-2.5v-8.8c-1.4-1.6-3.3-2.5-5.5-2.5z"></path></svg></a><div><div class="st-Header_realmSelector ml-1of2" tabindex="0"><span class="fa fa-caret-down"></span></div><div class="st-Header_dropdown st-RealmSelector"><div class="st-RealmSelector_realms"><a class="st-Header_dropdownItem st-RealmItem" href="https://qiita.com/"><div class="st-RealmItem_statusIcon"><span class="fa fa-fw fa-check"></span></div><div class="st-RealmItem_humanName">Qiita</div></a></div><hr><div class="st-RealmSelector_supplements"><div class="st-RealmSelector_label">ログイン中のチームがありません</div><a href="https://teams-center.qiita.com/find_team" class="st-Header_dropdownItem st-RealmSelectorSupplement"><div class="st-RealmSelectorSupplement_icon"><span class="fa fa-fw fa-sign-in"></span></div><div>Qiita:Team にログイン...</div></a></div></div></div><div class="u-relative ml-3 ml-1@s"><div class="st-Header_home py-2 mr-3" tabindex="0">ホーム<span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/" class="st-Header_dropdownItem"><span class="fa fa-fw fa-line-chart mr-1of2"></span>トレンド</a><a href="https://qiita.com/timeline" class="st-Header_dropdownItem"><span class="fa fa-fw fa-list-ul mr-1of2"></span>タイムライン</a><a href="https://qiita.com/tag-feed" class="st-Header_dropdownItem"><span class="fa fa-fw fa-tags mr-1of2"></span>タグフィード</a><a href="https://qiita.com/milestones" class="st-Header_dropdownItem"><span class="fa fa-fw fa-flag-checkered mr-1of2"></span>マイルストーン</a></div></div><div class="u-relative"><div class="st-Header_community py-2 mr-3" tabindex="0">コミュニティ<span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/users" class="st-Header_dropdownItem"><span class="fa fa-fw fa-users mr-1of2"></span>ユーザー一覧</a><a href="https://qiita.com/organizations" class="st-Header_dropdownItem"><span class="fa fa-fw fa-building-o mr-1of2"></span>Organization一覧</a><a href="https://qiita.com/advent-calendar" class="st-Header_dropdownItem"><span class="fa fa-fw fa-calendar mr-1of2"></span>アドベントカレンダー</a><div class="st-Header_dropdownSeparator"></div><a href="https://jobs.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-search mr-1of2"></span>Qiita Jobs</a><a href="https://qiitadon.com/" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-comments-o mr-1of2"></span>Qiitadon (β)</a><a href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-newspaper-o mr-1of2"></span>Qiita:Zine</a><div class="st-Header_dropdownSeparator"></div><a href="https://help.qiita.com/ja/articles/qiita-community-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>コミュニティガイドライン</a><a href="https://help.qiita.com/ja/articles/qiita-article-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span>良い記事を書くために</a></div></div><form class="st-Header_search" action="https://qiita.com/search" method="get"><span class="fa fa-search"></span><input class="st-Header_searchInput pl-4" type="search" autocomplete="off" placeholder="キーワードを入力" name="q" required=""></form><div class="st-Header_searchButton"><span class="fa fa-search"></span></div></div><div class="st-Header_end"><a href="https://qiita.com/stock" class="st-Header_stock mr-2 py-2"><span class="fa fa-fw fa-folder-open mr-1of2"></span><span class="st-Header_stock-label">ストック一覧</span></a><a href="https://qiita.com/drafts/new" class="st-Header_postButton px-2 mr-2"><span class="fa fa-pencil square-o mr-1"></span>投稿する</a><div class="st-Header_notifications mr-2" tabindex="0">0<div class="st-Header_notiIframe"><div class="st-Header_notiHeader"><div><span class="fa fa-bell-o mgr-1"></span>お知らせ</div><a href="https://qiita.com/settings/notifications">通知設定</a></div><div class="st-Header_notiFooter"><a href="https://qiita.com/notifications">通知一覧を見る</a></div></div></div><div class="u-relative"><div class="st-Header_loginUser" tabindex="0"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/photo.jpg"><span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/toki2222son" class="st-Header_dropdownItem">マイページ</a><div class="st-Header_dropdownSeparator"></div><a href="https://qiita.com/drafts" class="st-Header_dropdownItem">下書き一覧</a><a href="https://qiita.com/patches" class="st-Header_dropdownItem">編集リクエスト一覧</a><div class="st-Header_dropdownSeparator"></div><a href="https://qiita.com/settings" class="st-Header_dropdownItem">設定</a><a href="https://help.qiita.com/ja/categories/qiita/" class="st-Header_dropdownItem" target="_blank">ヘルプ</a><div class="st-Header_dropdownSeparator"></div><div class="st-Header_dropdownItem" tabindex="0">ログアウト</div></div></div></div><div class="st-Header_overlay"></div><form class="st-Header_searchModal" action="https://qiita.com/search" method="get"><input class="st-Header_searchModalInput pl-1" type="text" autocomplete="off" placeholder="キーワードを入力" name="q" required=""></form></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalHeaderContainer" data-dom-id="GlobalHeaderContainer-react-component-6c2ee20c-c313-42d4-bad0-6f781ca41273">{"user":{"profile_image_url":"https://lh4.googleusercontent.com/-YhQQuX1xVDQ/AAAAAAAAAAI/AAAAAAAAAAc/nGgW4O5qZI8/s50/photo.jpg","team_only":false,"url_name":"toki2222son"},"realms":[{"human_name":"Qiita","is_current_realm":true,"is_qiita":true,"is_qiita_team":false,"logged_in_user":{"profile_image_url":"https://lh4.googleusercontent.com/-YhQQuX1xVDQ/AAAAAAAAAAI/AAAAAAAAAAc/nGgW4O5qZI8/s50/photo.jpg","url_name":"toki2222son"},"team_id":null,"url":"https://qiita.com/"}],"teamFindUrl":"https://teams-center.qiita.com/find_team","unreadNotificationsCount":0,"locale":"ja","is_fluid":false,"is_staff":false}</script>
+      
+</div><div class="st-HeaderAlert st-HeaderAlert-warning"><div class="st-HeaderAlert_body"></div></div><div id="main"><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/qiita_bigmining.js"></script><img style="display:block;margin:0;padding:0;border:0;outline:0;width:0;height:0;line-height:0;" alt="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/bizmatrix"><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-64505631-1', 'auto', { name: 'userTracker' });
+ga('userTracker.send', 'pageview');</script><script async="" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/analytics.js"></script><script type="application/ld+json">{  "@context": "http://schema.org",  "@type": "BreadcrumbList",  "itemListElement": [    {      "@type": "ListItem",      "position": 1,      "item": {        "@id": "/",        "name": "Qiita"      }    },    {      "@type": "ListItem",      "position": 2,      "item": {        "@id": "/tags/javascript",        "name": "JavaScript"      }    }  ]}</script><article class="p-items logged-in" itemscope="itemscope" itemtype="http://schema.org/Article"><div class="p-items_wrapper"><div class="p-items_container"><div class="p-items_stickyMenu it-Actions" data-mount-target="articleStickyMenu"><div><div class="it-Actions_item it-Actions_item-like likable"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/likers" class="it-Actions_likeCount">99</a><button data-effect="solid" data-place="right" data-tip="いいね" currentitem="false"><i class="fa fa-fw fa-thumbs-up"></i></button></div><div class="it-Actions_item it-Actions_item-stock"><button data-effect="solid" data-place="right" data-tip="ストック" currentitem="false"><i class="fa fa-folder-open" style="margin-top: 4px; margin-left: 2px;"></i></button></div><div class="it-Actions_jumpToCommentButton" style="margin-top: 45px; margin-left: 8px;"><div class="it-Actions_commentCount">2</div><div class="fa fa-fw fa-comment"></div></div><div role="button" tabindex="0" class="SocialMediaShareButton SocialMediaShareButton--twitter" style="margin-top: 16px;"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--twitter "><g><circle cx="32" cy="32" r="31" fill="#00aced"></circle></g><g><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"></path></g></svg></div></div><div role="button" tabindex="0" class="SocialMediaShareButton SocialMediaShareButton--facebook" style="margin-top: 16px;"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--facebook "><g><circle cx="32" cy="32" r="31" fill="#3b5998"></circle></g><g><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></g></svg></div></div></div></div><div class="p-items_main"><div class="p-items_article" data-article-props="{&quot;body&quot;:&quot;\u003cp\u003e※ \u003cem\u003e「\u003ca href=\&quot;http://qiita.com/Yama-to/items/93cd8b3a8be67b09e353\&quot; id=\&quot;reference-f56d834b3331656eb438\&quot;\u003eあなたがRails触る人なら見ておきたい「体系的な」豆知識\u003c/a\u003e」からの派生記事です。\u003c/em\u003e\u003c/p\u003e\n\n\u003cp\u003eRailsでフォームに入力した文章をリロード無しで保存、描画することで最も簡単なAjaxの流れの説明を試みたいと思います。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;ajaxとは\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#ajax%E3%81%A8%E3%81%AF\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eAjaxとは\u003c/h2\u003e\n\n\u003cp\u003e「Ajaxとは」と検索すると大量に説明文が出てきますがよく「非同期通信の総称」とかいう記述を目にします。\u003cbr\u003e\n難しい話はよくわからないので「何かフォームからデータを送信した時にページをリロードせずにデータの保存・描画を行う」ことだとしましょう。以下のような感じです。\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\&quot;https://camo.qiitausercontent.com/f05e9c469f0528f4884425bba26f7bccaca15daf/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966\&quot; target=\&quot;_blank\&quot; rel=\&quot;nofollow noopener\&quot;\u003e\u003cimg src=\&quot;https://camo.qiitausercontent.com/f05e9c469f0528f4884425bba26f7bccaca15daf/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966\&quot; alt=\&quot;Ajaxのイメージ\&quot; data-canonical-src=\&quot;https://i.gyazo.com/f77c7a84e0b2e0a59d6fac2d76405ab9.gif\&quot;\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eいちいちリロードしないとは素晴らしいですね！\u003cbr\u003e\nこれを応用すると「いいねボタン」なども簡単につくれます。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;ajax通信の必要条件\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eAjax通信の必要条件\u003c/h2\u003e\n\n\u003cul\u003e\n\u003cli\u003eformにremote属性がセットされていること\u003c/li\u003e\n\u003cli\u003e対応するアクションが存在すること\u003c/li\u003e\n\u003cli\u003e対応するJSファイルが存在すること\u003c/li\u003e\n\u003c/ul\u003e\n\n\u003cp\u003e実はこれくらいです。\u003cbr\u003e\nファイルを作り、記述をちょちょいっと変えるだけでAjaxは導入できてしまいます。\u003c/p\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;ajax通信のイメージ\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003eAjax通信のイメージ\u003c/h2\u003e\n\n\u003cp\u003e\u003ca href=\&quot;https://camo.qiitausercontent.com/2ed734cd30d6a5974e5dd8b3875db8a145c1d076/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f38323232332f32396532326632632d393631372d643830632d653032612d3966336131303036396534392e706e67\&quot; target=\&quot;_blank\&quot; rel=\&quot;nofollow noopener\&quot;\u003e\u003cimg src=\&quot;https://camo.qiitausercontent.com/2ed734cd30d6a5974e5dd8b3875db8a145c1d076/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f38323232332f32396532326632632d393631372d643830632d653032612d3966336131303036396534392e706e67\&quot; alt=\&quot;ajax.png\&quot; data-canonical-src=\&quot;https://qiita-image-store.s3.amazonaws.com/0/82223/29e22f2c-9617-d80c-e02a-9f3a10069e49.png\&quot;\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003e順を追って見て行きましょう。\u003c/p\u003e\n\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e非同期通信の発生\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003e上記のようにフォームにAjaxを導入したときは、submitボタンを押した時に「 \u003cstrong\u003e非同期通信を行いなさい\u003c/strong\u003e 」という指令がControllerに飛びます。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eJSの応答\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003e非同期通信を行うよう指令を受けたControllerは指定のアクションを実行し、その後テンプレートファイルを読み込みにかかります。\u003c/li\u003e\n\u003cli\u003e通常ここではフォーマットを指定しない限りHTMLファイルが読み込まれますが、「非同期通信を行いなさい」と指定されたControllerはHTMLファイルを読み込まず \u003cstrong\u003eアクション名と対応したJSファイル\u003c/strong\u003e を読み込みにかかります。\u003c/li\u003e\n\u003cli\u003e\n\u003ccode\u003eupdate\u003c/code\u003e アクションを実行したのであれば対応するJSファイルは \u003ccode\u003eupdate.js.erb\u003c/code\u003e です。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eスクリプトの実行\u003c/p\u003e\n\n\u003cul\u003e\n\u003cli\u003eJSファイルが読み込まれると中に記述してあるスクリプトを実行し、一連の処理を終了します。\u003c/li\u003e\n\u003cli\u003eこのスクリプトに「 \u003cstrong\u003eビューの中のこの部分をこのように変更しなさい\u003c/strong\u003e 」という指示を織り込むことで、ページリロードせずともページ内の一部表示が再描画されるのです。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;実際に書いてみる\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003e実際に書いてみる\u003c/h2\u003e\n\n\u003cp\u003e今回題材にするのは、あるプロトタイプの投稿に対する「コメント機能のAjax化」です。\u003cbr\u003e\n上記で示した順序に沿って実装してみましょう。\u003c/p\u003e\n\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003eAjaxする前の段階を確認\u003cbr\u003e\n【 View 】\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;haml\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003eprototypes/show.html.haml\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n  \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003erender\u003c/span\u003e \u003cspan class=\&quot;vi\&quot;\u003e@prototype\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003ecomments\u003c/span\u003e\n\u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n  \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003eform_for\u003c/span\u003e \u003cspan class=\&quot;vi\&quot;\u003e@new_comment\u003c/span\u003e \u003cspan class=\&quot;k\&quot;\u003edo\u003c/span\u003e \u003cspan class=\&quot;o\&quot;\u003e|\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;o\&quot;\u003e|\u003c/span\u003e\n    \u003cspan class=\&quot;nt\&quot;\u003e%h4\u003c/span\u003e Write a comment\n    \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003etext_area\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003e:text\u003c/span\u003e\n    \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003esubmit\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003e:comment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e,\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003eclass: \u003c/span\u003e\u003cspan class=\&quot;s2\&quot;\u003e\&quot;btn btn-primary\&quot;\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;haml\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003eprototypes/_comment.html.haml\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n  \u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n    \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003eimage_tag\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ecomment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003eavatar_thumbnail\u003c/span\u003e\n  \u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n    \u003cspan class=\&quot;nt\&quot;\u003e%h4\u003c/span\u003e\n      \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ecomment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003euser\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003ename\u003c/span\u003e\n    \u003cspan class=\&quot;nt\&quot;\u003e%p\u003c/span\u003e\n      \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ecomment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003etext\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cp\u003e【 Controller 】\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;ruby\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003ecomments_controller.rb\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;k\&quot;\u003edef\u003c/span\u003e \u003cspan class=\&quot;nf\&quot;\u003ecreate\u003c/span\u003e\n  \u003cspan class=\&quot;no\&quot;\u003eComment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003ecreate\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e(\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003ecomment_params\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e)\u003c/span\u003e\n  \u003cspan class=\&quot;vi\&quot;\u003e@prototype\u003c/span\u003e \u003cspan class=\&quot;o\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;no\&quot;\u003ePrototype\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003efind\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e(\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003eparams\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e[\u003c/span\u003e\u003cspan class=\&quot;ss\&quot;\u003e:id\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e])\u003c/span\u003e\n  \u003cspan class=\&quot;n\&quot;\u003eredirect_to\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003eprototype_path\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e(\u003c/span\u003e\u003cspan class=\&quot;vi\&quot;\u003e@prototype\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e)\u003c/span\u003e\n\u003cspan class=\&quot;k\&quot;\u003eend\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cul\u003e\n\u003cli\u003eコメントを書いて投稿ボタンを押すと、「ページがリロードされて書いたコメントが表示される」という何の変哲もないフォームです。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e投稿ボタンを押した時に非同期通信が走るようにする\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;haml\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003esample.html.haml\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;nf\&quot;\u003e#comments\u003c/span\u003e\n  \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003erender\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003epartial: \u003c/span\u003e\u003cspan class=\&quot;s1\&quot;\u003e&#39;prototypes/comment&#39;\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e,\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003ecollection: \u003c/span\u003e\u003cspan class=\&quot;vi\&quot;\u003e@prototype\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003ecomments\u003c/span\u003e\n\u003cspan class=\&quot;nt\&quot;\u003e%div\u003c/span\u003e\n  \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003eform_for\u003c/span\u003e \u003cspan class=\&quot;vi\&quot;\u003e@new_comment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e,\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003eremote: \u003c/span\u003e\u003cspan class=\&quot;kp\&quot;\u003etrue\u003c/span\u003e \u003cspan class=\&quot;k\&quot;\u003edo\u003c/span\u003e \u003cspan class=\&quot;o\&quot;\u003e|\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;o\&quot;\u003e|\u003c/span\u003e\n    \u003cspan class=\&quot;nt\&quot;\u003e%h4\u003c/span\u003e Write a comment\n    \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003etext_area\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003e:text\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e,\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003eid: \u003c/span\u003e\u003cspan class=\&quot;s2\&quot;\u003e\&quot;comment_field\&quot;\u003c/span\u003e\n    \u003cspan class=\&quot;p\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;n\&quot;\u003ef\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003esubmit\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003e:comment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e,\u003c/span\u003e \u003cspan class=\&quot;ss\&quot;\u003eclass: \u003c/span\u003e\u003cspan class=\&quot;s2\&quot;\u003e\&quot;btn btn-primary\&quot;\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;haml\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003eprototypes/_comment.html.haml\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;c\&quot;\u003e-# 変更なし\n\u003c/span\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cul\u003e\n\u003cli\u003eまずは送信ボタンを押した際に「非同期通信を行いなさい」という指令が出るようにしたいのですが、これは \u003ccode\u003eform_for\u003c/code\u003e に対して \u003ccode\u003eremote: true\u003c/code\u003e を設定して完了です。\u003c/li\u003e\n\u003cli\u003e後々JSによる操作を行いやすくするために、「コメントを表示する部分(\u003ccode\u003e#comments\u003c/code\u003e)」と「コメントを入力するフィールド(\u003ccode\u003e#comment_field\u003c/code\u003e)」にそれぞれ固有のidを付与しています。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e非同期通信が走った後に投稿を保存しJSのテンプレートファイルを呼び出す\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;ruby\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003ecomments_controller.rb\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e\u003cspan class=\&quot;k\&quot;\u003edef\u003c/span\u003e \u003cspan class=\&quot;nf\&quot;\u003ecreate\u003c/span\u003e\n  \u003cspan class=\&quot;no\&quot;\u003eComment\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003ecreate\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e(\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003ecomment_params\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e)\u003c/span\u003e\n  \u003cspan class=\&quot;vi\&quot;\u003e@prototype\u003c/span\u003e \u003cspan class=\&quot;o\&quot;\u003e=\u003c/span\u003e \u003cspan class=\&quot;no\&quot;\u003ePrototype\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e.\u003c/span\u003e\u003cspan class=\&quot;nf\&quot;\u003efind\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e(\u003c/span\u003e\u003cspan class=\&quot;n\&quot;\u003eparams\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e[\u003c/span\u003e\u003cspan class=\&quot;ss\&quot;\u003e:id\u003c/span\u003e\u003cspan class=\&quot;p\&quot;\u003e])\u003c/span\u003e\n\u003cspan class=\&quot;k\&quot;\u003eend\u003c/span\u003e\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cul\u003e\n\u003cli\u003eredirect処理を消去しただけです。これでアクション名と対応したJSテンプレートファイルを読み込みにいってくれます。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eスクリプトを実行してコメント部分のみ再描画する\u003c/p\u003e\n\n\u003cdiv class=\&quot;code-frame\&quot; data-lang=\&quot;html+erb\&quot;\u003e\n\u003cdiv class=\&quot;code-lang\&quot;\u003e\u003cspan class=\&quot;bold\&quot;\u003ecomments/create.js.erb\u003c/span\u003e\u003c/div\u003e\n\u003cdiv class=\&quot;highlight\&quot;\u003e\u003cpre\u003e$(&#39;#comment_field&#39;).val(&#39;&#39;);\n$(&#39;#comments&#39;).html(\n  &#39;\u0026lt;%= j(render partial: &#39;prototypes/comment&#39;, collection: @prototype.comments) %\u0026gt;&#39;\n);\n\u003c/pre\u003e\u003c/div\u003e\n\u003c/div\u003e\n\n\u003cul\u003e\n\u003cli\u003eJSテンプレートファイルは \u003ccode\u003ejs.erb\u003c/code\u003e 形式で他のビューファイルと同ディレクトリに作成し、読み込まれるとファイル中のスクリプトを実行してくれます。\u003c/li\u003e\n\u003cli\u003e今回の場合は、投稿ボタンを押したタイミングで以下の動作を行っています。\n\n\u003col\u003e\n\u003cli\u003eコメントを入力するフィールドの文字を消去し\n\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e$(&#39;#comment_field&#39;).val(&#39;&#39;);\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eコメントを表示する部分のHTMLを再描画する\n\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e$(&#39;#comments&#39;).html(&#39;\u0026lt;%= j(render partial: &#39;prototypes/comment&#39;, collection: @prototype.comments) %\u0026gt;&#39;);\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ccode\u003ejメソッド\u003c/code\u003e はビューヘルパーである \u003ccode\u003eescape_javascriptメソッド\u003c/code\u003e のエイリアスです。クォーテーションや改行をエスケープしてくれるため、慣習的に付けておきます。\u003c/li\u003e\n\u003cli\u003e今回使用しているように、JSテンプレート内では外部の部分テンプレートも問題なく呼び出すことができます。\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\n\u003ch2\u003e\n\u003cspan id=\&quot;動作を確認してみる\&quot; class=\&quot;fragment\&quot;\u003e\u003c/span\u003e\u003ca href=\&quot;#%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B\&quot;\u003e\u003ci class=\&quot;fa fa-link\&quot;\u003e\u003c/i\u003e\u003c/a\u003e動作を確認してみる\u003c/h2\u003e\n\n\u003cp\u003eここまでで大方仕様は作りこめたので、動かしてみましょう+（0ﾟ・∀・） + ﾜｸﾃｶ +\u003c/p\u003e\n\n\u003cp\u003e＼\\ ポチッ! /／\u003cbr\u003e\n\u003ca href=\&quot;https://camo.qiitausercontent.com/f05e9c469f0528f4884425bba26f7bccaca15daf/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966\&quot; target=\&quot;_blank\&quot; rel=\&quot;nofollow noopener\&quot;\u003e\u003cimg src=\&quot;https://camo.qiitausercontent.com/f05e9c469f0528f4884425bba26f7bccaca15daf/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966\&quot; alt=\&quot;Ajaxのイメージ\&quot; data-canonical-src=\&quot;https://i.gyazo.com/f77c7a84e0b2e0a59d6fac2d76405ab9.gif\&quot;\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eうごいたぁぁぁぁ！！\u003c/p\u003e\n\n\u003cp\u003eカウンター部分は今回解説に含めていないので、どうすればできそうか考えてみてください。\u003cbr\u003e\nちなみに応用するといいねボタンもつくれます。\u003cbr\u003e\n\u003ca href=\&quot;https://camo.qiitausercontent.com/abdf73db23aad8a4408744c7adc549b7f9c03090/68747470733a2f2f692e6779617a6f2e636f6d2f34386634383232343964316338356466353461366561373230386362613630662e676966\&quot; target=\&quot;_blank\&quot; rel=\&quot;nofollow noopener\&quot;\u003e\u003cimg src=\&quot;https://camo.qiitausercontent.com/abdf73db23aad8a4408744c7adc549b7f9c03090/68747470733a2f2f692e6779617a6f2e636f6d2f34386634383232343964316338356466353461366561373230386362613630662e676966\&quot; alt=\&quot;いいねボタン\&quot; data-canonical-src=\&quot;https://i.gyazo.com/48f482249d1c85df54a6ea7208cba60f.gif\&quot;\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eこんな感じですが、まずは習うより慣れろです！\u003cbr\u003e\nコピペでも構わないので、まずは自分の今書いているコードに導入してみてください。\u003c/p\u003e\n&quot;,&quot;commentsCount&quot;:2,&quot;createdAtInUnixtime&quot;:1438944446,&quot;elapsedYearsFromUpdatedAt&quot;:3,&quot;id&quot;:320924,&quot;isBanned&quot;:false,&quot;isDeprecated&quot;:true,&quot;isDestroyable&quot;:false,&quot;isEditRequestSendable&quot;:true,&quot;isLikable&quot;:true,&quot;isLiked&quot;:false,&quot;isPublic&quot;:true,&quot;isSecret&quot;:false,&quot;isSlide&quot;:false,&quot;isStockable&quot;:true,&quot;isStocked&quot;:false,&quot;isUpdatable&quot;:false,&quot;isUpdated&quot;:true,&quot;likeUrl&quot;:&quot;https://qiita.com/api/internal/items/377f8a92cf30a3ebf454/likes&quot;,&quot;likesCount&quot;:99,&quot;qiitadonShareText&quot;:&quot;モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう by Yama-to https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454 #Qiita #JavaScript #Rails #Ajax&quot;,&quot;qiitadonIconUrl&quot;:&quot;https://cdn.qiita.com/assets/public/qiitadon-fa-icon-58373fa5fae3270777c5c30bfa06cf27.svg&quot;,&quot;showUrl&quot;:&quot;https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454&quot;,&quot;stockUrl&quot;:&quot;https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/stock&quot;,&quot;title&quot;:&quot;モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう&quot;,&quot;toc&quot;:&quot;\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#ajax%E3%81%A8%E3%81%AF\&quot;\u003eAjaxとは\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6\&quot;\u003eAjax通信の必要条件\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8\&quot;\u003eAjax通信のイメージ\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B\&quot;\u003e実際に書いてみる\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\&quot;#%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B\&quot;\u003e動作を確認してみる\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n&quot;,&quot;totalPv&quot;:5807,&quot;unstockUrl&quot;:&quot;https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/unstock&quot;,&quot;updatedAtInUnixtime&quot;:1441769469,&quot;uuid&quot;:&quot;377f8a92cf30a3ebf454&quot;,&quot;author&quot;:{&quot;contribution&quot;:4462,&quot;description&quot;:&quot;&quot;,&quot;followUrl&quot;:&quot;https://qiita.com/Yama-to/follow&quot;,&quot;isFollowed&quot;:false,&quot;name&quot;:&quot;Yamato&quot;,&quot;profileImageUrl&quot;:&quot;https://qiita-image-store.s3.amazonaws.com/0/82223/profile-images/1473702376&quot;,&quot;publicArticlesCount&quot;:19,&quot;showUrl&quot;:&quot;https://qiita.com/Yama-to&quot;,&quot;unfollowUrl&quot;:&quot;https://qiita.com/Yama-to/unfollow&quot;,&quot;urlName&quot;:&quot;Yama-to&quot;,&quot;organizationUrlNames&quot;:[]},&quot;viewer&quot;:{&quot;contribution&quot;:0,&quot;tagNames&quot;:[&quot;Rails&quot;],&quot;followersCount&quot;:0,&quot;articlesCount&quot;:0,&quot;organizationUrlNames&quot;:[],&quot;isGitHubLoginEnabled&quot;:false},&quot;tags&quot;:[{&quot;isFollowed&quot;:false,&quot;largeIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/cafc148eac97675ba077fb5a70ad741d0c9b532c/large.jpg?1554725663&quot;,&quot;mediumIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/7e67c6a2d1e2fc39283fe28cfd5f065b93bbb15a/medium.jpg?1554725663&quot;,&quot;name&quot;:&quot;JavaScript&quot;,&quot;showUrl&quot;:&quot;https://qiita.com/tags/Yama-to&quot;,&quot;thumbIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/c2d98c829fa3b9f6ca06ff21777b93c276aa6887/thumb.jpg?1554725663&quot;,&quot;urlName&quot;:&quot;javascript&quot;},{&quot;isFollowed&quot;:false,&quot;largeIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/fbcd7bf42d36cab8fa48912f8aca898972ab8819/large.jpg?1554029821&quot;,&quot;mediumIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/353fa0bbbfd79c4e8837b9c0b13232d80c32c6e8/medium.jpg?1554029821&quot;,&quot;name&quot;:&quot;Rails&quot;,&quot;showUrl&quot;:&quot;https://qiita.com/tags/Yama-to&quot;,&quot;thumbIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/fa4999320d564d8c14293cf8fc4465e4c809a737/thumb.jpg?1554029821&quot;,&quot;urlName&quot;:&quot;rails&quot;},{&quot;isFollowed&quot;:false,&quot;largeIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/0114cbd294b96e0de85f3dfdb473231321271cd6/large.jpg?1556175668&quot;,&quot;mediumIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/4fbf6c714a18eda62390750920d7d07386cb601c/medium.jpg?1556175668&quot;,&quot;name&quot;:&quot;Ajax&quot;,&quot;showUrl&quot;:&quot;https://qiita.com/tags/Yama-to&quot;,&quot;thumbIconUrl&quot;:&quot;https://s3-ap-northeast-1.amazonaws.com/qiita-tag-image/20cb93753e9bc2d65580e91bb178d508e3032916/thumb.jpg?1556175668&quot;,&quot;urlName&quot;:&quot;ajax&quot;}]}" data-following-likers-props="[]"><div class="it-Header"><div class="u-flex-center-between mb-3"><div class="it-Header_info"><div class="it-Header_author"><a href="https://qiita.com/Yama-to"><img class="it-Header_authorImage" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1473702376"></a> <a class="it-Header_authorName" href="https://qiita.com/Yama-to">@Yama-to</a> </div><div class="it-Header_time"><meta content="2015-08-07T19:47:26+09:00" itemprop="datePublished"><span data-toggle="tooltip" title="" data-original-title="2015年08月07日に投稿"><time datetime="2015-09-09T12:31:09+09:00" itemprop="dateModified">2015年09月09日</time>に更新</span></div><div class="it-Header_meta"><div class="it-Header_manipulate"><div class="it-Header_dropdown"><a class="it-Header_dropdownToggle" data-toggle="dropdown" href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#"><span class="fa fa-ellipsis-h fa-lg"></span></a><ul class="dropdown-menu dropdown-menu-right"><div class="it-Header_dropdown-title">記事の改善</div><li class="dropdown__item"><a href="https://qiita.com/drafts/377f8a92cf30a3ebf454/edit"><span class="fa fa-fw fa-code-fork"></span> 編集リクエストを送る</a></li><li class="divider" role="separator"></li><div class="it-Header_dropdown-title">記事の情報</div><li class="dropdown__item"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/revisions"><span class="fa fa-fw fa-history"></span> 編集履歴</a></li><li class="dropdown__item"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/patches"><span class="fa fa-fw fa-inbox"></span> 編集リクエスト一覧</a></li><li class="dropdown__item"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/likers"><span class="fa fa-fw fa-thumbs-up"></span> いいねしたユーザー一覧</a></li><li class="dropdown__item"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454.md"><span class="fa fa-fw fa-file-text-o"></span> Markdownで本文を見る</a></li><li class="divider" role="separator"></li><li class="dropdown__item"><a rel="nofollow" data-method="post" href="https://qiita.com/377f8a92cf30a3ebf454/items/377f8a92cf30a3ebf454/subscribe"><span class="fa fa-fw fa-volume-up"></span>記事を購読する</a></li><li class="dropdown__item"><a data-target=".js-report-form" data-toggle="modal" href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#"><span class="fa fa-fw fa-flag"></span> 問題がある記事を報告する</a></li></ul></div></div></div></div></div><h1 class="it-Header_title" itemprop="headline">モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう</h1><div class="it-Tags"><a class="it-Tags_item" href="https://qiita.com/tags/javascript"><span>JavaScript</span></a><a class="it-Tags_item" href="https://qiita.com/tags/rails"><span>Rails</span></a><a class="it-Tags_item" href="https://qiita.com/tags/ajax"><span>Ajax</span></a></div></div><div class="it-ActionsMobile it-ActionsMobile-disableSticky"><div class="it-ActionsMobile_like likable" data-effect="solid" data-offset="{&#39;top&#39;: 0, &#39;right&#39;: 30}"><button><span class="fa fa-fw fa-thumbs-up" style="margin-right: 4px;"></span><span>99</span></button></div><div class="it-ActionsMobile_stock"><div class="StockButton isNextMobile"><div class="StockButton isNextMobile"><button><div class="StockButton__stock"><div class="fa-stack"><span class="fa fa-folder-open fa-stack-1x unstock" style="font-size: 24px;"></span></div></div></button></div></div></div></div><div data-mount-target="mobileArticleActions"></div><div class="it-DeprecationAlert_three mb-5 p-2"><span class="fa fa-warning mr-1"></span>この記事は最終更新日から3年以上が経過しています。</div><section class="it-MdContent" itemprop="articleBody"><div id="item-377f8a92cf30a3ebf454"><p>※ <em>「<a href="http://qiita.com/Yama-to/items/93cd8b3a8be67b09e353" id="reference-f56d834b3331656eb438">あなたがRails触る人なら見ておきたい「体系的な」豆知識</a>」からの派生記事です。</em></p>
+
+<p>Railsでフォームに入力した文章をリロード無しで保存、描画することで最も簡単なAjaxの流れの説明を試みたいと思います。</p>
+
+<h2>
+<span id="ajaxとは" class="fragment"></span><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E3%81%A8%E3%81%AF"><i class="fa fa-link"></i></a>Ajaxとは</h2>
+
+<p>「Ajaxとは」と検索すると大量に説明文が出てきますがよく「非同期通信の総称」とかいう記述を目にします。<br>
+難しい話はよくわからないので「何かフォームからデータを送信した時にページをリロードせずにデータの保存・描画を行う」ことだとしましょう。以下のような感じです。</p>
+
+<p><a href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966" target="_blank" rel="nofollow noopener"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966" alt="Ajaxのイメージ" data-canonical-src="https://i.gyazo.com/f77c7a84e0b2e0a59d6fac2d76405ab9.gif"></a></p>
+
+<p>いちいちリロードしないとは素晴らしいですね！<br>
+これを応用すると「いいねボタン」なども簡単につくれます。</p>
+
+<h2>
+<span id="ajax通信の必要条件" class="fragment"></span><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><i class="fa fa-link"></i></a>Ajax通信の必要条件</h2>
+
+<ul>
+<li>formにremote属性がセットされていること</li>
+<li>対応するアクションが存在すること</li>
+<li>対応するJSファイルが存在すること</li>
+</ul>
+
+<p>実はこれくらいです。<br>
+ファイルを作り、記述をちょちょいっと変えるだけでAjaxは導入できてしまいます。</p>
+
+<h2>
+<span id="ajax通信のイメージ" class="fragment"></span><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8"><i class="fa fa-link"></i></a>Ajax通信のイメージ</h2>
+
+<p><a href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f38323232332f32396532326632632d393631372d643830632d653032612d3966336131303036396534392e706e67" target="_blank" rel="nofollow noopener"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e616d617a6f6e6177732e636f6d2f302f38323232332f32396532326632632d393631372d643830632d653032612d3966336131303036396534392e706e67" alt="ajax.png" data-canonical-src="https://qiita-image-store.s3.amazonaws.com/0/82223/29e22f2c-9617-d80c-e02a-9f3a10069e49.png"></a></p>
+
+<p>順を追って見て行きましょう。</p>
+
+<ol>
+<li>
+<p>非同期通信の発生</p>
+
+<ul>
+<li>上記のようにフォームにAjaxを導入したときは、submitボタンを押した時に「 <strong>非同期通信を行いなさい</strong> 」という指令がControllerに飛びます。</li>
+</ul>
+</li>
+<li>
+<p>JSの応答</p>
+
+<ul>
+<li>非同期通信を行うよう指令を受けたControllerは指定のアクションを実行し、その後テンプレートファイルを読み込みにかかります。</li>
+<li>通常ここではフォーマットを指定しない限りHTMLファイルが読み込まれますが、「非同期通信を行いなさい」と指定されたControllerはHTMLファイルを読み込まず <strong>アクション名と対応したJSファイル</strong> を読み込みにかかります。</li>
+<li>
+<code>update</code> アクションを実行したのであれば対応するJSファイルは <code>update.js.erb</code> です。</li>
+</ul>
+</li>
+<li>
+<p>スクリプトの実行</p>
+
+<ul>
+<li>JSファイルが読み込まれると中に記述してあるスクリプトを実行し、一連の処理を終了します。</li>
+<li>このスクリプトに「 <strong>ビューの中のこの部分をこのように変更しなさい</strong> 」という指示を織り込むことで、ページリロードせずともページ内の一部表示が再描画されるのです。</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<span id="実際に書いてみる" class="fragment"></span><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B"><i class="fa fa-link"></i></a>実際に書いてみる</h2>
+
+<p>今回題材にするのは、あるプロトタイプの投稿に対する「コメント機能のAjax化」です。<br>
+上記で示した順序に沿って実装してみましょう。</p>
+
+<ol>
+<li>
+<p>Ajaxする前の段階を確認<br>
+【 View 】</p>
+
+<div class="code-frame" data-lang="haml">
+<div class="code-lang"><span class="bold">prototypes/show.html.haml</span></div>
+<div class="highlight"><pre><span class="nt">%div</span>
+  <span class="p">=</span> <span class="n">render</span> <span class="vi">@prototype</span><span class="p">.</span><span class="nf">comments</span>
+<span class="nt">%div</span>
+  <span class="p">=</span> <span class="n">form_for</span> <span class="vi">@new_comment</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="nt">%h4</span> Write a comment
+    <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">text_area</span> <span class="ss">:text</span>
+    <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">submit</span> <span class="ss">:comment</span><span class="p">,</span> <span class="ss">class: </span><span class="s2">"btn btn-primary"</span>
+</pre></div>
+</div>
+
+<div class="code-frame" data-lang="haml">
+<div class="code-lang"><span class="bold">prototypes/_comment.html.haml</span></div>
+<div class="highlight"><pre><span class="nt">%div</span>
+  <span class="nt">%div</span>
+    <span class="p">=</span> <span class="n">image_tag</span> <span class="n">comment</span><span class="p">.</span><span class="nf">avatar_thumbnail</span>
+  <span class="nt">%div</span>
+    <span class="nt">%h4</span>
+      <span class="p">=</span> <span class="n">comment</span><span class="p">.</span><span class="nf">user</span><span class="p">.</span><span class="nf">name</span>
+    <span class="nt">%p</span>
+      <span class="p">=</span> <span class="n">comment</span><span class="p">.</span><span class="nf">text</span>
+</pre></div>
+</div>
+
+<p>【 Controller 】</p>
+
+<div class="code-frame" data-lang="ruby">
+<div class="code-lang"><span class="bold">comments_controller.rb</span></div>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">create</span>
+  <span class="no">Comment</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">comment_params</span><span class="p">)</span>
+  <span class="vi">@prototype</span> <span class="o">=</span> <span class="no">Prototype</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+  <span class="n">redirect_to</span> <span class="n">prototype_path</span><span class="p">(</span><span class="vi">@prototype</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+
+<ul>
+<li>コメントを書いて投稿ボタンを押すと、「ページがリロードされて書いたコメントが表示される」という何の変哲もないフォームです。</li>
+</ul>
+</li>
+<li>
+<p>投稿ボタンを押した時に非同期通信が走るようにする</p>
+
+<div class="code-frame" data-lang="haml">
+<div class="code-lang"><span class="bold">sample.html.haml</span></div>
+<div class="highlight"><pre><span class="nf">#comments</span>
+  <span class="p">=</span> <span class="n">render</span> <span class="ss">partial: </span><span class="s1">'prototypes/comment'</span><span class="p">,</span> <span class="ss">collection: </span><span class="vi">@prototype</span><span class="p">.</span><span class="nf">comments</span>
+<span class="nt">%div</span>
+  <span class="p">=</span> <span class="n">form_for</span> <span class="vi">@new_comment</span><span class="p">,</span> <span class="ss">remote: </span><span class="kp">true</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="nt">%h4</span> Write a comment
+    <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">text_area</span> <span class="ss">:text</span><span class="p">,</span> <span class="ss">id: </span><span class="s2">"comment_field"</span>
+    <span class="p">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">submit</span> <span class="ss">:comment</span><span class="p">,</span> <span class="ss">class: </span><span class="s2">"btn btn-primary"</span>
+</pre></div>
+</div>
+
+<div class="code-frame" data-lang="haml">
+<div class="code-lang"><span class="bold">prototypes/_comment.html.haml</span></div>
+<div class="highlight"><pre><span class="c">-# 変更なし
+</span></pre></div>
+</div>
+
+<ul>
+<li>まずは送信ボタンを押した際に「非同期通信を行いなさい」という指令が出るようにしたいのですが、これは <code>form_for</code> に対して <code>remote: true</code> を設定して完了です。</li>
+<li>後々JSによる操作を行いやすくするために、「コメントを表示する部分(<code>#comments</code>)」と「コメントを入力するフィールド(<code>#comment_field</code>)」にそれぞれ固有のidを付与しています。</li>
+</ul>
+</li>
+<li>
+<p>非同期通信が走った後に投稿を保存しJSのテンプレートファイルを呼び出す</p>
+
+<div class="code-frame" data-lang="ruby">
+<div class="code-lang"><span class="bold">comments_controller.rb</span></div>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">create</span>
+  <span class="no">Comment</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">comment_params</span><span class="p">)</span>
+  <span class="vi">@prototype</span> <span class="o">=</span> <span class="no">Prototype</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+
+<ul>
+<li>redirect処理を消去しただけです。これでアクション名と対応したJSテンプレートファイルを読み込みにいってくれます。</li>
+</ul>
+</li>
+<li>
+<p>スクリプトを実行してコメント部分のみ再描画する</p>
+
+<div class="code-frame" data-lang="html+erb">
+<div class="code-lang"><span class="bold">comments/create.js.erb</span></div>
+<div class="highlight"><pre>$('#comment_field').val('');
+$('#comments').html(
+  '&lt;%= j(render partial: 'prototypes/comment', collection: @prototype.comments) %&gt;'
+);
+</pre></div>
+</div>
+
+<ul>
+<li>JSテンプレートファイルは <code>js.erb</code> 形式で他のビューファイルと同ディレクトリに作成し、読み込まれるとファイル中のスクリプトを実行してくれます。</li>
+<li>今回の場合は、投稿ボタンを押したタイミングで以下の動作を行っています。
+
+<ol>
+<li>コメントを入力するフィールドの文字を消去し
+
+<ul>
+<li><code>$('#comment_field').val('');</code></li>
+</ul>
+</li>
+<li>コメントを表示する部分のHTMLを再描画する
+
+<ul>
+<li><code>$('#comments').html('&lt;%= j(render partial: 'prototypes/comment', collection: @prototype.comments) %&gt;');</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<code>jメソッド</code> はビューヘルパーである <code>escape_javascriptメソッド</code> のエイリアスです。クォーテーションや改行をエスケープしてくれるため、慣習的に付けておきます。</li>
+<li>今回使用しているように、JSテンプレート内では外部の部分テンプレートも問題なく呼び出すことができます。</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<span id="動作を確認してみる" class="fragment"></span><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B"><i class="fa fa-link"></i></a>動作を確認してみる</h2>
+
+<p>ここまでで大方仕様は作りこめたので、動かしてみましょう+（0ﾟ・∀・） + ﾜｸﾃｶ +</p>
+
+<p>＼\ ポチッ! /／<br>
+<a href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966" target="_blank" rel="nofollow noopener"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f66373763376138346530623265306135396436666163326437363430356162392e676966" alt="Ajaxのイメージ" data-canonical-src="https://i.gyazo.com/f77c7a84e0b2e0a59d6fac2d76405ab9.gif"></a></p>
+
+<p>うごいたぁぁぁぁ！！</p>
+
+<p>カウンター部分は今回解説に含めていないので、どうすればできそうか考えてみてください。<br>
+ちなみに応用するといいねボタンもつくれます。<br>
+<a href="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f34386634383232343964316338356466353461366561373230386362613630662e676966" target="_blank" rel="nofollow noopener"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/68747470733a2f2f692e6779617a6f2e636f6d2f34386634383232343964316338356466353461366561373230386362613630662e676966" alt="いいねボタン" data-canonical-src="https://i.gyazo.com/48f482249d1c85df54a6ea7208cba60f.gif"></a></p>
+
+<p>こんな感じですが、まずは習うより慣れろです！<br>
+コピペでも構わないので、まずは自分の今書いているコードに導入してみてください。</p>
+</div></section><div data-mount-target="articleFooterMenu"><div class="it-Footer"><div class="it-Footer_actions"><div class="it-Footer_editRequest"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/edit" class="u-link-no-underline" data-effect="solid" data-tip="投稿者に記事をより良くするための提案ができます 💪" currentitem="false"><i class="fa fa-fw fa-code-fork"></i><span>編集リクエスト</span></a></div><div class="it-Footer_stock"><button><span class="fa fa-folder-open"></span><span class="it-Footer_stockLabel">ストック</span></button></div><div class="it-Footer_like"><div class="LikeButton"><button class="p-button"><i class="fa fa-fw fa-thumbs-up"></i><span>いいね</span></button><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454/likers" class="LikeButton__balloon">99</a></div></div></div><div class="it-Footer_social"><div role="button" tabindex="0" class="SocialMediaShareButton SocialMediaShareButton--twitter" style="margin-right: 0px; margin-top: 0px;"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--twitter "><g><circle cx="32" cy="32" r="31" fill="#00aced"></circle></g><g><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"></path></g></svg></div></div><div role="button" tabindex="0" class="SocialMediaShareButton SocialMediaShareButton--facebook" style="margin-right: 0px; margin-top: 0px;"><div style="width: 32px; height: 32px;"><svg viewBox="0 0 64 64" fill="white" width="32" height="32" class="social-icon social-icon--facebook "><g><circle cx="32" cy="32" r="31" fill="#3b5998"></circle></g><g><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"></path></g></svg></div></div><div class="it-Footer_shareButton it-Footer_shareButton-qiitadon"><button><a href="https://qiitadon.com/share?text=%E3%83%A2%E3%83%A2%E3%83%B3%E3%82%AC%E3%81%A7%E3%82%82%E4%BD%BF%E3%81%88%E3%82%8BAjax%EF%BC%88%E3%81%88%E3%81%84%E3%81%98%E3%82%83%E3%81%A3%E3%81%8F%E3%81%99%EF%BC%89%20%E2%88%92%20%E6%8A%95%E7%A8%BF%E3%81%97%E3%81%9F%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%82%92%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%9B%E3%81%9A%E3%81%AB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%82%88%E3%81%86%20by%20Yama-to%20https%3A%2F%2Fqiita.com%2FYama-to%2Fitems%2F377f8a92cf30a3ebf454%20%23Qiita%20%23JavaScript%20%23Rails%20%23Ajax" target="_blank"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/qiitadon-fa-icon-58373fa5fae3270777c5c30bfa06cf27.svg"></a></button></div></div><div class="__react_component_tooltip place-top type-dark " data-id="tooltip"></div></div></div><div class="ai-Container" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><div class="ai-User"><a href="https://qiita.com/Yama-to"><img class="ai-User_image" itemprop="image" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1473702376"></a><div class="ai-User_body"><div class="ai-User_header"><a class="ai-User_urlname" itemprop="name" href="https://qiita.com/Yama-to">@Yama-to</a></div><div class="ai-User_description"></div><div class="ai-User_footer"><script type="application/json" id="js-react-on-rails-context">{}</script>
+<div id="UserFollowButton-react-component-39d5ec99-9bf3-49ff-a738-b927bb26e235"><span class="userFollowButton"><button class="btn btn-default btn-block userFollowButton_inner btn-xs"><i class="i fa fa-user-plus"></i>フォロー</button></span></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="UserFollowButton" data-dom-id="UserFollowButton-react-component-39d5ec99-9bf3-49ff-a738-b927bb26e235">{"initial_followed_by":false,"position":"ArticleAuthorInfo","size":"btn-xs","url_name":"Yama-to"}</script>
+      
+</div></div></div></div></div><div style="text-align: center; margin-right: -12px; margin-left: -12px;"><div style="display: inline-block; margin-top: 48px; vertical-align: top; margin-right: 8px;"><div id="dfp-slot-footer-left" data-google-query-id="CMaQoPT7zOMCFYpuYAod-SEEAw" style="height: 280px; width: 336px;"><div id="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-left_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-left_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-left_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="2" data-load-complete="true" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/saved_resource.html"></iframe></div></div></div><div style="display: inline-block; margin-top: 48px; vertical-align: top;"><div id="dfp-slot-footer-right" data-google-query-id="CMeQoPT7zOMCFYpuYAod-SEEAw" style="height: 280px; width: 336px;"><div id="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-right_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-right_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_loginuser_under-article-right_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="3" data-load-complete="true" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/saved_resource(1).html"></iframe></div></div><div style="margin-top: 4px; text-align: right; font-size: 0.9em;"><a href="http://blog.qiita.com/post/176483510744/community-sponsor" target="_blank"><i class="fa fa-fw fa-info-circle"></i><span>コミュニティスポンサー広告</span></a></div></div></div></div><div class="p-items_options"><div id="dfp-slot-sidebar-top" data-google-query-id="CMWQoPT7zOMCFYpuYAod-SEEAw" style="width: 300px; height: 250px; margin-top: 16px;"><div id="google_ads_iframe_/383564218/qiita.com_loginuser_sidebar-top_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/383564218/qiita.com_loginuser_sidebar-top_0" title="3rd party ad content" name="google_ads_iframe_/383564218/qiita.com_loginuser_sidebar-top_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/saved_resource(2).html"></iframe></div></div><div style="margin-top: 4px; text-align: right; font-size: 0.9em;"><a href="http://blog.qiita.com/post/176483510744/community-sponsor" target="_blank"><i class="fa fa-fw fa-info-circle"></i><span>コミュニティスポンサー広告</span></a></div></div><div class="p-items_toc"><div id="Toc-react-component-8048d405-aace-47c5-8018-b0d0524b10d0"><div class="tocTree"><div class="tocTree_contents nav" style="max-height: 578px;"><ul>
+<li class="">
+<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E3%81%A8%E3%81%AF">Ajaxとは</a>
+</li>
+<li class="">
+<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6">Ajax通信の必要条件</a>
+</li>
+<li class="">
+<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">Ajax通信のイメージ</a>
+</li>
+<li class="">
+<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B">実際に書いてみる</a>
+</li>
+<li class="active">
+<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">動作を確認してみる</a>
+</li>
+</ul>
+</div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="Toc" data-dom-id="Toc-react-component-8048d405-aace-47c5-8018-b0d0524b10d0">{"body":"\u003cul\u003e\n\u003cli\u003e\n\u003ca href=\"#ajax%E3%81%A8%E3%81%AF\"\u003eAjaxとは\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6\"\u003eAjax通信の必要条件\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#ajax%E9%80%9A%E4%BF%A1%E3%81%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8\"\u003eAjax通信のイメージ\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#%E5%AE%9F%E9%9A%9B%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%BF%E3%82%8B\"\u003e実際に書いてみる\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003ca href=\"#%E5%8B%95%E4%BD%9C%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B\"\u003e動作を確認してみる\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n"}</script>
+      
+</div></div></div><div class="p-items_container"><div class="p-items_leftDummy"></div><div class="p-items_main"><div class="p-items_aside mt-5"><div id="logly-lift-4279494"><div id="logly-lift-widget">  <div id="logly-lift-widget-header">    <span>関連記事</span>    <span class="logly-lift-credit logly-lift-credit2"><a href="https://www.logly.co.jp/privacy.html" target="_top" rel="nofollow">Recommended by <span class="logly-lift-credit-logo" title="logly"></span></a></span>  </div>  <div id="logly-lift-widget-content">    <div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/d773a1dca884eea90e906443d09a24e8" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/mikan3rd/items/0cafbcd060c0c1d33b42" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLYo40R5dU9IycVxr_3MAimYz1C9FAbxog3gJ6548VrIho-zQ5Z4aCw4Qx3h2B6T1Gk7WMEsTNkRK-4AMyM2Wpw9amGUJtDsjdU2xOzYNUTMfTdDkLYd4E7q1myJzxmcuJXQBB_5POESWF6gLMU6HV0kEyA_GLyrf34Mrq6qo3uVHGFwvjPodMATjuTvRLuK44uTlQ1q6Bnl_gdL5BqVJWE1ODSV_6hsxfNmD_kVR5ZTHH7NAKDkSXompJQC3jvUCFcv25USNnTL07R7v2n32AHqjYqx8uCoKIWb0FagzvBmtL0wWqmdeLdNXA5FNliBqLGTNREtp6yGHpKgouq2E35iCGFT9gjIxdTkk-am-wqD-fddJZ3Ro3TlXbJUYJohbJwUXOEQ6QshFv1A_2GbINKnp1GuHPglg8AZxtDHCtoCjs4bzoS8h5dKy0NzAYMwz31vZ2FdHYjrmjPUG0ixrOnnsTNhsIY-6RFm4tk7C7BBp5pXEXzFn6dZOGCo_utFS0Qs0XorlZsUEM0WqKuV1fcC-S9H5ca3yHxXRlG28Kc9_w" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">【Rails】非同期での自動更新機能の作り方【Ajax】</span>    </a>    <span class="logly-lift-ad-author">by mikan3rd</span><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/abc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">  </div　class="logly-lift-ad-content"></div></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/a7c80f117c3ff10471f800af164cf7fb" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/shizuma/items/755f8dea449204ba5d1d" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLYo40R5dU9IycVxr_3MAimYz1C9FAbxog27ve82e1Nyza_w8AAw-3i5WRihEtRMGmErTcp7QdT1C4VWko4oN8X10PZY7ix3fT1wLNL-ugQKRWoEq5VYrldsz0lFzqJTpnonMan3vR_xjX8065iCrdIP5iMuTRYUK-dsA90M8RCb7I1gI-XFFk0INVaZDIGbX8uRWfO6hPM9uZ9EuAVBN7ri9CwVN48zQwOrQyCpSRpbMMCmt93C4-4fYJIbtNZd3W7vJV3IDsjzFxOZJUWBzBFrNCuRdvdUnMCeRvzVORPLdqBChQYVay2T7gaQFjhw7y19TRBf5m7MRj7QgVkUyc3fKVE-SvWsBmU-l8DAsmf21h0zwao4uSdA9K4UCdmzbGiVCVCgtGdp4whEUrl3ytX-gJc70hoUFZRYdYiqg7baNh3KzN0GbrOu2gYibwabb94wz6PW_xb5cNM8TTy367ARkJOIUQbCTQ5_sz4MiM4wYpQDi8BaJ1Xq1Q2J01lgdiDhrE0S4B1syqf5fAQpUmjeSV8cXIuV_RdMkzCbsQ4yUw" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">Rails jQueryを用いたajax化のやり方</span>    </a>    <span class="logly-lift-ad-author">by shizuma</span>  </div　class="logly-lift-ad-content"></div></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/f28117aeeacf3b4357706abfb1ffa23b" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/ka215/items/dfa602f1ccc652cf2888" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLYo40R5dU9IycVxr_3MAimYz1C9FAbxog05BZrOR2G5CetqxJg1lu10Rvl9mlVEjgezooHotbUTbNg5vg8ETH6jaxwP5I9I1Q9SlN1QdzbCZLYBAGHCQHB4NK_3q87MUrpE358lwSae3M061wv4tU7OOnBHxtYMaMr6k2aqx7CX944cVqEN8gsl4Vt2EaZ-XtNI3wpJ7F7ItIm6jCV0PVD3Iqq8PKXmAwgNYbr5g08_UKv5wZphw--qWkJrUjxgb-WKmvwzdpG_WzoG0eGmlQXposzz8gF1fbr1bVQqTOPCrt7YmFRB1-7azP7AtQxnVWqUknK0TwrGPDiEgUGPVp23HD5T6bk3WUhq0HppPwBTIhzfCj27FgRVVKY8Owt6Rd7MDoMbNm8DdP4VmkVZJvIEpnaOyFLMrPWjZeWY7SKhzN5msqTV9yw4T0eUA2GBxLgh4wG7vHfmph3PL2QOoKDmhbR-HfyQB4-savAEZOfN4xezrSr-gZEPhMbpgBUI2wtIRLF2eF4en7rwAwIyaqCLr98GNDP-A58" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">Ruby on RailsのAjax処理のおさらい</span>    </a>    <span class="logly-lift-ad-author">by ka215</span>  </div　class="logly-lift-ad-content"></div><div class="logly-lift-ad">  <span class="logly-lift-ad-icon"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/73d8c9fdda1193ebec6a68a53ef1d0ea" width="18"></span>  <div　class="logly-lift-ad-content">    <a class="logly-lift-ad-link" href="https://qiita.com/maru_u/items/60aa3d7e36cf93e0d832" target="_top" style="text-decoration:none;" data-click-url="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLYo40R5dU9IycVxr_3MAimYz1C9FAbxog3wym4iUQF747F4uZkJVbPCO6uSAxY8nd461DFCk5CfdQDq936TqnznoYCLwbIFFhe6uD-QT9QpNU6bWC2nc6abQZRYCaxtn3wLlL6Qoz74J1N0J9aibLMI_ZbQoMsgi4nTHCeYTHSpr0sJcOSVZxfX-x28E0RhG3DJb5e0JN4HSADKyIyojzy05tKAfUUf-rY9d1chTB87cimout-xf9hYw67wU4iXVEa8zP4UdmbFliHP5UhAOVZqRb6k6S_n6AEyzkwIBey_ZYSYebE9JyZz3SFHsxt9ZS4dt7VrO5DjSfA5a91nXusXBjMp7agSqBnqkKqjLHuTohCCt2fhKv4RD0lwCoyr5b6J34lPgLf9D4JkGm86gLqtat6NJKKvKS7cTU1MG9CgSdBLK1BIS2x-kSyHpT9DQgmSaOVemqgzeNTE4yFYp4LUmXx10li_CqdRkduMaX-QclH_DEitCixgqFHS9VA4Qgugf4ohgnONnbe0QuSRk5x-OblKs45Jvf4" onmousedown="this.setAttribute(&#39;href&#39;,this.getAttribute(&#39;data-click-url&#39;));">      <span class="logly-lift-ad-title">【rails/非同期】js初心者がいいね機能をReact.jsで実装してみた。その①</span>    </a>    <span class="logly-lift-ad-author">by maru_u</span>  </div　class="logly-lift-ad-content"></div><div class="logly-lift-ad">    <span class="logly-lift-ad-icon"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/normal.png" width="18"></span>    <div　class="logly-lift-ad-content">      <a class="logly-lift-ad-link" href="https://dsp.logly.co.jp/click?ad=G8GmQLsVMLYo40R5dU9IycVxr_3MAimYdWLPP1t81TeuXnthYm3qJqiJF91zVoCGwiBPx8kBzHbu_2JQgwzwp7E1x23rIzAoV8DNopQ4NxUId45grHBKtgdGoW4FfifIDfjfF1gPNmXKT9DtyLcFpOPEvP62xC0YwcjQkM0jql5Ck9Kwm1WYr3TVv700z3luMs34XBSW6Ty79XB3dK5CSke2xp1y26eXZDR_aGvGQIJ05X9iaYsoEUGAdmj5i8xFNA_-_a1I2EAjv-FzdvFApEU9SAqwGPJyrKann8YCzbiHRaj6sjDkaJ9aPSov6C-DrN7DPtipvQ3C5oew2kd95-_sR8FouXuCgqXk9OhpQIsII5ByoJpkR655GQ4b6E9bs9BaAkNFCgPYED9TuK93Fi6Ea8Eu_FU603nsj0xu8EaQARBl5lq4ax6pCR-G-Q0CTaOeBa8kgW6wHD46yVlv-MQuXkHDEhnuM3MUScrPRDhZGalO4WXOa_8WigE3B5olk5EUhWGGJBnayP3luTh5t9rCy88fInxq" target="_blank" style="text-decoration:none;" rel="nofollow">        <span class="logly-lift-ad-title">AWS設定のセキュリティリスクを回避！「スキャンモンスター」</span>      </a><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/bc" width="1" height="1" style="position: absolute; width: 1px; height: 1px; top: -32767px; left: -32767px;">      <span class="logly-lift-ad-adv">PR NTTドコモ</span>    </div　class="logly-lift-ad-content"></div>    <div class="logly-lift-clear"></div></div><div class="p-items_aside mt-4"><div class="p-items_footnote"><ul class="references js-referencesView mt-5"><li class="references_header"><i class="fa fa-fw fa-link"></i> この記事は以下の記事からリンクされています</li><li class="references_reference js-reference"><a href="https://qiita.com/Yama-to/items/93cd8b3a8be67b09e353#_reference-f96c62c4c1c49b1bb54b"><img alt="" width="18" height="18" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1473702376">あなたがRails触る人なら見ておきたい「体系的な」豆知識</a><span>からリンク</span><time class="references_datetime js-dateTimeView" datetime="2015-08-08T21:11:36+00:00">4年弱前</time></li><li class="references_reference js-reference"><a href="https://qiita.com/shi-ma-da/items/9beb167e002097eda640#_reference-518c9fdba9a4cbf9ad1c"><img alt="" width="18" height="18" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1532172842">[初学者向け]Ajax 対応のハイパーリンク を 生成 </a><span>からリンク</span><time class="references_datetime js-dateTimeView" datetime="2018-06-20T14:10:45+00:00">約1年前</time></li><li class="references_reference js-reference"><a href="https://qiita.com/rainbow___0/items/bfd5d668cb72e98399a3#_reference-66c093dbbdb5e8c391cd"><img alt="" width="18" height="18" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1562338332">Rails 非同期通信(ajax)</a><span>からリンク</span><time class="references_datetime js-dateTimeView" datetime="2019-04-24T16:56:18+00:00">3ヶ月前</time></li></ul></div></div><div class="p-items_aside mt-5"><div class="itemsShowComment_wrapper" id="comments"><div id="PublicCommentListContainer-react-component-e5b0df30-8cf3-469e-ab7f-1c454c045d72"><div class="commentList"><div class="comment"><div class="commentHeader"><div class="commentHeader_creator"><a href="https://qiita.com/Yama-to" title="Yama-to" itemprop="url"><img alt="" class="commentHeader_creatorIcon" itemprop="image" width="36" height="36" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/1473702376"></a><div class="commentHeader_creatorInfo"><div class="commentHeader_publicUrlName"><a href="https://qiita.com/Yama-to">Yama-to</a></div><div class="commentHeader_contribution"><span class="commentHeader_contribution_count">4462</span><span class="commentHeader_contribution_unit">contribution</span></div></div></div><div class="commentHeader_metadata pull-right"><div class="text-right"><a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#comment-bd246f14e21459f25215"><time datetime="2015-08-15T19:39:36+09:00" itemprop="commentTime">2015-08-15 19:39</time></a><span>&nbsp;|&nbsp;<a href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#" data-target="#js-comment-report-form-311301" data-toggle="modal">通報</a></span></div><div class="LikeButton LikeButton--small"><button class="p-button"><span class="fa fa-fw fa-thumbs-up"></span><span>いいね</span></button><div class="LikeButton__balloon">1</div></div></div><div class="js-comment-report-form modal fade reportForm" id="js-comment-report-form-311301"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button name="button" type="submit" class="close" data-dismiss="modal">×</button><h4 class="modal-title">問題があるコメントを報告する</h4></div><div class="modal-body"><form class="new_public_issue_report" id="new_public_issue_report" action="https://qiita.com/api/internal/issue_reports" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="7hlB2Ym38tTT/xZLlHOlKnaxWuRi3YwEno6SBoa1WP207w04EGZS7MWAh/V6HyM4nmCzLPZFFP0RaXhJBNauYg=="><input type="hidden" name="public_issue_report[target_type]" id="public_issue_report_target_type" value="Comment"><input type="hidden" name="public_issue_report[target_id]" id="public_issue_report_target_id" value="311301"><p>この投稿にどのような問題がありますか？</p><br><div class="form-group"><ul class="list-unstyled"><li><label><input required="" type="radio" name="public_issue_report[reason]" id="public_issue_report_reason_spam" value="spam">スパムです</label></li><li><label><input required="" type="radio" name="public_issue_report[reason]" id="public_issue_report_reason_harassment" value="harassment">攻撃的または迷惑な内容を含んでいます</label></li><li><label><input required="" type="radio" name="public_issue_report[reason]" id="public_issue_report_reason_inappropriate_content" value="inappropriate_content">不適切な内容を含んでいます</label></li></ul></div><div class="reportForm_submitButtonContainer"><button name="button" type="submit" class="btn btn-primary reportForm_submitButton"><i class="fa fa-send"></i>送信</button></div></form></div></div></div></div></div><div class="comment_content"><div class="it-MdContent"><p><a href="https://qiita.com/YoheiMiyamoto" class="user-mention js-hovercard" title="YoheiMiyamoto" data-hovercard-target-type="user" data-hovercard-target-name="YoheiMiyamoto">@YoheiMiyamoto</a> コメントを追加するだけならばそれでいいですね！そうしなかった理由は2つあります。<br>
+1つは記述が冗長になってしまうこと、もう1つは削除のアクションを取った時にも再利用可能なスクリプトを目指したこと、この二点です。appendだと末尾への追加を行ってくれますよね、しかし今後の発展性として、コメント描画部分全体の再描画を行っている、ということです。</p>
+</div></div></div><div class="comment"><div class="well">サービス利用規約に基づき、このコメントは削除されました。</div></div><div class="commentForm"><form datatype="json" action="https://qiita.com/comments/" method="post"><div class="commentForm_header"><img class="commentForm_userIcon" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/photo.jpg" width="36" height="36"><div class="commentForm_headerLabel">コメントを投稿する</div></div><div class="commentForm_contentHeader"><div class="commentForm_tabs"><a class="commentForm_tab edit active">編集</a><a class="commentForm_tab preview ">プレビュー</a></div><div class="commentForm_toolbar" style="display: flex;"><div class="markdownHelp_button"><i class="fa fa-question-circle" data-tip="Markdown の書き方" data-for="markdown-help-button" currentitem="false"><div class="__react_component_tooltip place-top type-dark " id="markdown-help-button" data-id="tooltip"></div></i></div><div class="emojiPicker"><span class="emojiPicker_label"><i class="fa fa-smile-o" data-tip="絵文字" data-for="emoji-picker-tooltip-button" currentitem="false"></i><div class="__react_component_tooltip place-top type-dark " id="emoji-picker-tooltip-button" data-id="tooltip"></div></span><div class="emojiPicker_container"></div></div></div></div><div class="commentForm_body content-area tab-pane" style="display: block;"><textarea class="form-control commentForm_textarea" maxlength="10000" placeholder="コメントを入力してください" style="min-height: 100px; max-height: 500px; overflow: hidden; overflow-wrap: break-word; resize: none; height: 100px;"></textarea></div><div class="preview-area tab-pane" style="display: none;"></div><div class="commentForm_imageUploader"><input type="file" class="commentForm_inputImageFile" tabindex="-1"><span class="btn btn-default btn-xs commentForm_imageUploader-button"><i class="fa fa-picture-o"></i>画像を選択</span><span class="commentForm_imageUploader-text">またはドラッグ＆ドロップ</span><span><span class="commentForm_imageUploader-size"><span> - 0B</span>/<span>100MB</span></span><i class="fa fa-info-circle commentForm_imageUploader-info" data-placement="top" data-toggle="tooltip" title="" data-original-title="今月アップロード可能な画像の残り容量です"></i></span><div class="commentForm_btns"><button class="btn btn-primary btn-sm">投稿</button></div></div></form></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="PublicCommentListContainer" data-dom-id="PublicCommentListContainer-react-component-e5b0df30-8cf3-469e-ab7f-1c454c045d72">{"currentUser":{"contribution":0,"created_at":"2019-06-10T17:20:13+09:00","id":434765,"is_admin":false,"profile_image_url":"https://lh4.googleusercontent.com/-YhQQuX1xVDQ/AAAAAAAAAAI/AAAAAAAAAAc/nGgW4O5qZI8/s50/photo.jpg","suspended":false,"url_name":"toki2222son"},"initialComments":[{"banned":false,"body":"\u003cp\u003e\u003ca href=\"/YoheiMiyamoto\" class=\"user-mention js-hovercard\" title=\"YoheiMiyamoto\" data-hovercard-target-type=\"user\" data-hovercard-target-name=\"YoheiMiyamoto\"\u003e@YoheiMiyamoto\u003c/a\u003e コメントを追加するだけならばそれでいいですね！そうしなかった理由は2つあります。\u003cbr\u003e\n1つは記述が冗長になってしまうこと、もう1つは削除のアクションを取った時にも再利用可能なスクリプトを目指したこと、この二点です。appendだと末尾への追加を行ってくれますよね、しかし今後の発展性として、コメント描画部分全体の再描画を行っている、ということです。\u003c/p\u003e\n","created_at":"2015-08-15T19:39:36+09:00","expanded_references":"","id":311301,"is_team":false,"item_id":320924,"item_type":"PublicDomainArticle","item_uuid":"377f8a92cf30a3ebf454","likable":true,"liked":false,"public_likes_count":1,"raw_body":"@YoheiMiyamoto コメントを追加するだけならばそれでいいですね！そうしなかった理由は2つあります。\n1つは記述が冗長になってしまうこと、もう1つは削除のアクションを取った時にも再利用可能なスクリプトを目指したこと、この二点です。appendだと末尾への追加を行ってくれますよね、しかし今後の発展性として、コメント描画部分全体の再描画を行っている、ということです。\n","reaction_types":[{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f44d.png","name":"+1"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f64f.png","name":"pray"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f389.png","name":"tada"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f647.png","name":"bow"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f631.png","name":"scream"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f440.png","name":"eyes"}],"reactions":[],"team":null,"team_membership":null,"updatable":false,"updated_at":"2015-08-15T19:39:36+09:00","url":"https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#comment-bd246f14e21459f25215","user":{"contribution":4462,"created_at":"2015-06-09T17:16:33+09:00","id":82223,"is_admin":false,"profile_image_url":"https://qiita-image-store.s3.amazonaws.com/0/82223/profile-images/1473702376","suspended":false,"url_name":"Yama-to"},"uuid":"bd246f14e21459f25215","via_email":false},{"banned":true,"body":null,"created_at":"2018-04-13T12:24:01+09:00","expanded_references":"","id":1025964,"is_team":false,"item_id":320924,"item_type":"PublicDomainArticle","item_uuid":"377f8a92cf30a3ebf454","likable":true,"liked":false,"public_likes_count":0,"raw_body":null,"reaction_types":[{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f44d.png","name":"+1"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f64f.png","name":"pray"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f389.png","name":"tada"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f647.png","name":"bow"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f631.png","name":"scream"},{"image_url":"https://cdn.qiita.com/emoji/twemoji/unicode/1f440.png","name":"eyes"}],"reactions":[],"team":null,"team_membership":null,"updatable":false,"updated_at":"2018-07-12T01:36:39+09:00","url":"https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454#comment-44959b70c206697c4fad","user":{"contribution":0,"created_at":"2018-04-13T12:21:46+09:00","id":249911,"is_admin":false,"profile_image_url":"https://secure.gravatar.com/avatar/6d636f0d590fe114462924e4cc879ebc","suspended":true,"url_name":"robinsue"},"uuid":"44959b70c206697c4fad","via_email":false}],"monthly_public_image_uploadable_size_limit":104857600,"total_uploaded_public_image_size_in_current_month":0,"item":{"id":320924,"uuid":"377f8a92cf30a3ebf454","suspended":false,"secret":false},"owner":{"url_name":"Yama-to"},"is_team":false,"is_project":false,"logged_in":true,"polling":false,"mention_candidates":[{"id":82223,"url_name":"Yama-to","profile_image_url":"https://qiita-image-store.s3.amazonaws.com/0/82223/profile-images/1473702376"},{"id":249911,"url_name":"robinsue","profile_image_url":"https://secure.gravatar.com/avatar/6d636f0d590fe114462924e4cc879ebc"}],"csrfToken":"7hlB2Ym38tTT/xZLlHOlKnaxWuRi3YwEno6SBoa1WP207w04EGZS7MWAh/V6HyM4nmCzLPZFFP0RaXhJBNauYg=="}</script>
+      
+</div></div></div><div class="p-items_rightDummy"></div></div></div></article><div class="TagList__label" style="display:none"><span></span><span>JavaScript</span></div><div class="TagList__label" style="display:none"><span></span><span>Rails</span></div><div class="TagList__label" style="display:none"><span></span><span>Ajax</span></div><div class="js-report-form modal fade reportForm"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button name="button" type="submit" class="close" data-dismiss="modal">×</button><h4 class="modal-title">問題がある記事を報告する</h4></div><div class="modal-body"><form class="new_public_issue_report" id="new_public_issue_report" action="https://qiita.com/api/internal/issue_reports" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="n6A9MQKm5huSLqfORuK8U1TRxBD3GgdDH9czxWxys6rFVnHQm3dGI4RRNnCojjpBvAAt2GOCn7qQMNmK7hFFNQ=="><input type="hidden" value="PublicDomainArticle" name="public_issue_report[target_type]" id="public_issue_report_target_type"><input type="hidden" value="320924" name="public_issue_report[target_id]" id="public_issue_report_target_id"><p>この投稿にどのような問題がありますか？</p><br><div class="form-group"><ul class="list-unstyled"><li><label><input required="required" type="radio" value="spam" name="public_issue_report[reason]" id="public_issue_report_reason_spam"> スパムです </label></li><li><label><input required="required" type="radio" value="harassment" name="public_issue_report[reason]" id="public_issue_report_reason_harassment"> 攻撃的または迷惑な内容を含んでいます </label></li><li><label><input required="required" type="radio" value="inappropriate_content" name="public_issue_report[reason]" id="public_issue_report_reason_inappropriate_content"> 不適切な内容を含んでいます </label></li></ul></div><div class="reportForm_submitButtonContainer"><button name="button" type="submit" class="btn btn-primary reportForm_submitButton"><i class="fa fa-send"></i> 送信</button></div></form></div></div></div></div><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/td_qt_access.js" type="text/javascript"></script><script>microadTd.QT.start({"article_category": "JavaScript,Rails,Ajax"})</script><script>(function(d,u){var b=d.getElementsByTagName("script")[0],j=d.createElement("script");j.async=true;j.src=u;b.parentNode.insertBefore(j,b);})(document,"//img.ak.impact-ad.jp/ut/ff9a3577423c8ed5_4330.js");</script><noscript><iframe frameborder="0" height="0" src="//nspt.unitag.jp/ff9a3577423c8ed5_4330.php" width="0"></iframe></noscript></div><script type="text/javascript" charset="UTF-8">!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","set","trackEvent","trackPageview","trackClicks","ready","fetchGlobalID","fetchUserSegments"],a=0;a<s.length;a++){var c=s[a];e[t].prototype[c]=r(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/1.9.2/td.min.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(n,i)}}("Treasure",this);</script><script type="text/javascript" charset="UTF-8" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/aid"></script><footer class="footer"><div class="footer_inner"><div class="footer_container"><ul class="footer_links-left"><li class="footer_link"><a class="footer_copyright" href="http://increments.co.jp/">© 2011-2019 Increments Inc.</a></li><li class="footer_link"><a href="https://qiita.com/terms">利用規約</a></li><li class="footer_link"><a target="_blank" href="http://help.qiita.com/ja/articles/qiita-community-guideline">ガイドライン</a></li><li class="footer_link"><a href="https://qiita.com/privacy">プライバシー</a></li><li class="footer_link"><a href="https://help.qiita.com/">ヘルプ</a></li></ul><ul class="footer_links-right"><li class="footer_link"><a href="https://qiita.com/about">Qiitaとは</a></li><li class="footer_link"><a href="https://qiita.com/users">ユーザー</a></li><li class="footer_link"><a href="https://qiita.com/tags">タグ</a></li><li class="footer_link"><a href="https://qiita.com/items">記事</a></li><li class="footer_link"><a href="https://blog.qiita.com/">ブログ</a></li><li class="footer_link"><a href="https://qiita.com/api/v2/docs">API</a></li><li class="footer_link"><a href="https://teams.qiita.com/">Team</a></li><li class="footer_link"><a target="_blank" href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=footer">Qiita:Zine</a></li><li class="footer_link"><a class="js-public-form-feedback-link" data-target=".js-feedback-form" data-toggle="modal" href="https://qiita.com/Yama-to/items/377f8a92cf30a3ebf454"><i class="fa fa-heart"></i> ご意見 <i class="fa fa-caret-down"></i></a></li></ul></div></div></footer><div class="js-feedback-form modal fade feedbackForm"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button name="button" type="submit" class="close" data-dismiss="modal">×</button><h4 class="modal-title">ご意見</h4></div><div class="modal-body"><form class="js-feedback-form-form" action="https://qiita.com/feedbacks" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="n6A9MQKm5huSLqfORuK8U1TRxBD3GgdDH9czxWxys6rFVnHQm3dGI4RRNnCojjpBvAAt2GOCn7qQMNmK7hFFNQ=="><input type="hidden" name="redirect_path" id="redirect_path" value="/Yama-to/items/377f8a92cf30a3ebf454"><div class="form-group"><textarea name="feedback[message]" id="feedback_message" class="form-control js-feedback-form-text-area" placeholder="Qiitaについてのご意見をお聞かせください。" required="required" rows="5"></textarea></div><div class="feedbackForm_submitButtonContainer"><button name="button" type="submit" class="btn btn-primary feedbackForm_submitButton"><i class="fa fa-send"></i> 送信</button><p class="feedbackForm_note">いただいたご意見への返信は行っておりません。<br>返信の必要な内容については、<a href="https://increments.zendesk.com/hc/ja/requests/new">こちら</a> からお問い合わせください。</p></div><div style="position:fixed;top:-99999px;opacity:0.0001;"><input name="feedback[name]" type="text"></div></form></div></div></div></div><script>// if (window.mixpanel instanceof Element) {
+//   window.mixpanel = [];
+// }
+// (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+// for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);</script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/public-2237dffce05ed0721457c2a9fe3375b1.min.js"></script>
+<script type="text/javascript" id="">(function(e,a){if(!a.__SV){var b=window;try{var n,k,l=b.location,g=l.hash;var c=function(a,b){return(n=a.match(RegExp(b+"\x3d([^\x26]*)")))?n[1]:null};g&&c(g,"state")&&(k=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===k.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(k.desiredHash||"",e.title,l.pathname+l.search)))}catch(p){}var m,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};m="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<m.length;h++)e(d,m[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init(google_tag_manager["GTM-TBQWPN"].macro(14));google_tag_manager["GTM-TBQWPN"].macro(15)&&mixpanel.people.set(google_tag_manager["GTM-TBQWPN"].macro(16));google_tag_manager["GTM-TBQWPN"].macro(18)&&mixpanel.identify(google_tag_manager["GTM-TBQWPN"].macro(20));google_tag_manager["GTM-TBQWPN"].macro(21)&&mixpanel.register({"Layout Version":google_tag_manager["GTM-TBQWPN"].macro(22)});</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div><div id="itm_4330" style="visibility: hidden; display: none;"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><ul class="dropdown-menu textcomplete-dropdown" style="display: none; position: absolute; z-index: 10000;"></ul><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/widget_iframe.940e1bc455d9af25d6ec2f14e90d0d6c.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="aopb_ff9a3577423c8ed5" frameborder="0" scrolling="no" width="1" height="1" style="display: none" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/pb.html"></iframe><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct" width="1" height="1" border="0" class="bigmining_dmp_beacon" style="display: none;"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58Z82M');</script><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi.html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi(1).html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi(2).html"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi(3).html"></iframe><img src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/rep" style="display: none;"><div style="display: none; visibility: hidden;"><iframe src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi(4).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;"><iframe src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/activityi(5).html" width="1" height="1" frameborder="0" style="display:none"></iframe></div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nv2kc",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","809797712462041");fbq("track","PageView");</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nxmb9");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","996402550503199");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","954575148009345");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","437265843064161");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw0lq",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw1xy",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nw9n2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","262978464137256");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","256605841418458");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","386990638325508");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlif",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxlih",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nxyp7",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("ny46g",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1733466696949178");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","ny5vy");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:19972,advertiser_id:6796,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        </div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4740006retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813012retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813013retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813014retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815034retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4815035retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"4813015retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2040876882868599");fbq("track","PageView");</script>
+<noscript></noscript>
+
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1469129556533591");fbq("track","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5053023retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5048036retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">window._tfa=window._tfa||[];_tfa.push({notify:"mark",type:"5054022retargeting"});</script>
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/tfa.js"></script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;"><script type="text/javascript">var _fout_queue=_fout_queue||{};void 0===_fout_queue.segment&&(_fout_queue.segment={});void 0===_fout_queue.segment.queue&&(_fout_queue.segment.queue=[]);_fout_queue.segment.queue.push({user_id:21947,advertiser_id:8063,contractor_id:5});(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://":"http://")+"js.fout.jp/segmentation.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+        
+        </div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("c2e22923c3676a816c61d14d","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("218d489b0df6609f4876420b","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("5f64d149dd4731f0f0190385","PageView");</script>
+<noscript></noscript>
+
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzdtr");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nziop",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script type="text/javascript">!function(){if(window.SmartnewsAds=window.SmartnewsAds||{},!window.SmartnewsAds.p){var a=window.SmartnewsAds.p=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};window.SmartnewsAds._p||(window.SmartnewsAds._p=a);a.push=a;a.version="1.0.0";a.queue=[];var b=document.createElement("script");b.async=!0;b.src="//cdn.smartnews-ads.com/i/pixel.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}}();SmartnewsAds.p("4fc5ab48b835653a76f95b96","PageView");</script>
+<noscript></noscript></div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn0",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("nznn2",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nzu0q");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;"><script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","nve3t");twq("track","PageView");</script></div><div style="display: none; visibility: hidden;"><script type="text/javascript" language="javascript">var yahoo_retargeting_id="USSDKFK3A8",yahoo_retargeting_label="",yahoo_retargeting_page_type="",yahoo_retargeting_items=[{item_id:"",category_id:"",price:"",quantity:""}];</script>
+<script type="text/javascript" language="javascript" src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/s_retargeting.js"></script></div><div style="display: none; visibility: hidden;">
+<script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid("o03ez",{tw_sale_amount:0,tw_order_quantity:0});</script>
+<noscript></noscript>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o058w");twq("track","PageView");</script>
+</div><div style="display: none; visibility: hidden;">
+<script>!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="//static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("init","o0jpn");twq("track","PageView");</script>
+</div><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(1)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(2)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(4)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(5)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(6)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(7)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(8)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(9)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(10)" type="text/javascript"></script><iframe src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/beacon.html" style="display: none;"></iframe><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(11)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(12)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(13)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(14)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(15)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(16)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(17)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(3)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(18)" type="text/javascript"></script><script src="./モモンガでも使えるAjax（えいじゃっくす） − 投稿したコメントをリロードせずに表示しよう - Qiita_files/adsct(19)" type="text/javascript"></script></body></html>

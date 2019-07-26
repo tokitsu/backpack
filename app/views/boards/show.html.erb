@@ -14,7 +14,7 @@
 <%= render @board %>
 <div class="p-comment__list">
   <div class="p-comment_listTitle">コメント</div>
-  <%= render @board.comments %>
+  <div id="comments_area"><%= render partial: 'comments/comment',collection: @board.comments %></div>
 </div>
 
 <%= render partial: 'comments/form', locals: { comment: @comment } %>

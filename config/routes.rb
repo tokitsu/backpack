@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'homes#index'
   resources :sessions
-  resources :users
+  namespace :admin do
+    resources :users
+  end
+
   resources :boards do
     post 'add', to: 'favorites#create'
     delete 'add', to: 'favorites#destroy'
@@ -17,6 +20,8 @@ Rails.application.routes.draw do
   resources :questions
   resources :answers, only: %i[create destroy]
   resources :homes
-
-  mount ActionCable.server => '/cable'
+  resources :conversations do
+    resources :messages
+  end
+  resources :users
 end

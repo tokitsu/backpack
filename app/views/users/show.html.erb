@@ -8,7 +8,11 @@
 
 <% if @current_user == @user %>
 <div class="edit_profile_link">
-  <%= link_to 'プロフィールを編集する', edit_user_path(@user.id), class:'btn btn-outline-secondary'%>
+  <%= link_to 'プロフィールを編集する', edit_user_path(@user.id), class:'btn btn-outline-success'%>
+</div>
+<% else %>
+<div class="edit_profile_link">
+  <%= link_to 'メッセージする', conversations_path(sender_id: @current_user.id, recipient_id: @user.id), method: :post, class:'btn btn-outline-success' %>
 </div>
 <% end %>
 
@@ -38,6 +42,12 @@
     自己紹介 : <%= @user.introduction %>
   </li>
 </ul>
+<% if @current_user.admin == true %>
+  <div class="admin_user_link">
+    <%= link_to 'ユーザー管理画面', admin_users_path, class:'btn btn-outline-danger'%> : <%= @current_user.name %>は全てのユーザーを管理する権限があります
+  </div>
+<% end %>
+
 <br><br><br>
 <div class="user_boards">
   最近の投稿

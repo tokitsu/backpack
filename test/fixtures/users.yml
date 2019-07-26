@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id                     :integer          not null, primary key
+#  admin                  :boolean          default(FALSE), not null
 #  age                    :integer
 #  country_you_want_to_go :string(255)
 #  email                  :string(255)      not null
