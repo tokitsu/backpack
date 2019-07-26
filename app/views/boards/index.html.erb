@@ -66,9 +66,11 @@
     <li class="list-group-item">
       <% unless @current_user.id == board.user_id %>
       <% if Favorite.exists?(user_id:@current_user.id, board_id:board.id)%>
-        <%= link_to 'お気に入り解除',board_add_path(board), method: :delete %>
+        <%= link_to 'お気に入り解除',board_add_path(board), method: :delete, id: "favorite-button", remote: true %>
+        <%= board.favorites_count %>
       <% else %>
-        <%= link_to 'お気に入り', board_add_path(board), method: :post %>
+        <%= link_to 'お気に入り', board_add_path(board), method: :post, id: "favorite-button", remote:true %>
+        <%= board.favorites_count %>
       <% end %>
       <%= link_to 'コメントする', board_path(board)%>
       <% else %>
