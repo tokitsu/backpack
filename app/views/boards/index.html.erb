@@ -72,6 +72,7 @@
         <%= link_to 'お気に入り', board_add_path(board), method: :post, id: "favorite-button", remote:true %>
         <%= board.favorites_count %>
       <% end %>
+
       <%= link_to 'コメントする', board_path(board)%>
       <% else %>
       <div class="board_button">
