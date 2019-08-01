@@ -1,4 +1,3 @@
-
 <div class="d-flex align-items-center mt-4 mb-4">
   <div class="ml-auto boards__linkBox">
     <%= link_to '一覧', boards_path, class: 'btn btn-outline-dark' %>
@@ -12,6 +11,7 @@
   <div class= "alert alert-success"><%= flash[:notice] %></div>
 <% end %>
 <%= render @board %>
+<div id= "comments_area">
 <div class="p-comment__list">
   <div class="p-comment_listTitle">コメント</div>
   <div id="comments_area"><%= render partial: 'comments/comment',collection: @board.comments %></div>

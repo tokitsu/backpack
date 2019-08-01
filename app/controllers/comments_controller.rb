@@ -3,14 +3,12 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new (comment_params.merge(user_id: @current_user.id))
-    if @comment.save
-      flash[:notice] = 'コメントを投稿しました。'
-      redirect_to @comment.board
-    else
-      redirect_back fallback_location: @comment.board, flash: {
-        comment: @comment,
-        error_messages: @comment.errors.full_messages
-      }
+    respond_to do |format|
+      if @comment.save
+        format.js { render :index }
+      else
+        format.html { redirect_to blog_path(@blog), notice: '投稿できませんでした...' }
+      end
     end
   end
 
