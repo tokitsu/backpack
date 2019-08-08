@@ -65,21 +65,16 @@
     </li>
     <li class="list-group-item">
       <% unless @current_user.id == board.user_id %>
-      <% if Favorite.exists?(user_id:@current_user.id, board_id:board.id)%>
-        <%= link_to 'お気に入り解除',board_add_path(board), method: :delete, id: "favorite-button", remote: true %>
-        <%= board.favorites_count %>
+        <div id="favorite_btn_<%= board.id %>">
+          <%= render partial: "favorites/favorite", locals: {board: board} %>
+        </div>
+        <%= link_to 'コメントする', board_path(board)%>
       <% else %>
-        <%= link_to 'お気に入り', board_add_path(board), method: :post, id: "favorite-button", remote:true %>
-        <%= board.favorites_count %>
-      <% end %>
-
-      <%= link_to 'コメントする', board_path(board)%>
-      <% else %>
-      <div class="board_button">
-        <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>
-        <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark btn-sm' %>
-        <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete, data: { confirm: '削除してよろしいですか？'} %>
-      </div>
+        <div class="board_button">
+          <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>
+          <%= link_to '編集', edit_board_path(board), class: 'btn btn-outline-dark btn-sm' %>
+          <%= link_to '削除', board, class: 'btn btn-outline-dark btn-sm', method: :delete, data: { confirm: '削除してよろしいですか？'} %>
+        </div>
       <% end %>
     </li>
   </ul><br>

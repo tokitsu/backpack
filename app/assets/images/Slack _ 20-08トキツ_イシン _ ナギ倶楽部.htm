@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://app.slack.com/client/TBCT7NJ9H/CLY80V2H2 -->
+<html data-gantry="" data-app="client" data-cdn="https://a.slack-edge.com/bv1-6-22392ae/" data-version-ts="1565224516" data-version-hash="53cf77768f7da73e20d3000b070467b539fd2079" data-min-version-data-ts="1564002900" lang="ja-JP"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Security-Policy" content="base-uri &#39;self&#39;; object-src &#39;none&#39;; script-src &#39;self&#39; https://a.slack-edge.com/ https://cfr.slack-edge.com/ https://fst.slack-edge.com/ &#39;sha256-J06Hu9N8e5soymm3iajEPx7DLiWbOMsJayXXiRVgf/s=&#39; &#39;sha256-V3pNBo9vFI47lnzeFlyJVDxtN3Yf0X6UgalmXzoA69U=&#39; &#39;sha256-XVjf1UrB+S9bTulVsVW6RjmlY9eDXYYpMiNpLNbVBC0=&#39; &#39;sha256-70BUJPuJh5aI1NeamZRa8MdQXl+7wOHhYWsVfJkvUXU=&#39; &#39;sha256-mp3SG4Pc6a47Y5coFf0IX1pgh1+A+R37HLRpPVEIQEM=&#39; &#39;sha256-keaiTltuBLqAtRLCssZllSJuP0Vijtc4BzqS/E/vKH8=&#39; &#39;sha256-D+/bcNwAmFYJ9CfMh57ykwI2161k02TzQhHgIuPRv0I=&#39; &#39;sha256-zrcy3SzYViBiMy5rM3l7tqGvSE+/k9w5qKC76DX8vbc=&#39; &#39;sha256-ty0WP7gj2+gCV3jX1exbJFg17hQ1TOyFtYh93NDuCC4=&#39; &#39;sha256-fKMSo/2aRPjDK3TvtGUs76AMplGNxWWhEY+goQpyBkA=&#39; &#39;sha256-z+exSiLIRz09KpCjypQLA/Xr6+Jlk03g2ER8sdr11go=&#39; &#39;sha256-35mYXSHRQ2LY4SM3PwR5jvuBjqQBw4sQAWibQFv4OGM=&#39; &#39;sha256-3cWbBuB0FinFqWc0NzKHPcpoHosSSZKn7souvh0t/Oc=&#39; &#39;sha256-yYztm0BqgNksu1A6ZI988WxF4UIim1EAkPWxWHYOPdg=&#39; &#39;sha256-T1amXenfS00sfdEwaEfzrxVx1g6z9jGLoHRAU4HLLBY=&#39; &#39;sha256-Z0VFr4Ofya9JZAcb9DXiufDzaFpEtoD822hR/IrvJD0=&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://a.slack-edge.com/ https://cfr.slack-edge.com/ https://fst.slack-edge.com/"><script>function asyncGeneratorStep(e,n,t,o,r,i,a){try{var s=e[i](a),c=s.value}catch(e){return void t(e)}s.done?n(c):Promise.resolve(c).then(o,r)}function _asyncToGenerator(s){return function(){var e=this,a=arguments;return new Promise(function(n,t){var o=s.apply(e,a);function r(e){asyncGeneratorStep(o,n,t,r,i,"next",e)}function i(e){asyncGeneratorStep(o,n,t,r,i,"throw",e)}r(void 0)})}}function _typeof(e){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function _defineProperty(e,n,t){return n in e?Object.defineProperty(e,n,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[n]=t,e}function _extends(){return(_extends=Object.assign||function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o])}return e}).apply(this,arguments)}function _classCallCheck(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}function _defineProperties(e,n){for(var t=0;t<n.length;t++){var o=n[t];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}function _createClass(e,n,t){return n&&_defineProperties(e.prototype,n),t&&_defineProperties(e,t),e}var SafeConsole=function(){function e(){_classCallCheck(this,e),this.enabled=window.console&&window.console.log&&window.console.warn&&window.console.group&&window.console.groupEnd}return _createClass(e,[{key:"log",value:function(e){return this.enabled&&window.console.log("[WD] ".concat(e))}},{key:"warn",value:function(e){return this.enabled&&window.console.warn("[WD] ".concat(e))}},{key:"group",value:function(e,n){this.enabled&&(this.warn("[WD] ".concat(e)),window.console.group(),n.forEach(function(e){return window.console.warn(e)}),window.console.groupEnd())}}]),e}(),Watchdog=function(){function u(e){_classCallCheck(this,u),this.c=e,this.t=0,this.to=null,this.s=[],this.f=[],this.params=this.parseParams(),this.cLen=0,this.jLen=0}return _createClass(u,[{key:"track",value:function(){this.t+=1,null!==this.to&&(clearTimeout(this.to),this.to=null),this.to=setTimeout(this.reloadIfIssue.bind(this,{ignoreTracking:!0}),u.ASSET_TIMEOUT*this.t)}},{key:"parse",value:function(e){return e.onload=void 0,e.onerror=void 0,e?e.href&&e.rel&&"stylesheet"===e.rel?{src:e.href,type:u.TYPE_CSS}:e.src&&"script"===e.nodeName.toLowerCase()?{src:e.src,type:u.TYPE_JS}:null:null}},{key:"ok",value:function(e){var n=this.parse(e);n&&(this.s.push(n),this.reloadIfIssue())}},{key:"err",value:function(e){var n=this.parse(e);n&&(this.f.push(_extends({},n,{reason:"Failed to load from CDN"})),this.reloadIfIssue())}},{key:"showTroubleLoading",value:function(){document.body.classList.add("p-trouble_loading--show"),setTimeout(function(){document.body.classList.add("p-trouble_loading--transition")},100)}},{key:"parseParams",value:function(){if(!this.params){var e=window.location.search,n=e.slice(1).split("&");this.params=e?n.reduce(function(e,n){var t=n.split("=");return _extends({},e,_defineProperty({},t[0],decodeURIComponent(t[1]||"")))},{}):{}}return this.params}},{key:"haveAssetsLoaded",value:function(){var e=(0<arguments.length&&void 0!==arguments[0]?arguments[0]:{}).ignoreTracking;if(void 0!==e&&e)return this.c.warn("Ignoring asset checks, because something timed out. T: ".concat(this.t,"; S: ").concat(this.s.length,"; F: ").concat(this.f.length)),!1;if(this.t<this.cLen+this.jLen)return null;if(this.t>this.s.length+this.f.length)return null;null!==this.to&&(this.c.log("All assets have reported back; s: ".concat(this.s.length,"; f: ").concat(this.f.length)),clearTimeout(this.to),this.to=null);var n=-1<this.s.findIndex(function(e){return e.type===u.TYPE_CSS}),t=-1<this.s.findIndex(function(e){return e.type===u.TYPE_JS});return n&&t?0<this.f.length?(this.c.group("The following assets had issued loading:",this.f.map(function(e){return"".concat(e.src,": ").concat(e.reason)})),!1):"object"===_typeof(window.slackDebug)||(this.c.warn("No slackDebug object found"),!1):(this.c.warn("CSS or JS is missing from loaded assets; CSS: ".concat(n,"; JS: ").concat(t)),!1)}},{key:"reloadIfIssue",value:function(){var t=this,e=(0<arguments.length&&void 0!==arguments[0]?arguments[0]:{}).ignoreTracking,n=void 0!==e&&e,o=this.haveAssetsLoaded({ignoreTracking:n});if(null!==o&&!0!==o){if(!1===window.navigator.onLine)return this.c.warn("[RELOAD] Need to reload, but not online; won't try reloading"),void this.showTroubleLoading();var r=this.parseParams();r.cdn_fallback=(parseInt(r.cdn_fallback,10)||0)+1,r.force_cold_boot=1;var i,a="?".concat(Object.keys(r).map(function(e){return"".concat(e,"=").concat(encodeURIComponent(r[e]))}).join("&"));if(r.cdn_fallback>u.MAX_CDN_FALLBACK)return this.c.warn("[RELOAD] Hit maximum reload attempts, won't try reloading anymore"),void this.showTroubleLoading();var s=function(){t.c.warn("[RELOAD] Reloading client with URL: ".concat(a)),window.clearTimeout(i),window.location.search=a};i=window.setTimeout(s.bind(this),5e3);var c=[];window.desktop&&window.desktop.stats&&window.desktop.stats.clearCache&&c.push(new Promise(function(n){try{t.c.warn("[RELOAD] Attempting to clear desktop cache"),window.desktop.stats.clearCache().then(function(){t.c.warn("[RELOAD] Successfully cleared desktop cache"),n()})}catch(e){t.c.warn("[RELOAD] Error clearing desktop cache: ".concat(e.message)),n()}})),"serviceWorker"in navigator&&window&&void 0!==window.caches&&(c.push(new Promise(function(n){window.caches.keys().then(function(e){return e.map((n=_asyncToGenerator(regeneratorRuntime.mark(function e(n){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",window.caches.delete(n));case 1:case"end":return e.stop()}},e)})),function(e){return n.apply(this,arguments)}));var n}).then(function(){t.c.warn("[RELOAD] Removed all Service Worker caches"),n()}).catch(function(e){t.c.warn("[RELOAD] Service worker cache keys could not be removed: ".concat(e.message)),n()})})),c.push(new Promise(function(n){navigator.serviceWorker.getRegistration("/service-worker.js").then(function(e){e?e.unregister().then(function(e){t.c.warn("[RELOAD] Service worker unregistered: ".concat(e)),n()}).catch(function(e){t.c.warn("[RELOAD] Service worker could not be unregistered: ".concat(e.message)),n()}):n()})}))),Promise.all(c).then(s)}}}]),u}();Watchdog.TYPE_CSS="css",Watchdog.TYPE_JS="js",Watchdog.MAX_CDN_FALLBACK=2,Watchdog.ASSET_TIMEOUT=7e3;var watchdog=new Watchdog(new SafeConsole);window.wd=watchdog,window.Watchdog=Watchdog</script><style>.p-trouble_loading,.p-trouble_loading_overlay{z-index:9999;opacity:0;display:none;transition:transform .5s ease-out,opacity .5s ease-out}.p-trouble_loading_overlay{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;background:#d9d9d9}.p-trouble_loading{position:absolute;top:50%;left:50%;width:100%;max-width:35rem;min-height:15rem;max-height:27.5rem;overflow:auto;background:#fff;padding:1.5rem;user-select:text;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;pointer-events:auto;border:1px solid rgba(0,0,0,.05);border-radius:8px;font-size:1rem;transform:scale(1) translateX(-50%) translateY(-50%);transition-duration:.33s;transition-delay:.25s;box-shadow:0 0 16px 8px rgba(0,0,0,.05)}.p-trouble_loading a{text-decoration:none;color:#0073c6}.p-trouble_loading a:hover{text-decoration:underline}.p-trouble_loading h1{font-size:1.5rem;margin:0 0 .25rem 0}.p-trouble_loading h3{font-size:1.2rem}.p-trouble_loading .p-trouble_loading_content li{margin-bottom:.5rem}.p-trouble_loading .p-trouble_loading_content li{line-height:1.275rem}.p-trouble_loading p{line-height:1.5rem;margin:.75rem 0}.p-trouble_loading--show .p-trouble_loading,.p-trouble_loading--show .p-trouble_loading_overlay{display:block}.p-trouble_loading--transition .p-trouble_loading,.p-trouble_loading--transition .p-trouble_loading_overlay{opacity:1}</style><meta name="referrer" content="no-referrer"><meta name="superfish" content="nofish"><meta name="author" content="Slack"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google" content="notranslate"><title>Slack | 20-08トキツ_イシン | ナギ倶楽部</title><link href="https://a.slack-edge.com/bv1-6-22392ae/slack-icons-v2-d3f483a.cache-gantry-1565224516.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-6-22392ae/lato-regular-d9ce515.cache-gantry-1565224516.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-6-22392ae/lato-black-b64f5e4.cache-gantry-1565224516.woff2" rel="preload" as="font" crossorigin="anonymous"><link href="https://a.slack-edge.com/bv1-6-22392ae/lato-bold-4b1dc11.cache-gantry-1565224516.woff2" rel="preload" as="font" crossorigin="anonymous"><script>window.wd.cdn=document&&document.documentElement&&document.documentElement.getAttribute("data-cdn")||"/"</script><script>window.wd.jLen=8,window.wd.cLen=3</script><script>window.wd.track();
+				const l0 = document.createElement('link');
+				l0.onload = function () {
+					window.wd.ok(l0);
+				};
+				l0.onerror = function () {
+					window.wd.err(l0);
+				};
+				l0.rel = 'stylesheet';
+				l0.href = window.wd.cdn + 'slack-kit-styles.06d155a.cache-gantry-1565224516.css';
+				document.getElementsByTagName('head')[0].appendChild(l0);</script><link rel="stylesheet" href="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/slack-kit-styles.06d155a.cache-gantry-1565224516.css"><script>window.wd.track();
+				const l1 = document.createElement('link');
+				l1.onload = function () {
+					window.wd.ok(l1);
+				};
+				l1.onerror = function () {
+					window.wd.err(l1);
+				};
+				l1.rel = 'stylesheet';
+				l1.href = window.wd.cdn + 'client-boot-styles.a5d4d65.cache-gantry-1565224516.css';
+				document.getElementsByTagName('head')[0].appendChild(l1);</script><link rel="stylesheet" href="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/client-boot-styles.a5d4d65.cache-gantry-1565224516.css"><script>window.wd.track();
+				const l2 = document.createElement('link');
+				l2.onload = function () {
+					window.wd.ok(l2);
+				};
+				l2.onerror = function () {
+					window.wd.err(l2);
+				};
+				l2.rel = 'stylesheet';
+				l2.href = window.wd.cdn + 'helper-styles.d29e930.cache-gantry-1565224516.css';
+				document.getElementsByTagName('head')[0].appendChild(l2);</script><link rel="stylesheet" href="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/helper-styles.d29e930.cache-gantry-1565224516.css"><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-manifest.f8ba621.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-vendors.4590b72.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-vendors-client.862d05c.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-shared.962590b.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/slack-kit-styles.f4a4ba0.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/client-boot-styles.938f1e9.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/helper-styles.e9169a3.cache-gantry-1565224516.min.js" defer=""></script><script src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/client-boot.131f41f.cache-gantry-1565224516.min.js" defer=""></script><script charset="utf-8" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-vendors-async.fd02c1a.cache-gantry-1565224516.min.js" crossorigin="anonymous"></script><script charset="utf-8" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-vendors-async-client.8222d0a.cache-gantry-1565224516.min.js" crossorigin="anonymous"></script><script charset="utf-8" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/gantry-shared-async.21bbed9.cache-gantry-1565224516.min.js" crossorigin="anonymous"></script><script charset="utf-8" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/client-boot-imports.a92617c.cache-gantry-1565224516.min.js" crossorigin="anonymous"></script><link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABNVBMVEVKFEz///9NGE+EX4VLFU3w7PD9/f1SH1Tb0Nv59/n18/W4orhZKFt2TnhwRXF2TXdpPGqghKFMFk7FtMZTIFVhMmNxR3PHt8hfL2F6U3xpPWt/WYD+/v5nOWhWI1edgJ7z8POBW4LIuMhySHS6pruHZIl/WoGJZopuQ3CObI/Vydba0NtsQW7ArcHw6/DEs8VYJlqojqnx7fH8/PyfgqDGtcbg1+Du6e7e1N5kN2Z8VX2fg6BbKlxOGVBxRnJ4T3ljNWV6UnuDXoSLaIyih6NMF07az9qWd5f8+/zUx9Ts5+zj2+Pv6u/t5+13Tni1n7WYeZlTH1XYzdn49vjLu8uIZYm5pLpmOGipkKqMaY2UdJXr5euZe5prP2xsQG2JZovTxtSnjahOGlDSxdOQcJKHY4hXJVnkajHYAAABJUlEQVR4Xr3PNXbFMBCF4Tvmx8wYZmZmZmaG/S8hHke2UuikfF9xp9DfCC3V4YQzUeB01umDStYkogKS5EpCIUGukLHOZwMKRYsLrYv3EyqTljqQcm26DmWQXen2HNsIgrNEUf7PJGGm1w/yJlkLEBwK9PvBgLtWTgRhGQxD53OHCT5rIpiSwRCe+QyCt1kXQbQQIk9oZBQYGz9sAETV6RgChuaBpGlpSHPzlcoilpZLqwDikXZPZtOG0CCXvrXt7g7iu+TbM0Sw7wUx3gNESCqL4IiDfA9vGCck1USQIqLztAjKF+S7hO/qOmVDBLi57fRE7jX8FQRqMugienj8P3A9QeGLg+bveYFCjYNXxPiUoPJWJTOOd4foQ4OSHeUH47uO1voBEO4eo1Zt+vMAAAAASUVORK5CYII=" sizes="16x16 32x32 48x48" type="image/png"><style id="detectElementResize" type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style></head><body class=""><div aria-hidden="true" style="position:absolute" tabindex="1"></div><div class="p-client_container"><div class="p-client"><style class="p-channel_sidebar__theme--default">
+		.p-channel_sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__channel,
+		.p-channel_sidebar__link,
+		.p-channel_sidebar__channel:link,
+		.p-channel_sidebar__link:link,
+		.p-channel_sidebar__channel:visited,
+		.p-channel_sidebar__link:visited,
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__link:hover {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__channel--selected:link,
+		.p-channel_sidebar__link--selected:link,
+		.p-channel_sidebar__channel--selected:visited,
+		.p-channel_sidebar__link--selected:visited,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__close {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__close_container:hover {
+			background: #350D36;
+		}
+
+		.p-channel_sidebar__header {
+			color: rgb(207,195,207);
+		}
+
+		/* Folders */
+
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename {
+			background: rgb(38,0,39);
+			color: rgb(207,195,207);
+		}
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename:hover {
+			background: rgb(28,0,29);
+			color: rgb(207,195,207);
+		}
+
+		/* Override presence icons */
+		.p-channel_sidebar__channel--im .c-presence--active,
+		.p-channel_sidebar__channel--im-slackbot:before {
+			color: #2BAC76;
+		}
+		.p-channel_sidebar__channel--im.p-channel_sidebar__channel--selected .c-presence,
+		.p-channel_sidebar__channel--im-slackbot.p-channel_sidebar__channel--selected:before {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__channel--im .c-presence--away {
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__link--selected:hover {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__channel--selected:before,
+		.p-channel_sidebar__channel--selected:hover:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__channel--selected:after,
+		.p-channel_sidebar__channel--selected:hover:after,
+		.p-channel_sidebar__link--selected:after,
+		.p-channel_sidebar__link--selected:after {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__badge,
+		.p-channel_sidebar__banner--mentions {
+			background: #CD2553;
+		}
+
+		.p-channel_sidebar .c-custom_scrollbar__thumb_vertical,
+		.p-channel_sidebar .c-scrollbar__bar {
+			background: rgba(255,255,255,0.45);
+		}
+
+		.client_channels_list_container.focusablesection:focus .sectionfocusindicator,
+		.client_channels_list_container .focus-ring,
+		.p-channel_sidebar.focusablesection:focus .sectionfocusindicator,
+		#team_menu.focusablesection:focus .sectionfocusindicator {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		.client_channels_list_container a:not(.c-link--focus-visible).focus-ring,
+		.client_channels_list_container button:not(.c-button--focus-visible).focus-ring,
+		.p-channel_sidebar__jumper.c-button--focus-visible:focus,
+		.p-channel_sidebar__history_button.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_label--clickable.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_plus.c-button--focus-visible:focus,
+		.p-channel_sidebar__channel.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-button--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__close.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** `opacity: 1` color overrides */
+		.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-channel:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__section_heading_label--clickable:hover,
+		.p-channel_sidebar__section_heading_label--unreads,
+		.p-channel_sidebar__quickswitcher:hover {
+			color: #FFFFFF;
+		}
+
+		/** Navigation Bar **/
+		.p-channel_sidebar__jumper {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__jumper:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__history_button:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button--disabled:hover {
+			background: rgba(255,255,255,0.15);
+		}
+
+		/** Global Nav (DEPRECATED BUT KEEP FOR SONIC) **/
+		.p-global_nav__top {
+			background: #2B002C;
+			color: #FFFFFF;
+		}
+		.p-global_nav__top:after {
+			background: #2B002C;
+		}
+		.p-global_nav__sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+		.p-global_nav__top_user_presence {
+			background: #2B002C;
+		}
+		.p-global_nav__top_user_presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-global_nav__top_user_presence.c-presence--away {
+			color: #FFFFFF;
+		}
+		.p-global_nav__sidebar_jumper:hover,
+		.p-global_nav__sidebar_button:hover {
+			color: #FFFFFF;
+		}
+
+		/** Classic Nav (WIP) **/
+		.p-classic_nav__team_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-classic_nav__team_header:hover {
+			background: #350d36;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-classic_nav__team_header .c-link--focus-visible:focus,
+		.p-classic_nav__team_header .c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+	</style><div class="p-workspace p-workspace--context-pane-collapsed p-workspace--classic-nav" role="tabpanel"><div class="p-workspace__banner"><div role="alert" class="c-banner c-banner--info" data-qa="banner" style="top: 0px; opacity: 1;"><div class="c-banner__text">デスクトップ通知を受け取りたい場合には、Slack に<button class="c-link--button" type="button">デスクトップ通知の有効化</button>の許可を与えてください。</div><button class="c-button-unstyled c-icon_button c-icon_button--dark c-banner__close" type="button" aria-label="解除する"><i class="c-icon c-icon--times" type="times" aria-hidden="true"></i></button></div></div><div class="p-workspace__top_nav"><div class="p-classic_nav"><div class="p-classic_nav__team_header"><div class="p-classic_nav__team_header__content" id="team-menu-trigger" aria-haspopup="true"><div class="p-classic_nav__team_header__team"><div data-teamid="TBCT7NJ9H" class="p-classic_nav__team_header__team__name">ナギ倶楽部</div><button class="c-button-unstyled p-classic_nav__team_header__team__icon_button" type="button" aria-label="チームメニュー" aria-haspopup="true"><i class="c-icon p-classic_nav__team_header__team__icon c-icon--chevron-down" type="chevron-down" aria-hidden="true"></i></button><div class="p-classic_nav__team_header__team__dnd_container" role="presentation"><button class="c-button-unstyled p-dnd_button p-classic_nav__team_header__team__dnd" type="button" data-qa="do_not_disturb_btn" aria-label="通知" delay="150" aria-haspopup="true"><i class="c-icon c-icon--bell-o" type="bell-o" aria-hidden="true"></i></button></div></div><div class="p-classic_nav__team_header__user"><i class="c-icon p-classic_nav__team_header__user__presence c-presence c-presence--active c-icon--presence-online c-icon--inline" type="presence-online" title="アクティブ" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span class="p-classic_nav__team_header__user__name"><span class="p-classic_nav__team_header__user__name__truncate">トキ</span></span></div></div></div><div class="p-classic_nav__channel_header p-classic_nav__model_header"><div data-qa="channel_header__title" class="p-classic_nav__model__title"><div class="p-classic_nav__model__title__name p-classic_nav__no_drag"><button class="c-button-unstyled p-classic_nav__model__title__name__button" type="button" data-qa="channel_name" aria-haspopup="true"><i class="c-icon c-inline_channel_icon c-icon--lock-medium c-icon--inherit" type="lock-medium" aria-hidden="true"></i>20-08トキツ_イシン</button></div><div data-qa="channel_header__title__info" class="p-classic_nav__model__title__info p-classic_nav__no_drag"><button class="c-button-unstyled p-classic_nav__model__title__info__star" type="button" aria-label="このチャンネルにスターを付ける" data-qa="channel_header__star_button" delay="150" aria-describedby="slack-kit-tooltip"><i class="c-icon c-icon--star-o c-icon--inherit c-icon--inline" type="star-o" aria-hidden="true"></i></button><span class="p-classic_nav__model__title__info__sep">|</span><button class="c-button-unstyled p-classic_nav__model__title__info__members" type="button" aria-label="メンバーリストを表示する" delay="150"><i class="c-icon c-icon--user c-icon--inherit c-icon--inline" type="user" aria-hidden="true"></i>&nbsp;2</button><span class="p-classic_nav__model__title__info__sep">|</span><button class="c-button-unstyled p-classic_nav__model__title__info__pins" type="button" aria-label="ピン留めアイテムを確認" delay="150"><i class="c-icon c-icon--thumb-tack c-icon--inherit c-icon--inline" type="thumb-tack" aria-hidden="true"></i>&nbsp;1</button><span class="p-classic_nav__model__title__info__sep">|</span><div role="presentation" class="p-classic_nav__model__title__info__item p-classic_nav__model__title__info__topic p-classic_nav__model__title__info__topic--empty"><div class="p-classic_nav__model__title__info__topic__text"><div class="p-classic_nav__model__title__info__topic__content"><i class="c-icon c-icon--pencil c-icon--inherit c-icon--inline" type="pencil" aria-hidden="true"></i>&nbsp;トピックを追加</div></div><button class="c-button-unstyled p-classic_nav__model__title__info__topic__edit" type="button" aria-label="チャンネルのトピックを編集する">編集</button></div><span class="p-classic_nav__model__title__info__sep">|</span></div></div><div data-qa="channel_header__buttons" class="p-classic_nav__model__buttons p-classic_nav__no_drag"><button class="c-button-unstyled p-classic_nav__model__button p-classic_nav__model__button--disabled" type="button" aria-label="チャンネル内で通話を開始するには、有料プランをチェックしてください。" aria-disabled="true" data-qa="channel_header_calls_button" delay="150"><i class="c-icon p-classic_nav__model__button__icon c-icon--phone" type="phone" aria-hidden="true"></i></button><button class="c-button-unstyled p-classic_nav__model__button" type="button" aria-label="チャンネル詳細を表示する" delay="300"><i class="c-icon p-classic_nav__model__button__icon c-icon--info-circle" type="info-circle" aria-hidden="true"></i></button><button class="c-button-unstyled p-classic_nav__model__button" type="button" data-qa="channel_header_settings_button" aria-label="チャンネル設定" delay="150" aria-haspopup="true"><i class="c-icon p-classic_nav__model__button__icon c-icon--cog-o" type="cog-o" aria-hidden="true"></i></button></div></div><div class="p-classic_nav__right_header"><button class="c-button-unstyled p-classic_nav__right__search p-classic_nav__no_drag" type="button" aria-label="検索" data-qa="legacy_search_header"><i class="c-icon p-classic_nav__right__search__icon c-icon--search c-icon--inherit c-icon--inline" type="search" aria-hidden="true"></i><span class="p-classic_nav__right__search__placeholder">検索</span></button><div class="p-classic_nav__search_small_divider"></div><button class="c-button-unstyled p-classic_nav__right__button p-classic_nav__right__button--search_small p-classic_nav__no_drag" type="button" data-qa="legacy_search_header" aria-label="検索" delay="150" aria-describedby="slack-kit-tooltip"><i class="c-icon c-icon--search" type="search" aria-hidden="true"></i></button><div class="p-classic_nav__right__activity__container"><button class="c-button-unstyled p-classic_nav__right__button p-classic_nav__right__button--activity p-classic_nav__right__activity p-classic_nav__no_drag" type="button" aria-label="アクティビティログを開く" delay="150" aria-describedby="slack-kit-tooltip"><i class="c-icon p-classic_nav__right__activity__icon c-icon--mentions" type="mentions" aria-hidden="true"></i></button></div><button class="c-button-unstyled p-classic_nav__right__button p-classic_nav__right__button--stars p-classic_nav__no_drag" type="button" aria-label="スター付きアイテムリストを開く" delay="150" aria-describedby="slack-kit-tooltip"><i class="c-icon c-icon--star-o" type="star-o" aria-hidden="true"></i></button><button class="c-button-unstyled p-classic_nav__right__button p-classic_nav__right__button--flexpanes p-classic_nav__no_drag" type="button" aria-label="その他" delay="150" aria-haspopup="true"><i class="c-icon c-icon--vertical-ellipsis" type="vertical-ellipsis" aria-hidden="true"></i></button></div></div></div><div class="p-workspace__sidebar"><div class="p-workspace__channel_sidebar" data-qa="ws_channel_sidebar"><nav class="p-channel_sidebar p-channel_sidebar--classic_nav" data-qa-channel-sidebar="true" data-qa-channel-sidebar-selected-item-id="CLY80V2H2" aria-labelledby="channel_sidebar_aria_label"><h1 id="channel_sidebar_aria_label" class="offscreen">チャンネルサイドバー</h1><style class="p-channel_sidebar__theme--default">
+		.p-channel_sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__channel,
+		.p-channel_sidebar__link,
+		.p-channel_sidebar__channel:link,
+		.p-channel_sidebar__link:link,
+		.p-channel_sidebar__channel:visited,
+		.p-channel_sidebar__link:visited,
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__link:hover {
+			color: rgb(207,195,207);
+		}
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__channel--selected:link,
+		.p-channel_sidebar__link--selected:link,
+		.p-channel_sidebar__channel--selected:visited,
+		.p-channel_sidebar__link--selected:visited,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected:hover,
+		.p-channel_sidebar__channel--selected + .p-channel_sidebar__close,
+		.p-channel_sidebar__link--selected + .p-channel_sidebar__close {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__channel:hover,
+		.p-channel_sidebar__link:hover,
+		.p-channel_sidebar__close_container:hover {
+			background: #350D36;
+		}
+
+		.p-channel_sidebar__header {
+			color: rgb(207,195,207);
+		}
+
+		/* Folders */
+
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename {
+			background: rgb(38,0,39);
+			color: rgb(207,195,207);
+		}
+		input[type="text"].p-channel_sidebar__folder_heading_label_rename:hover {
+			background: rgb(28,0,29);
+			color: rgb(207,195,207);
+		}
+
+		/* Override presence icons */
+		.p-channel_sidebar__channel--im .c-presence--active,
+		.p-channel_sidebar__channel--im-slackbot:before {
+			color: #2BAC76;
+		}
+		.p-channel_sidebar__channel--im.p-channel_sidebar__channel--selected .c-presence,
+		.p-channel_sidebar__channel--im-slackbot.p-channel_sidebar__channel--selected:before {
+			color: #FFFFFF;
+		}
+		.p-channel_sidebar__channel--im .c-presence--away {
+			color: rgb(207,195,207);
+		}
+
+		.p-channel_sidebar__channel--selected,
+		.p-channel_sidebar__channel--selected:hover,
+		.p-channel_sidebar__link--selected,
+		.p-channel_sidebar__link--selected:hover {
+			background: #1164A3;
+		}
+
+		.p-channel_sidebar__channel--selected:before,
+		.p-channel_sidebar__channel--selected:hover:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__link--selected:before,
+		.p-channel_sidebar__channel--selected:after,
+		.p-channel_sidebar__channel--selected:hover:after,
+		.p-channel_sidebar__link--selected:after,
+		.p-channel_sidebar__link--selected:after {
+			color: #FFFFFF;
+		}
+
+		.p-channel_sidebar__badge,
+		.p-channel_sidebar__banner--mentions {
+			background: #CD2553;
+		}
+
+		.p-channel_sidebar .c-custom_scrollbar__thumb_vertical,
+		.p-channel_sidebar .c-scrollbar__bar {
+			background: rgba(255,255,255,0.45);
+		}
+
+		.client_channels_list_container.focusablesection:focus .sectionfocusindicator,
+		.client_channels_list_container .focus-ring,
+		.p-channel_sidebar.focusablesection:focus .sectionfocusindicator,
+		#team_menu.focusablesection:focus .sectionfocusindicator {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		.client_channels_list_container a:not(.c-link--focus-visible).focus-ring,
+		.client_channels_list_container button:not(.c-button--focus-visible).focus-ring,
+		.p-channel_sidebar__jumper.c-button--focus-visible:focus,
+		.p-channel_sidebar__history_button.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_label--clickable.c-button--focus-visible:focus,
+		.p-channel_sidebar__section_heading_plus.c-button--focus-visible:focus,
+		.p-channel_sidebar__channel.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-button--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__link.c-link--focus-visible:focus .p-channel_sidebar__name,
+		.p-channel_sidebar__close.c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+
+		/** `opacity: 1` color overrides */
+		.p-channel_sidebar__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--suggested):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--unread:not(.p-channel_sidebar__link--selected) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__link--add-channel:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+		.p-channel_sidebar__section_heading_label--clickable:hover,
+		.p-channel_sidebar__section_heading_label--unreads,
+		.p-channel_sidebar__quickswitcher:hover {
+			color: #FFFFFF;
+		}
+
+		/** Navigation Bar **/
+		.p-channel_sidebar__jumper {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__jumper:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button {
+			background: rgba(255,255,255,0.15);
+		}
+		.p-channel_sidebar__history_button:hover {
+			background: rgba(255,255,255,0.2);
+		}
+		.p-channel_sidebar__history_button--disabled:hover {
+			background: rgba(255,255,255,0.15);
+		}
+
+		/** Global Nav (DEPRECATED BUT KEEP FOR SONIC) **/
+		.p-global_nav__top {
+			background: #2B002C;
+			color: #FFFFFF;
+		}
+		.p-global_nav__top:after {
+			background: #2B002C;
+		}
+		.p-global_nav__sidebar {
+			background: #3F0E40;
+			color: rgb(207,195,207);
+		}
+		.p-global_nav__top_user_presence {
+			background: #2B002C;
+		}
+		.p-global_nav__top_user_presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-global_nav__top_user_presence.c-presence--away {
+			color: #FFFFFF;
+		}
+		.p-global_nav__sidebar_jumper:hover,
+		.p-global_nav__sidebar_button:hover {
+			color: #FFFFFF;
+		}
+
+		/** Classic Nav (WIP) **/
+		.p-classic_nav__team_header {
+			background: #3F0E40;
+			color: #FFFFFF;
+		}
+		.p-classic_nav__team_header:hover {
+			background: #350d36;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--active {
+			color: #2BAC76;
+		}
+		.p-classic_nav__team_header__user__presence.c-presence--away {
+			color: rgb(207,195,207);
+		}
+		.p-classic_nav__team_header .c-link--focus-visible:focus,
+		.p-classic_nav__team_header .c-button--focus-visible:focus {
+			box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 5px rgba(255,255,255,0.3);
+		}
+	</style><div class="p-channel_sidebar__navigation_bar"><button class="c-button-unstyled p-channel_sidebar__jumper" type="button" aria-label="クイックスイッチャーを開いて会話に移動しましょう。"><div class="p-channel_sidebar__jumper_left"><i class="c-deprecated-icon p-channel_sidebar__jumper_icon c-icon--filter c-deprecated-icon--vertical-align-baseline c-deprecated-icon--inherit" type="filter" aria-hidden="true"></i>会話を移動</div><span class="p-channel_sidebar__jumper_keys">⌘K</span></button></div><div class="p-channel_sidebar__list" style="position: relative;"><div style="overflow: visible; height: 0px; width: 0px;"><div role="presentation" class="c-scrollbar" style="width: 220px; height: 401px;"><div role="presentation" class="c-scrollbar__hider"><div role="presentation" class="c-scrollbar__child" style="width: 220px;"><div class="p-channel_sidebar__static_list" data-qa="channel_sidebar_list" aria-label="チャンネルとダイレクトメッセージ" role="list" style="min-height: 401px;"><div data-qa="channel_sidebar_static_list_body"><div role="presentation" style="height: 12px;"></div><div role="listitem" style="height: 26px;"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--all-threads" type="button" aria-label="スレッド" data-sidebar-link-id="Vall_threads" data-qa-channel-sidebar-link-id="Vall_threads"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name">スレッド</span></button></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__section_heading" data-qa-channel-sidebar-section-heading="channels" role="group" aria-label="チャンネル"><h2 class="offscreen">チャンネル</h2><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable" type="button" aria-label="チャンネル一覧を確認する" delay="300"> チャンネル</button><div class="p-channel_sidebar__section_heading_right"><button class="c-button-unstyled p-channel_sidebar__section_heading_plus" type="button" aria-label="チャンネルを作成する" data-qa="channel_sidebar__plus__channels" delay="300"></button></div></div></div><div role="listitem" style="height: 26px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="CBCPLG8JY" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="00-00自己紹介 (チャンネル, 1 件の未読メッセージ)" draggable="false" data-drag-type="channel" data-drag-id="CBCPLG8JY" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--unread" href="https://naggigoishi.slack.com/messages/CBCPLG8JY"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip">00-00自己紹介</span></a></div><div role="listitem" style="height: 26px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="CLQBVNERZ" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="00-02休憩広場 (チャンネル)" draggable="false" data-drag-type="channel" data-drag-id="CLQBVNERZ" class="c-link p-channel_sidebar__channel" href="https://naggigoishi.slack.com/messages/CLQBVNERZ"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip">00-02休憩広場</span></a></div><div role="listitem" style="height: 26px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="CM3QAJZQF" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="00-03報告 (チャンネル)" draggable="false" data-drag-type="channel" data-drag-id="CM3QAJZQF" class="c-link p-channel_sidebar__channel" href="https://naggigoishi.slack.com/messages/CM3QAJZQF"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip">00-03報告</span></a></div><div role="listitem" style="height: 26px;"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="true" data-qa-channel-sidebar-channel-id="CLY80V2H2" data-qa-channel-sidebar-channel-type="private" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="20-08トキツ_イシン (選択済み, プライベートチャンネル, には下書きがある)" draggable="false" data-drag-type="channel" data-drag-id="CLY80V2H2" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--private p-channel_sidebar__channel--selected" href="https://naggigoishi.slack.com/messages/CLY80V2H2"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip">20-08トキツ_イシン</span></a></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="CLLAE1LH0" data-qa-channel-sidebar-channel-type="channel" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="00-01無料質問 (チャンネル, 参加推奨)" draggable="false" data-drag-type="channel" data-drag-id="CLLAE1LH0" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--suggested" href="https://naggigoishi.slack.com/messages/CLLAE1LH0"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip">00-01無料質問</span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="参加推奨チャンネルを却下する"><i class="c-deprecated-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--add-channel p-channel_sidebar__link--dim" type="button" aria-label="チャンネルを追加する" data-sidebar-link-id="Vadd_channel" data-qa-channel-sidebar-link-id="Vadd_channel"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_add_channel">チャンネルを追加する</span></button><button class="c-button-unstyled p-channel_sidebar__close" type="button"><i class="c-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__section_heading" data-qa-channel-sidebar-section-heading="ims" role="group" aria-label="ダイレクトメッセージ"><h2 class="offscreen">ダイレクトメッセージ</h2><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable" type="button" aria-label="ダイレクトメッセージを開く" delay="300"> ダイレクトメッセージ</button><div class="p-channel_sidebar__section_heading_right"><button class="c-button-unstyled p-channel_sidebar__section_heading_plus" type="button" aria-label="ダイレクトメッセージを開く" data-qa="channel_sidebar__plus__ims" delay="300"></button></div></div></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="DLS5QTGBB" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="Slackbot (ダイレクトメッセージ, アクティブ)" draggable="false" data-drag-type="channel" data-drag-id="DLS5QTGBB" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--im p-channel_sidebar__channel--im-slackbot" href="https://naggigoishi.slack.com/messages/DLS5QTGBB"><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip"><span>Slackbot</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="Slackbot とのダイレクトメッセージを閉じる"><i class="c-deprecated-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="DLM3QUX7C" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="true" aria-label="トキ (自分) (ダイレクトメッセージ, アクティブ)" draggable="false" data-drag-type="channel" data-drag-id="DLM3QUX7C" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--im p-channel_sidebar__channel--im-you" href="https://naggigoishi.slack.com/messages/DLM3QUX7C"><i class="c-icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="アクティブ" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="true" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip"><span>トキ</span><span class="p-channel_sidebar__you_label">(自分)</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="トキ とのダイレクトメッセージを閉じる"><i class="c-deprecated-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><a data-user-count="0" data-qa-channel-sidebar-channel="true" data-qa-channel-sidebar-channel-is-selected="false" data-qa-channel-sidebar-channel-id="DM0D5778F" data-qa-channel-sidebar-channel-type="im" data-qa-channel-sidebar-is-starred="false" data-qa-channel-sidebar-is-you="false" aria-label="Naggi (ダイレクトメッセージ, アクティブ)" draggable="false" data-drag-type="channel" data-drag-id="DM0D5778F" class="c-link p-channel_sidebar__channel p-channel_sidebar__channel--im" href="https://naggigoishi.slack.com/messages/DM0D5778F"><i class="c-icon c-presence c-presence--active c-icon--presence-online" type="presence-online" title="アクティブ" aria-hidden="true" data-qa="presence_indicator" data-qa-presence-self="false" data-qa-presence-active="true" data-qa-presence-dnd="false"></i><span dir="auto" class="p-channel_sidebar__name" data-qa="channel_sidebar_name" delay="300" aria-describedby="slack-kit-tooltip"><span>Naggi</span></span></a><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="Naggi とのダイレクトメッセージを閉じる"><i class="c-deprecated-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><button class="c-button-unstyled p-channel_sidebar__link p-channel_sidebar__link--invites p-channel_sidebar__link--dim" type="button" aria-label="メンバーを招待" data-sidebar-link-id="Vinvites" data-qa-channel-sidebar-link-id="Vinvites"><span class="p-channel_sidebar__name" data-qa="channel_sidebar_name_invite_people">メンバーを招待</span></button><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="「メンバーを招待」ボタンを非表示にする"><i class="c-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__section_heading" data-qa-channel-sidebar-section-heading="apps"><h2 class="offscreen">App</h2><button class="c-button-unstyled p-channel_sidebar__section_heading_label p-channel_sidebar__section_heading_label--clickable" type="button" aria-label="アプリを検索する" delay="300" aria-describedby="slack-kit-tooltip"> App</button><div class="p-channel_sidebar__section_heading_right" aria-hidden="true"><button class="c-button-unstyled p-channel_sidebar__section_heading_plus" type="button" aria-label="アプリを検索する" tabindex="-1" data-qa="channel_sidebar__plus__apps" delay="300" aria-describedby="slack-kit-tooltip"></button></div></div></div><div role="presentation" style="height: 18px;"></div><div role="listitem" style="height: 26px;"><div class="p-channel_sidebar__close_container"><button class="c-button-unstyled p-channel_sidebar__link" type="button" data-qa="add_apps_link">+ アプリを追加する</button><button class="c-button-unstyled p-channel_sidebar__close" type="button" aria-label="「アプリを追加する」プロンプトを閉じる" data-qa="add_apps_dismiss_link"><i class="c-icon c-icon--times-circle-medium" type="times-circle-medium" aria-hidden="true"></i></button></div></div><div role="presentation" style="height: 18px;"></div><div role="presentation" style="height: 18px;"></div></div><div class="p-channel_sidebar__static_list_footer" data-qa="channel_sidebar_static_list_footer"></div></div></div></div><div role="presentation" class="c-scrollbar__track"><div role="presentation" class="c-scrollbar__bar" tabindex="-1" style="height: 294.507px; transform: translateY(29px);"></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 221px; height: 402px;"></div></div><div class="contract-trigger"></div></div></div></nav></div></div><div class="p-workspace__primary_view"><div class="p-workspace__primary_view_contents"><div class="p-file_drag_drop__container"><div class="p-workspace__primary_view_body"><div class="p-message_pane p-message_pane--classic-nav" data-qa="message_pane"><div class="p-message_pane__top_banners"></div><div style="overflow: visible; height: 0px; width: 0px;"><div role="presentation"><div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none;"></div><div role="list" class="c-virtual_list c-virtual_list--scrollbar c-message_list c-scrollbar c-scrollbar--fade" aria-label="20-08トキツ_イシン (プライベートチャンネル, には下書きがある)" style="width: 1060px; height: 159px;"><div role="presentation" class="c-scrollbar__hider"><div role="presentation" class="c-scrollbar__child" style="width: 1060px;"><div class="c-virtual_list__scroll_container" role="presentation" style="position: relative; height: 2241.28px;"><div class="c-virtual_list__sticky_container" role="presentation" style="top: 1959.19px; bottom: 0px;"><div class="c-virtual_list__item--sticky c-virtual_list__item" tabindex="-1" role="listitem" style="top: -21px; z-index: 200;"><div class="c-message_list__day_divider__label"><div class="c-message_list__day_divider__label__pill">今日</div></div></div></div><div class="c-virtual_list__item" tabindex="-1" role="listitem" style="top: 1959.28px;"><div class="c-message_list__day_divider"><hr class="c-message_list__day_divider__line"></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" style="top: 2015.28px;"><div class="c-message c-message--light" role="document" data-qa="message_container" data-qa-placeholder="false"><div class="c-message__gutter c-message__gutter--feature_sonic_inputs"><button class="c-button-unstyled c-message__avatar c-avatar c-avatar--interactive" type="button" aria-hidden="true" aria-label="Naggi のプロフィールを表示" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/TBCT7NJ9H-UBCT7NJAX-00204f100f61-48" srcset="https://ca.slack-edge.com/TBCT7NJ9H-UBCT7NJAX-00204f100f61-72 2x" alt=""></button></div><div class="c-message__content c-message__content--feature_sonic_inputs" data-qa="message_content"><div class="c-message__content_header"><span class="c-message__sender" data-qa="message_sender"><a target="_blank" rel="noopener noreferrer" data-message-sender="UBCT7NJAX" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link" href="https://app.slack.com/team/UBCT7NJAX">Naggi</a></span> <a delay="300" aria-describedby="slack-kit-tooltip" class="c-link c-timestamp c-timestamp--static" href="https://naggigoishi.slack.com/archives/CLY80V2H2/p1565225417000600"><span class="c-timestamp__label" data-stringify-type="replace" data-stringify-text="[09:50]" data-stringify-requires-siblings="true">09:50</span></a></div><span class="c-message__body" dir="auto" data-qa="message-text"><span dir="ltr" delay="150" aria-describedby="slack-kit-tooltip"><a class="c-link c-member_slug c-member_slug--link c-member_slug--mention" data-member-id="ULM45KT43" data-member-label="@トキ" data-stringify-type="mention" data-stringify-id="ULM45KT43" data-stringify-label="@トキ" aria-haspopup="true" href="https://naggigoishi.slack.com/team/ULM45KT43" rel="noopener noreferrer">@トキ</a></span> さん！<br>学習の調子はいかがですか？質問があれば気軽にご連絡ください！</span></div></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" style="top: 2085.28px;"><div class="c-message c-message--light" role="document" data-qa="message_container" data-qa-placeholder="false"><div class="c-message__gutter c-message__gutter--feature_sonic_inputs"><button class="c-button-unstyled c-message__avatar c-avatar c-avatar--interactive" type="button" aria-hidden="true" aria-label="トキ のプロフィールを表示" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/TBCT7NJ9H-ULM45KT43-g6a8e2006ed7-48" srcset="https://ca.slack-edge.com/TBCT7NJ9H-ULM45KT43-g6a8e2006ed7-72 2x" alt=""></button></div><div class="c-message__content c-message__content--feature_sonic_inputs" data-qa="message_content"><div class="c-message__content_header"><span class="c-message__sender" data-qa="message_sender"><a target="_blank" rel="noopener noreferrer" data-message-sender="ULM45KT43" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link" href="https://app.slack.com/team/ULM45KT43">トキ</a></span> <a delay="300" aria-describedby="slack-kit-tooltip" class="c-link c-timestamp c-timestamp--static" href="https://naggigoishi.slack.com/archives/CLY80V2H2/p1565237494001500"><span class="c-timestamp__label" data-stringify-type="replace" data-stringify-text="[13:11]" data-stringify-requires-siblings="true">13:11</span></a></div><span class="c-message__body" dir="auto" data-qa="message-text">すいません、少し体調を崩していました<span class="c-emoji c-emoji__medium c-emoji--inline" data-qa="emoji" delay="300" aria-describedby="slack-kit-tooltip"><img src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/1f647-200d-2642-fe0f.png" aria-label="おじぎ 男性 絵文字" alt=":おじぎ_男性:" data-stringify-type="emoji" data-stringify-emoji=":man-bowing:"></span><br>だいぶよくなったので、とりかかります。</span></div></div></div><div class="c-virtual_list__item" tabindex="-1" role="listitem" style="top: 2155.28px;"><div class="c-message_list__unread_divider c-message_list__unread_divider--ghost"><hr class="c-message_list__unread_divider__separator" aria-hidden="true"><span class="c-message_list__unread_divider__label">新しいメッセージ</span></div></div><div aria-expanded="false" class="c-virtual_list__item" tabindex="-1" role="listitem" style="top: 2155.28px;"><div class="c-message c-message--light c-message--last" role="document" data-qa="message_container" data-qa-placeholder="false"><div class="c-message__gutter c-message__gutter--feature_sonic_inputs"><button class="c-button-unstyled c-message__avatar c-avatar c-avatar--interactive" type="button" aria-hidden="true" aria-label="Naggi のプロフィールを表示" tabindex="-1" aria-haspopup="true" style="height: 36px; line-height: 36px; width: 36px;"><img class="c-avatar__image" src="./Slack _ 20-08トキツ_イシン _ ナギ倶楽部_files/TBCT7NJ9H-UBCT7NJAX-00204f100f61-48" srcset="https://ca.slack-edge.com/TBCT7NJ9H-UBCT7NJAX-00204f100f61-72 2x" alt=""></button></div><div class="c-message__content c-message__content--feature_sonic_inputs" data-qa="message_content"><div class="c-message__content_header"><span class="c-message__sender" data-qa="message_sender"><a target="_blank" rel="noopener noreferrer" data-message-sender="UBCT7NJAX" data-qa="message_sender_name" aria-haspopup="true" class="c-link c-message__sender_link" href="https://app.slack.com/team/UBCT7NJAX">Naggi</a></span> <a delay="300" aria-describedby="slack-kit-tooltip" class="c-link c-timestamp c-timestamp--static" href="https://naggigoishi.slack.com/archives/CLY80V2H2/p1565237716002200"><span class="c-timestamp__label" data-stringify-type="replace" data-stringify-text="[13:15]" data-stringify-requires-siblings="true">13:15</span></a></div><span class="c-message__body" dir="auto" data-qa="message-text">はい！ご連絡ありがとうございます。<br>お体にお気をつけて頑張っていきましょう！</span></div></div></div></div></div></div><div role="presentation" class="c-scrollbar__track"><div role="presentation" class="c-scrollbar__bar" tabindex="-1" style="height: 50px; transform: translateY(92px);"></div></div></div><div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none;"></div></div></div><input type="file" class="p-hidden_file_input" multiple="" aria-hidden="true" data-qa="file_upload" tabindex="-1"><div class="resize-triggers"><div class="expand-trigger"><div style="width: 1061px; height: 160px;"></div></div><div class="contract-trigger"></div></div></div></div><footer class="p-workspace__primary_view_footer"><div class="p-workspace__message_pane_input"><div class="p-workspace__message_pane_input_inner"><div class="p-workspace__input p-message_input"><div class="p-message_input_field c-texty_input--multi_line c-texty_input ql-container focus" data-qa="message_input" data-message-input="true" data-channel-id="CLY80V2H2" data-view-context="message-pane" data-min-lines="1" data-buttons="2"><div class="ql-editor" data-gramm="false" contenteditable="true" id="undefined" dir="auto" role="textbox" tabindex="1" data-team-id="TBCT7NJ9H" aria-label="20-08トキツ_イシン へのメッセージ" aria-multiline="true" aria-autocomplete="list" aria-expanded="false" aria-owns="chat_input_tab_ui" spellcheck="true"><p>boards/indexで各投稿のお気に入りとお気に入り解除をajaxによって切り替えたいのですが、</p><p>なかなかうまくいかないので、相談させてください🙇‍♂️</p><p><br></p><p>やりたいこと</p><p>AJAX通信でboards/indexのお気に入り、お気に入り解除の表示を変えたい。</p><p><br></p><p>やったこと</p><p>１、boards/indexのお気に入りのところのみ切り出して、favorites/_favorite.html.erbにパーシャル化しました。</p><p>　　そしてboards/inidexのパーシャル化したところに id を取り付けました。</p><p>　　お気に入り、お気に入り解除にremote:trueもつけています。</p><p><br></p><p>２、favorites_controllerのcreateアクションでrespond_to do |format|を使い、create.js.erbに飛ぶようにしました。</p><p><br></p><p>３、create.js.erbに変更したい内容を記述しました。</p><p><br></p><p>実際の挙動</p><p>お気に入りボタンを押しても何も変わらずです。リーロードすると切り替わります。</p><p><br></p><p>https://github.com/tokitsu/asia/tree/issues/12a</p><p><br></p><p>よろしくお願いいたします。</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1" aria-hidden="true" role="presentation"></div><div class="ql-composer" style="left: 139.617px; top: -33px;"></div><div class="ql-buttons"><button class="c-button-unstyled c-texty_input__button" type="button" aria-label="絵文字メニュー" data-qa="texty_emoji_button" tabindex="4" aria-haspopup="true"><i class="c-icon c-texty_input__button_icon c-texty_input__button_icon--emoji_background c-icon--circle-fill" type="circle-fill" aria-hidden="true"></i><i class="c-icon c-texty_input__button_icon c-texty_input__button_icon--emoji_passive c-icon--smile-o" type="smile-o" aria-hidden="true"></i><i class="c-icon c-texty_input__button_icon c-texty_input__button_icon--emoji_active c-icon--happy-smile" type="happy-smile" aria-hidden="true"></i></button><button class="c-button-unstyled c-texty_input__button" type="button" data-qa="texty_mention_button" tabindex="3" aria-label="メンションを追加する"><i class="c-icon c-texty_input__button_icon c-texty_input__button_icon--mention c-icon--mentions" type="mentions" aria-hidden="true"></i></button></div><div class="ql-placeholder" aria-hidden="true" role="presentation" tabindex="-1" style=""><div class="c-texty_input__placeholder">20-08トキツ_イシン へのメッセージ</div></div></div><button class="c-button-unstyled p-message_input_file_button" type="button" aria-label="ファイルメニュー" tabindex="2" data-qa="msg_input_file_btn" aria-haspopup="true"><i class="c-icon p-message_input_file_icon c-icon--paperclip" type="paperclip" aria-hidden="true"></i></button><input type="file" class="p-hidden_file_input" multiple="" aria-hidden="true" data-qa="file_upload" tabindex="-1"></div><div class="p-notification_bar"><div class="p-notification_bar__section p-notification_bar__section--left"></div><div class="p-notification_bar__section p-notification_bar__section--right p-notification_bar__section--is-visible"><span class="p-notification_bar__formatting" aria-hidden="true"><b>＊太字＊</b> <code>｀コード｀</code> <code>｀｀｀書式設定済み｀｀｀</code> <span>＞引用</span></span></div></div></div><button class="c-button c-button--primary c-button--medium p-workspace__message_pane_send p-message_input__send p-message_input__send--primary p-message_input__send--medium" type="button" tabindex="1" delay="150" aria-describedby="slack-kit-tooltip">送信</button></div></footer></div></div></div><div class="p-workspace__secondary_view"><div class="p-workspace__secondary_view_contents"></div></div></div></div></div><div class="p-trouble_loading_overlay"></div><div class="p-trouble_loading"><h1 id="p-trouble--title">For some reason, Slack couldn't load 😓</h1><p id="p-trouble--subtext">We're quite sorry about this! Before you try to troubleshoot, please do check <a href="https://status.slack.com/" target="_blank">https://status.slack.com</a> — the problem may be on our end.</p><h3 id="p-trouble--ts">Troubleshooting</h3><div class="p-trouble_loading_content"><p id="p-trouble--tsSubtext">Here are a few things to try:</p><ul><li id="p-trouble--ts1"><a href="https://app.slack.com/client?force_cold_boot=1">Reload Slack</a> or even restart your browser</li><li id="p-trouble--ts2"><a href="https://slack.com/help/test" target="_blank">Test your connection</a> to Slack's servers.</li><li id="p-trouble--ts3">Make sure your security software isn't blocking Slack.</li></ul><p id="p-trouble--moreInfo"><a href="https://slack.com/help" target="_blank">Check our Help Center</a> for more details, or <a href="https://slack.com/help/requests/new" target="_blank">drop us a line</a>.</p></div></div><script>window.wd.translations={"de-DE":{title:"Aus irgendeinem Grund konnte Slack nicht geladen werden 😓",subtext:'Das tut uns wirklich sehr leid! Bevor du dich an die Fehlerbehebung machst, schau bitte mal auf der folgenden Website nach: <a href="http://status.slack.com/">http://status.slack.com/</a>. Es kann nämlich sein, dass das Problem bei uns liegt.',ts:"Fehlerbehebung",tsSubtext:"Hier sind ein paar Dinge, die du versuchen kannst:",ts1:'<a href="/client?force_cold_boot=1">Lade Slack neu</a> oder starte deinen Browser neu.',ts2:'<a href="https://slack.com/help/test" target="_blank">Teste deine Verbindung</a> zu den Servern von Slack.',ts3:"Vergewissere dich bitte, dass deine Sicherheitssoftware Slack nicht blockiert.",moreInfo:'<a href="https://slack.com/help" target="_blank">Informiere dich in unserem Support-Center</a> über weitere Einzelheiten oder <a href="https://slack.com/help/requests/new" target="_blank">sende uns eine Nachricht.</a>'},"es-ES":{title:"Por alguna razón, Slack no se ha cargado 😓",subtext:'Lo sentimos mucho. Antes de intentar solucionar el problema, revisa <a href="http://status.slack.com/">http://status.slack.com/</a>. El problema puede venir de nuestra parte.',ts:"Resolución de problemas",tsSubtext:"Prueba a hacer lo siguiente:",ts1:'<a href="/client?force_cold_boot=1">Vuelve a cargar Slack</a> o incluso reinicia el navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Comprueba el estado de tu conexión</a> a los servidores de Slack.',ts3:"Asegúrate de que tu software de seguridad no bloquea Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consulta nuestro centro de ayuda</a> para más información o <a href="https://slack.com/help/requests/new" target="_blank">escríbenos.</a>'},"es-LA":{title:"Por alguna razón, Slack no pudo cargarse 😓",subtext:'Lo sentimos mucho. Antes de intentar solucionar el problema, revisa <a href="http://status.slack.com/">http://status.slack.com/</a>. El problema puede venir de nuestra parte.',ts:"Resolución de problemas",tsSubtext:"Intenta hacer lo siguiente:",ts1:'<a href="/client?force_cold_boot=1">Vuelve a cargar Slack</a> o incluso reinicia el navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Comprueba el estado de tu conexión</a> a los servidores de Slack.',ts3:"Asegúrate de que tu software de seguridad no bloquea Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consulta nuestro Centro de Ayuda</a> para más información o <a href="https://slack.com/help/requests/new" target="_blank">escríbenos.</a>'},"fr-FR":{title:"Slack n’a pas pu se charger 😓",subtext:'Nous en sommes désolés ! Avant d’essayer de résoudre les problèmes, veuillez consulter <a href="http://status.slack.com/">http://status.slack.com/</a> — le problème pourrait provenir de notre côté.',ts:"Résolution des problèmes",tsSubtext:"Ce que vous pouvez essayer de faire:",ts1:'<a href="/client?force_cold_boot=1">Rechargez Slack</a> ou redémarrez le navigateur.',ts2:'<a href="https://slack.com/help/test" target="_blank">Testez votre connexion</a> aux serveurs Slack.',ts3:"Vérifiez que votre logiciel de sécurité ne bloque pas Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Consultez notre Centre d’assistance</a> pour en savoir plus. Vous pouvez aussi <a href="https://slack.com/help/requests/new" target="_blank">nous écrire.</a>'},"ja-JP":{title:"何らかの理由により、Slack を読み込めませんでした 😓",subtext:'大変申しわけありません！トラブルシューティングを行う前に、<a href="http://status.slack.com/">http://status.slack.com/</a> をご確認ください — 原因はこちらにあるかもしれません。',ts:"トラブルシューティング",tsSubtext:"幾つか試してみてください：",ts1:'<a href="/client?force_cold_boot=1">Slack をリロード</a>するか、ブラウザを再起動してみてください。',ts2:'Slack のサーバーへの<a href="https://slack.com/help/test" target="_blank">接続をテスト</a>します。',ts3:"お使いのセキュリティソフトウェアがSlackをブロックしていないかどうか確認してください。",moreInfo:'詳しくは<a href="https://slack.com/help" target="_blank">ヘルプセンターをチェック</a>するか、<a href="https://slack.com/help/requests/new" target="_blank">当社までご連絡</a>ください。'},"pt-BR":{title:"Por algum motivo, o Slack não carregou 😓",subtext:'Lamentamos o inconveniente. Antes de tentar solucionar o problema, consulte <a href="http://status.slack.com/">http://status.slack.com/</a> — o problema talvez seja nos nossos servidores locais.',ts:"Solução de problemas",tsSubtext:"Tente o seguinte:",ts1:'<a href="/client?force_cold_boot=1">Recarregue o Slack</a> ou reinicie seu navegador.',ts2:'<a href="https://slack.com/help/test" target="_blank">Teste sua conexão</a> com os servidores do Slack.',ts3:"Verifique se o seu software de segurança não está bloqueando o Slack.",moreInfo:'<a href="https://slack.com/help" target="_blank">Explore nossa Central de Ajuda</a> para mais detalhes ou <a href="https://slack.com/help/requests/new" target="_blank">escreva para nossa equipe.</a>'}},function(){var e=document.cookie.match("(^|[^;]+)\\s*i18n_locale\\s*=\\s*([^;]+)"),a=e?e.pop():null;if(a||(a=navigator.languages&&navigator.languages.length?navigator.languages[0]:navigator.language||navigator.browserLanguage||"en-US"),!(0<=a.indexOf("en"))){var t=window.wd.translations[a];t&&(Object.keys(t).forEach(function(e){var a=document.getElementById("p-trouble--"+e);a&&(a.innerHTML=t[e])}),window.wd.translations=null)}}()</script><script>window.translationMap={"en-US":window.wd.cdn+"gantry-translations_en-US.6e3b5714cfb81409735f.min.json","en-GB":window.wd.cdn+"gantry-translations_en-GB.a72d0e3f89b9c78b0f08.min.json","de-DE":window.wd.cdn+"gantry-translations_de-DE.4258ec8fe726007a9acc.min.json","es-ES":window.wd.cdn+"gantry-translations_es-ES.5a9e4b344c1e038269f6.min.json","es-LA":window.wd.cdn+"gantry-translations_es-LA.e704e2846a4cf17b4a6b.min.json","fr-FR":window.wd.cdn+"gantry-translations_fr-FR.6238c6d45fc51959faed.min.json","pt-BR":window.wd.cdn+"gantry-translations_pt-BR.cdb80ceec68f7026239b.min.json","ja-JP":window.wd.cdn+"gantry-translations_ja-JP.3018dfee7432cbc9a6bc.min.json"},window.performance&&window.performance.timing&&(window.sonic_boot__phase_1__duration=Date.now()-performance.timing.fetchStart,window.sonic_boot__phase_1_5__start=Date.now(),window.performance.mark&&performance.mark("start_load"))</script><script>window.wd.track();
+			const s0 = document.createElement('script');
+			s0.onload = function () {
+				window.wd.ok(s0);
+			};
+			s0.onerror = function () {
+				window.wd.err(s0);
+			};
+			s0.src = window.wd.cdn + 'gantry-manifest.f8ba621.cache-gantry-1565224516.min.js';
+			s0.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s0);</script><script>window.wd.track();
+			const s1 = document.createElement('script');
+			s1.onload = function () {
+				window.wd.ok(s1);
+			};
+			s1.onerror = function () {
+				window.wd.err(s1);
+			};
+			s1.src = window.wd.cdn + 'gantry-vendors.4590b72.cache-gantry-1565224516.min.js';
+			s1.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s1);</script><script>window.wd.track();
+			const s2 = document.createElement('script');
+			s2.onload = function () {
+				window.wd.ok(s2);
+			};
+			s2.onerror = function () {
+				window.wd.err(s2);
+			};
+			s2.src = window.wd.cdn + 'gantry-vendors-client.862d05c.cache-gantry-1565224516.min.js';
+			s2.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s2);</script><script>window.wd.track();
+			const s3 = document.createElement('script');
+			s3.onload = function () {
+				window.wd.ok(s3);
+			};
+			s3.onerror = function () {
+				window.wd.err(s3);
+			};
+			s3.src = window.wd.cdn + 'gantry-shared.962590b.cache-gantry-1565224516.min.js';
+			s3.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s3);</script><script>window.wd.track();
+			const s4 = document.createElement('script');
+			s4.onload = function () {
+				window.wd.ok(s4);
+			};
+			s4.onerror = function () {
+				window.wd.err(s4);
+			};
+			s4.src = window.wd.cdn + 'slack-kit-styles.f4a4ba0.cache-gantry-1565224516.min.js';
+			s4.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s4);</script><script>window.wd.track();
+			const s5 = document.createElement('script');
+			s5.onload = function () {
+				window.wd.ok(s5);
+			};
+			s5.onerror = function () {
+				window.wd.err(s5);
+			};
+			s5.src = window.wd.cdn + 'client-boot-styles.938f1e9.cache-gantry-1565224516.min.js';
+			s5.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s5);</script><script>window.wd.track();
+			const s6 = document.createElement('script');
+			s6.onload = function () {
+				window.wd.ok(s6);
+			};
+			s6.onerror = function () {
+				window.wd.err(s6);
+			};
+			s6.src = window.wd.cdn + 'helper-styles.e9169a3.cache-gantry-1565224516.min.js';
+			s6.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s6);</script><script>window.wd.track();
+			const s7 = document.createElement('script');
+			s7.onload = function () {
+				window.wd.ok(s7);
+			};
+			s7.onerror = function () {
+				window.wd.err(s7);
+			};
+			s7.src = window.wd.cdn + 'client-boot.131f41f.cache-gantry-1565224516.min.js';
+			s7.defer = true;
+			document.getElementsByTagName('head')[0].appendChild(s7);</script><div aria-hidden="true" style="position:absolute" tabindex="0"></div></body></html>
