@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new (comment_params.merge(user_id: @current_user.id))
       if @comment.save
+      @board = @comment.board
       else
         redirect_to @comment.board, flash: {notice: '投稿できませんでした...' }
       end

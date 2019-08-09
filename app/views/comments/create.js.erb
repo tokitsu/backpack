@@ -1,4 +1,2 @@
-$('#comment_field').val('');
-$('#comments_area').html(
-  '<%= j(render partial: 'comments/comment',collection: @board.comments) %>'
-);
+$("#comments_area").html("<%= j(render partial: 'comments/comment', collection: @board.comments)%>");
+$("#comment_field").val("");
