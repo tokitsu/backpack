@@ -259,7 +259,7 @@ DEPENDENCIES
   rails-flog
   rails-i18n
   ransack
-  rspec-rails (~> 3.8)
+  rspec-rails (~> 3.7)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
