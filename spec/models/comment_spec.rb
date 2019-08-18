@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
 
+
   it "投稿があれば、コメントできる" do
     user_a = FactoryBot.create(:user , name: 'userA', email: 'user@user.com')
     board = FactoryBot.create(:board, title: 'タイトル１', body: '本文１', user:user_a)

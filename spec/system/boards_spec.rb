@@ -18,5 +18,19 @@ describe 'ノート機能', type: :system do
         expect(page).to have_content '最初の投稿'
       end
     end
+
+    context 'ユーザーBがログインしている時' do
+      before do
+        FactoryBot.create(:user, name: 'ユーザーB',email: 'b@mail.com')
+        visit login_path
+        fill_in 'メールアドレス', with: 'b@email.com'
+        fill_in 'パスワード', with: 'password'
+        click_button 'ログインする'
+      end
+
+      it '投稿の編集、削除が表示されない' do
+        expect(page).not_to have_content '編集'
+      end
+    end
   end
 end
