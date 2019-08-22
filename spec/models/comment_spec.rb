@@ -7,7 +7,8 @@ RSpec.describe Comment, type: :model do
     user_a = FactoryBot.create(:user , name: 'userA', email: 'user@user.com')
     board = FactoryBot.create(:board, title: 'タイトル１', body: '本文１', user:user_a)
     comment = board.comments.build(
-      comment: 'コメント１'
+      comment: 'コメント１',
+      user: user_a
     )
     expect(comment). to be_valid
   end

@@ -5,8 +5,9 @@ RSpec.describe Answer, type: :model do
   it "投稿があれば、コメントできる" do
     user_a = FactoryBot.create(:user , name: 'userA', email: 'user@user.com')
     question = FactoryBot.create(:question, title: 'タイトル１', body: '本文１', user:user_a)
-    answer = board.comments.build(
-      body: 'コメント１'
+    answer = question.answers.build(
+      body: 'コメント１',
+      user: user_a
     )
     expect(answer). to be_valid
   end

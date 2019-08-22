@@ -40,7 +40,7 @@ RSpec.describe UsersController, type: :controller do
       end
 
       it 'マイページにリダイレクトされること' do
-        expect(post :create, params: params).to redirect_to(user_path(user))
+        expect(post :create, params: params).to redirect_to(boards_path)
       end
     end
 

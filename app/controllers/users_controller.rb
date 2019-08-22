@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path(user.id)
+      redirect_to boards_path
     else
       redirect_back fallback_location: new_user_path, flash: {
         user: user,
