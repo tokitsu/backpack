@@ -4,7 +4,7 @@
     <li class="list-group-item">
       <div class="board_user">
         <% if favorite.board.user.image.attached? %>
-          <%=link_to image_tag(favorite.board.user.image.variant(auto_orient: true),width:45), favorite.board.user %>
+          <%=link_to image_tag(favorite.board.user,height:55), favorite.board.user %>
         <% else %>
           <%= link_to image_tag('human.jpeg', width: 40), favorite.board.user %>
         <% end %>
@@ -29,7 +29,7 @@
         <p class="card-left">
           <% if favorite.board.images.attached? %>
             <% favorite.board.images.each do |image| %>
-              <%= image_tag(image.variant(auto_orient: true),height:200) %>
+              <%= image_tag(image,height:200) %>
             <% end %>
           <% end %>
         </p>

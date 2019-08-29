@@ -2,7 +2,7 @@
   <li class="list-group-item">
     <div class="board_user">
       <% if @board.user.image.attached? %>
-        <%=link_to image_tag(@board.user.image.variant(auto_orient: true),width:45), board.user %>
+        <%=link_to image_tag(@board.user.image,height:55), board.user %>
       <% else %>
         <%= link_to image_tag('human.jpeg', width: 40), board.user %>
       <% end %>
@@ -27,17 +27,24 @@
       <p class="card-left">
         <% if @board.images.attached? %>
           <% @board.images.each do |image| %>
-            <%= image_tag image.variant(auto_orient: true),height:200 %>
+            <%= image_tag(image,height:400) %>
           <% end %>
         <% end %>
       </p>
     </div>
   </li>
   <li class="list-group-item">
-    <% if Favorite.exists?(user_id:@current_user.id, board_id:board.id)%>
-      <%= link_to 'お気に入り解除',board_add_path(board), method: :delete %>
+    <% unless @current_user.id == @board.user_id %>
+      <div class="board_favorite">
+        <div id="favorite_btn_<%= @board.id %>">
+          <%= render partial: "favorites/favorite", locals: {board: @board} %>
+        </div>
+      </div>
     <% else %>
-      <%= link_to 'お気に入り', board_add_path(board), method: :post %>
+      <div class="board_button">
+        <%= link_to '編集', edit_board_path(@board), class: 'btn btn-outline-dark btn-sm' %>
+        <%= link_to '削除', @board, class: 'btn btn-outline-dark btn-sm', method: :delete, data: { confirm: '削除してよろしいですか？'} %>
+      </div>
     <% end %>
   </li>
 </ul><br>
