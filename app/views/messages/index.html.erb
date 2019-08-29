@@ -10,7 +10,7 @@
         <div class="message_user">
           <div class="message_user_image">
             <% if message.user.image.attached? %>
-              <%= image_tag(message.user.image,height:55)%>
+              <%= image_tag(message.user.image,height:45)%>
             <% else %>
               <%= image_tag 'human.jpeg', width: 50 %>
             <% end %>
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="message_body">
-          <%= message.body %><br>
+          <%= simple_format(message.body) %><br>
         </div>
         <div class="message_time">
           <%= message.created_at.to_s(:datetime_jp) %>
@@ -37,6 +37,6 @@
   </div>
     <%= f.text_field :user_id, value: @current_user.id, type: "hidden"  %>
   <div>
-    <%= f.submit "メッセージを送る" %>
+    <%= f.submit "メッセージを送る",class:'btn btn-outline-success' %>
   </div>
 <% end %>
