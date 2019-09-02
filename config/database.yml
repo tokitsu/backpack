@@ -19,7 +19,8 @@ default: &default
 
 development:
   <<: *default
-  database: app_development
+  reconnect: false
+  database: mysql_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
