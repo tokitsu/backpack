@@ -4,4 +4,32 @@
 <div class="home_introduction">
 </div>
 <div class="home_concept">
+  <div class="main_concept">
+    旅の情報を共有しよう<br>
+    (アプリの説明)
+  </div>
+  <div class="first_concept">
+    きれいな景色、美味しい食事
+    <%= image_tag 'seaview.jpg', width: '40%' %>
+  </div>
+  <div class="second_consept">
+    <%= image_tag 'train.jpg', width: '40%' %>
+    安く旅するための情報
+  </div>
+  <div class="third_consept">
+    安全に旅をするための安全情報
+    <%= image_tag 'caution.jpg', width: '40%' %>
+  </div>
+  <div class="forth_concept">
+    <%= image_tag 'boy.jpg', width: '40%' %>
+    旅で聞きたいこと
+
+  </div>
+  <div class="start_part">
+    さあ始めよう!
+  </div>
+  <div class="start_button">
+      <%= link_to "初めてみる！", new_user_path, class: 'btn btn-outline-success btn-lg' %>
+      <%= link_to "ログインする", login_path, class: 'btn btn-outline-success btn-lg'%>
+  </div>
 </div>
