@@ -18,7 +18,7 @@
 
 <div class="profile_image">
   <% if @user.image.attached? %>
-    <%= image_tag(@user.image.variant(auto_orient: true),width:200) %>
+    <%= image_tag(@user.image,width:200) %>
   <% else %>
     <%= image_tag 'human.jpeg', width:160 %>
   <% end %>
@@ -62,7 +62,7 @@
     <li class="list-group-item">
       <div class="board_user">
         <% if board.user.image.attached? %>
-          <%= image_tag(board.user.image.variant(auto_orient: true),width:45)%>
+          <%= image_tag(board.user.image,height:55)%>
         <% else %>
           <%= image_tag 'human.jpeg', width: 50 %>
         <% end %>
@@ -88,7 +88,7 @@
         <p class="card-left">
           <% if board.images.attached? %>
             <% board.images.each do |image| %>
-              <%= image_tag(image,width:200) %>
+              <%= image_tag(image,height:200) %>
             <% end %>
           <% end %>
         </p>

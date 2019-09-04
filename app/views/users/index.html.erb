@@ -1,11 +1,22 @@
-<h2>ユーザー</h2>
+<h3>ユーザー一覧</h3>
 <% @users.each do |user| %>
   <% if user.id != @current_user.id %>
-    <li>
-      <div class="item">
-        <%= link_to user.name, user %>
-        <%= link_to 'メッセージ', conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: :post %>
-      </div>
-    </li>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="users_image">
+          <% if user.image.attached? %>
+            <%= image_tag(user.image,height:55)%>
+          <% else %>
+            <%= image_tag 'human.jpeg', width: 50 %>
+          <% end %>
+        </div>
+        <div class="users_name">
+          <%= link_to user.name, user %>
+        </div>
+        <div class="users_message">
+          <%= link_to 'メッセージする', conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: :post, class:'btn btn-outline-success'%>
+        </div>
+      </li>
+    </ul>
   <% end %>
 <% end %>

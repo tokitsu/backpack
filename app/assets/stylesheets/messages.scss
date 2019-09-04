@@ -1,3 +1,26 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.message_segment{
+  margin-top: 30px;
+}
+.message_user{
+  float: left;
+  width: 100px;
+}
+.message_user_image{
+  text-align: center;
+ }
+.message_user_name{
+  text-align: center;
+ }
+
+ .message_body{
+   margin-left: 100px;
+ }
+
+.message_time{
+  float: right;
+  font-size: 12px;
+  color: #808080;
+}

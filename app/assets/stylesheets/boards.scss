@@ -22,10 +22,11 @@
 
 .board_user{
   float:left;
+  text-align: center;
 }
 
 .board_name{
-  text-align: left;
+  text-align: center;
   font-size: 14px;
 }
 
@@ -54,4 +55,13 @@
 
 .board_body{
   min-height: 100px
+}
+
+.board_favorite{
+  float:left;
+  width: 250px;
+}
+
+.board_comment{
+  float:left;
 }

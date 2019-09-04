@@ -30,7 +30,7 @@
     <li class="list-group-item">
       <div class="board_user">
         <% if board.user.image.attached? %>
-          <%=link_to image_tag(board.user.image.variant(auto_orient: true),width:45), board.user %>
+          <%=link_to image_tag(board.user.image,height:55), board.user %>
         <% else %>
           <%= link_to image_tag('human.jpeg', width: 40), board.user %>
         <% end %>
@@ -57,7 +57,7 @@
         <p class="card-left">
           <% if board.images.attached? %>
             <% board.images.each do |image| %>
-              <%= image_tag image.variant(auto_orient: true),height:200 %>
+              <%= image_tag(image,height:200) %>
             <% end %>
           <% end %>
         </p>
@@ -65,10 +65,14 @@
     </li>
     <li class="list-group-item">
       <% unless @current_user.id == board.user_id %>
+      <div class="board_favorite">
         <div id="favorite_btn_<%= board.id %>">
           <%= render partial: "favorites/favorite", locals: {board: board} %>
         </div>
-        <%= link_to 'コメントする', board_path(board)%>
+      </div>
+        <div class="board_comment">
+          <%= link_to 'コメントする', board_path(board)%>
+        </div>
       <% else %>
         <div class="board_button">
           <%= link_to '詳細', board, class: 'btn btn-outline-dark btn-sm' %>

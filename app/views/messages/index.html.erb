@@ -2,23 +2,31 @@
   <%= link_to '以前のメッセージ', '?m=all' %>
 <% end %>
 
-<div class="ui segment">
+<div class="message_segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
-      <div class="item">
-        <div class="content">
-          <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <%= message.body %> /
-              <% if message.user == @current_user %>
-                <%= message.read ? '既読' : '未読' %>
-              <% end %>
-            </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="message_user">
+          <div class="message_user_image">
+            <% if message.user.image.attached? %>
+              <%= image_tag(message.user.image,height:45)%>
+            <% else %>
+              <%= image_tag 'human.jpeg', width: 50 %>
+            <% end %>
+          </div>
+          <div class="message_user_name">
+            <%= message.user.name %>
           </div>
         </div>
-      </div>
+        <div class="message_body">
+          <%= simple_format(message.body) %><br>
+        </div>
+        <div class="message_time">
+          <%= message.created_at.to_s(:datetime_jp) %>
+        </div>
+      </li>
+    </ul>
     <% end %>
   <% end %>
 </div>
@@ -29,6 +37,6 @@
   </div>
     <%= f.text_field :user_id, value: @current_user.id, type: "hidden"  %>
   <div>
-    <%= f.submit "メッセージを送る" %>
+    <%= f.submit "メッセージを送る",class:'btn btn-outline-success' %>
   </div>
 <% end %>
