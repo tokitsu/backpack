@@ -24,7 +24,7 @@ class BoardsController < ApplicationController
   def create
     board = Board.new(board_params.merge(user_id: @current_user.id))
     if board.save
-      flash[:notice] = "「#{board.title}」の掲示板が作成されました。"
+      flash[:notice] = "「#{board.title}」のノートが作成されました。"
       redirect_to board_path(board)
     else
       redirect_to new_board_path, flash:{
@@ -45,7 +45,7 @@ class BoardsController < ApplicationController
 
   def update
     if @board.update(board_params.merge(user_id: @current_user.id))
-      flash[:notice] = "「#{@board.title}」の掲示板が編集されました"
+      flash[:notice] = "「#{@board.title}」のノートが編集されました"
       redirect_to board_path(@board)
     else
       redirect_to board_path(@board), flash:{
@@ -57,7 +57,7 @@ class BoardsController < ApplicationController
 
   def destroy
     @board.destroy
-    redirect_to boards_path, flash: { notice: "「 #{@board.title}」の掲示板が削除されました"}
+    redirect_to boards_path, flash: { notice: "「 #{@board.title}」のノートが削除されました"}
   end
 
 

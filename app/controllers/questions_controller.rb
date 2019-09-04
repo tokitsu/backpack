@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def create
     question = Question.new(question_params.merge(user_id: @current_user.id))
     if question.save
-      flash[:notice] = "「#{question.title}」の掲示板が作成されました。"
+      flash[:notice] = "「#{question.title}」の質問が作成されました。"
       redirect_to question_path(question)
     else
       redirect_to new_question_path, flash:{
@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params.merge(user_id: @current_user.id))
-      flash[:notice] = "「#{@question.title}」の掲示板が編集されました"
+      flash[:notice] = "「#{@question.title}」の質問が編集されました"
       redirect_to question_path(@question)
     else
       redirect_to question_path(@question), flash:{
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to questions_path, flash: { notice: "「 #{@question.title}」の掲示板が削除されました"}
+    redirect_to questions_path, flash: { notice: "「 #{@question.title}」の質問が削除されました"}
   end
 
 

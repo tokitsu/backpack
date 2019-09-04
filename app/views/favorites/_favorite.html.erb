@@ -1,6 +1,6 @@
 <% favorite = @current_user.favorites.find_by(board_id: board.id) %>
 <% if favorite.present? %>
-  <%= link_to 'お気に入りをはずす',board_add_path(board), method: :delete, id: "favorite-button", remote: true %>
+  <%= link_to 'お気に入りをはずす',board_add_path(board), method: :delete, id: "favorite-button", remote: true, class: "fas fa-heart"%>
 <% else %>
-  <%= link_to 'お気に入り！', board_add_path(board), method: :post, id: "favorite-button", remote:true %>
+  </i><%= link_to ' お気に入り！', board_add_path(board), method: :post, id: "favorite-button", remote:true, class: "far fa-heart" %>
 <% end %>
