@@ -6,18 +6,27 @@
 }
 
 .home_introduction{
-  background-color:#555555;
+  background-color:black;
   height: 5px;
 }
 
 .home_concept{
   height: 2000px;
+  font-family: serif;
 }
 
 .main_concept{
-  font-size: 60px;
+background-color: black;
+font-size: 60px;
+text-align: center;
+color: #C0C0C0;
+}
+
+.main_introduce{
+  font-size: 30px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .first_concept{
