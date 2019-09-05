@@ -4,31 +4,54 @@
 <div class="home_introduction">
 </div>
 <div class="home_concept">
-  <div class="main_concept">
+  <div class="main_name">
     BACKPACKER's note<br>
   </div>
   <div class="main_introduce">
     旅をする人のための情報を共有するアプリケーションです。
   </div>
-  <div class="first_concept">
-    きれいな景色、美味しい食事
-    <%= image_tag 'seaview.jpg', width: '40%' %>
+  <div class="main_concept">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="first_concept">
+          きれいな景色の情報
+        </div>
+        <div class="first_image">
+          <%= image_tag 'seaview.jpg', width: '95%', class: 'top_image' %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="second_concept">
+          安く旅するための情報
+        </div>
+        <div class="second_image">
+          <%= image_tag 'train.jpg', width: '95%', class: 'top_image'  %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="second_consept">
-    <%= image_tag 'train.jpg', width: '40%' %>
-    安く旅するための情報
-  </div>
-  <div class="third_consept">
-    安全に旅をするための情報
-    <%= image_tag 'caution.jpg', width: '40%' %>
-  </div>
-  <div class="forth_concept">
-    <%= image_tag 'boy.jpg', width: '40%' %>
-    旅での疑問や聞きたいこと
-
-  </div>
-  <div class="start_part">
-    さあ共有しよう!
+  <div class="main_concept">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="third_concept">
+          安全に旅をするための情報
+        </div>
+        <div class="third_imgae">
+          <%= image_tag 'caution.jpg', width: '95%', class: 'top_image'  %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="forth_concept">
+          旅での疑問や聞きたいこと
+        </div>
+        <div class="forth_image">
+          <%= image_tag 'boy.jpg', width: '95%', class: 'top_image'  %>
+        </div>
+      </div>
+    </div>
+    <div class="start_part">
+      さあ共有しよう!
+    </div>
   </div>
   <div class="start_button">
     <%= link_to "初めてみる！", new_user_path, class: 'btn btn-outline-success btn-lg' %>
@@ -39,5 +62,4 @@
       パスワード:testtest
     </div>
   </div>
-
 </div>

@@ -11,13 +11,13 @@
 }
 
 .home_concept{
-  height: 2000px;
+  height: 100%;
   font-family: serif;
 }
 
-.main_concept{
+.main_name{
 background-color: black;
-font-size: 60px;
+font-size: 40px;
 text-align: center;
 color: #C0C0C0;
 font-family: "Ravi Prakash", cursive;
@@ -30,34 +30,30 @@ font-family: "Ravi Prakash", cursive;
   margin-bottom: 50px;
 }
 
+.main_concept{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 .first_concept{
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
-
-.second_consept{
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 30px;
+.second_concept{
+  margin-top: 50px;
 }
-
-.third_consept{
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 30px;
+.third_concept{
+  margin-top: 30px;
 }
-
 .forth_concept{
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 40px;
+  margin-top: 70px;
+}
+.top_image{
+  border-radius: 100px;
 }
 
 .start_part{
-  text-align: center;
+  margin-top: 70px;
   font-size: 40px;
-  margin-bottom: 40px;
 }
 
 .start_button{
@@ -67,4 +63,6 @@ font-family: "Ravi Prakash", cursive;
 
 .test_button{
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
 }
