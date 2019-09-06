@@ -13,6 +13,26 @@ describe 'ノート管理機能', type: :system do
     click_button 'ログイン'
   end
 
+  describe '新規作成' do
+    context 'ユーザーAがログインしているとき' do
+      let(:login_user) {user_a}
+
+      before do
+        visit new_board_path
+      end
+
+      it '新規投稿が完了する' do
+
+        fill_in 'board[title]', with: 'titi'
+        fill_in 'board[body]', with: 'bobo'
+        click_button '投稿する'
+
+        expect(page).to have_content 'ノートが作成されました'
+
+      end
+    end
+  end
+
   describe '一覧機能' do
 
     context 'ユーザーAでログインしている時' do
