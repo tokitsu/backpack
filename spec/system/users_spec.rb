@@ -2,8 +2,6 @@ require 'rails_helper'
 
 describe 'ユーザー機能', type: :system do
 
-  let(:user_a) {FactoryBot.create(:user, name: 'userA', email: 'a@mail.com')}
-
   describe '新規ユーザー作成機能' do
 
     before do
@@ -63,17 +61,70 @@ describe 'ユーザー機能', type: :system do
 
   describe 'ログイン機能' do
 
+    let(:user_a) {FactoryBot.create(:user, name: 'userA', email: 'a@mail.com')}
 
-    before do
-      visit login_path
+    describe '登録されているユーザーのメールアドレスとパスワードを入力した場合' do
+
+      before do
+        visit login_path
+        fill_in 'session[email]', with: login_user.email
+        fill_in 'session[password]', with: login_user.password
+        click_button 'ログイン'
+      end
+
+      let(:login_user) {user_a}
+
+      it 'ログインが成功する' do
+        expect(page).to have_content 'ログインしました！'
+      end
     end
 
-    it 'ログインが成功する。' do
-      fill_in 'session[email]', with: login_user.email
-      fill_in 'session[password]', with: login_user.password
-      click_button 'ログイン'
+    describe '登録されているユーザー情報を誤った場合' do
 
-      expect(page).to have_content 'ログインしました！'
+      before do
+        visit login_path
+      end
+
+      it 'メールアドレスが間違っている場合、ログインに失敗する' do
+
+        fill_in 'session[email]', with: 'b@mail.com'
+        fill_in 'session[password]',with: 'password'
+        click_button 'ログイン'
+
+        expect(page).to have_content 'メールアドレスかパスワードに誤りがあります。'
+      end
+
+      it 'パスワードが間違っている場合、ログインに失敗する' do
+
+        fill_in 'session[email]', with: 'a@mail.com'
+        fill_in 'session[password]',with: 'papaword'
+        click_button 'ログイン'
+
+        expect(page).to have_content 'メールアドレスかパスワードに誤りがあります。'
+      end
+    end
+  end
+
+  describe 'ログアウト機能' do
+
+    let(:user_a) {FactoryBot.create(:user, name: 'userA', email: 'a@mail.com')}
+
+    describe 'ユーザーログイン時にログアウトを行う場合' do
+
+      before do
+        visit login_path
+        fill_in 'session[email]', with: login_user.email
+        fill_in 'session[password]', with: login_user.password
+        click_button 'ログイン'
+      end
+
+      let(:login_user) {user_a}
+
+      it 'ログアウトが成功する' do
+
+        click_link 'ログアウト'
+        expect(page).to have_content '旅をする人のための情報を共有するアプリケーションです。'
+      end
     end
   end
 end

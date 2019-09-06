@@ -119,9 +119,6 @@ describe 'ノート管理機能', type: :system do
 
         expect(page).to have_content 'ノートが編集されました'
       end
-
     end
   end
-
-
 end
