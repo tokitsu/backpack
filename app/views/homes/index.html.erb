@@ -1,65 +1,165 @@
 <div class="home_all">
-<div class="home_header">
-</div>
-<%= image_tag 'sea.jpg', width: '100%' %>
-<div class="home_concept">
-  <div class="main_name">
-    BACKPACKER's note<br>
+  <div class="home_header">
   </div>
-  <div class="main_introduce">
-    旅をする人のための情報を共有するアプリケーションです。
-  </div>
-  <div class="main_concept">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="first_concept">
-          きれいな景色の情報
+  <%= image_tag 'sea.jpg', width: '100%' %>
+  <div class="home_concept">
+    <div class="main_name">
+      BACKPACKER's note<br>
+    </div>
+    <div class="main_introduce">
+      旅をする人のための情報を共有するアプリケーションです。
+    </div>
+    <div class="main_concept">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="first_concept">
+            きれいな景色の情報
+          </div>
+          <div class="first_image">
+            <%= image_tag 'seaview.jpg', width: '95%', class: 'top_image' %>
+          </div>
         </div>
-        <div class="first_image">
-          <%= image_tag 'seaview.jpg', width: '95%', class: 'top_image' %>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="second_concept">
-          安く旅するための情報
-        </div>
-        <div class="second_image">
-          <%= image_tag 'train.jpg', width: '95%', class: 'top_image'  %>
+        <div class="col-md-6">
+          <div class="second_concept">
+            安く旅するための情報
+          </div>
+          <div class="second_image">
+            <%= image_tag 'train.jpg', width: '95%', class: 'top_image'  %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="main_concept">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="third_concept">
-          安全に旅をするための情報
+    <div class="main_concept">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="third_concept">
+            安全に旅をするための情報
+          </div>
+          <div class="third_imgae">
+            <%= image_tag 'caution.jpg', width: '95%', class: 'top_image'  %>
+          </div>
         </div>
-        <div class="third_imgae">
-          <%= image_tag 'caution.jpg', width: '95%', class: 'top_image'  %>
+        <div class="col-md-6">
+          <div class="forth_concept">
+            旅での疑問や聞きたいこと
+          </div>
+          <div class="forth_image">
+            <%= image_tag 'boy.jpg', width: '95%', class: 'top_image'  %>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="forth_concept">
-          旅での疑問や聞きたいこと
+      <div class="start_part">
+        さあ共有しよう!
+      </div>
+    </div>
+    <div class="start_button">
+      <%= link_to "初めてみる！", new_user_path, class: 'btn btn-outline-success btn-lg' %>
+      <%= link_to "ログインする", login_path, class: 'btn btn-outline-success btn-lg'%>
+    </div>
+    <div class="test_button">
+      テストユーザーでログインする場合<br>
+      メールアドレス:test@mail.com<br>
+      パスワード:testtest
+    </div>
+  </div>
+  <div class="how_to_use">
+    <div class="how_to_use_apprication">
+      BACKPACKER's note の使い方
+    </div>
+    <div class="make_board">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="note-concept">
+            １、ノートを作成し、情報を共有しよう！
+          </div>
+          <div class="note-introduction">
+            共有したい情報や見せたい画像を加えてアップしましょう。画像は複数枚アップすることができます。ヘッダーにある『情報ノート』の中の『新規ノート作成』から新しいノートを作ることが出来ます。
+
+          </div>
         </div>
-        <div class="forth_image">
-          <%= image_tag 'boy.jpg', width: '95%', class: 'top_image'  %>
+        <div class="col-md-6">
+          <div class="sample_image">
+            <%= image_tag 'sample-board.png', width: '80%' %>
+          </div>
         </div>
       </div>
     </div>
-    <div class="start_part">
-      さあ共有しよう!
+    <div class="make_comment">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="comment_concept">
+            ２、気になったノートにはコメントしてみよう！
+          </div>
+          <div class="comment_introduction">
+            気になったノートに質問したり、コメントを残すことができます。投稿されているノートの『コメントする』からコメントできるページに入ることが出来ます。気軽にコメントしてみましょう！
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="sample_image">
+            <%= image_tag 'sample-comment.png', width: '80%' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="other_function">
+      その他の機能
+    </div>
+    <div class="function_explain">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="conversation_funtion">
+            １対１のメッセージ機能
+            <div class="function_image">
+              <%= image_tag 'sample-conversation.jpeg', width: '150px' %>
+            </div>
+            <div class="other_function_introduction">
+              気になったユーザーには直接メッセージすることができます。
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="favorite_function">
+            お気に入り機能
+            <div class="function_image">
+              <%= image_tag 'sample-favorite.jpeg', width: '150px' %>
+            </div>
+            <div class="other_function_introduction">
+              気に入ったノートはお気に入り登録し、ストックすることができます。
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="search_function">
+            検索機能
+            <div class="function_image">
+              <%= image_tag 'sample-search.jpeg', width: '150px' %>
+            </div>
+            <div class="other_function_introduction">
+              文字の検索とノートに付いているタグの検索をすることができます。
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="question_function">
+            Q＆A
+            <div class="function_image">
+              <%= image_tag 'sample-question.jpeg', width: '150px' %>
+            </div>
+            <div class="other_function_introduction">
+              旅の疑問や困ったと時のために質問できる質問箱を設置しました。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="start_button">
+      <%= link_to "初めてみる！", new_user_path, class: 'btn btn-outline-success btn-lg' %>
+      <%= link_to "ログインする", login_path, class: 'btn btn-outline-success btn-lg'%>
+    </div>
+    <div class="test_button2">
+      テストユーザーでログインする場合<br>
+      メールアドレス:test@mail.com<br>
+      パスワード:testtest
     </div>
   </div>
-  <div class="start_button">
-    <%= link_to "初めてみる！", new_user_path, class: 'btn btn-outline-success btn-lg' %>
-    <%= link_to "ログインする", login_path, class: 'btn btn-outline-success btn-lg'%>
-  </div>
-  <div class="test_button">
-    テストユーザーでログインする場合<br>
-    メールアドレス:test@mail.com<br>
-    パスワード:testtest
-  </div>
-</div>
 </div>

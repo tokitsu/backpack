@@ -27,7 +27,9 @@
       <p class="card-left">
         <% if @board.images.attached? %>
           <% @board.images.each do |image| %>
-            <%= image_tag(image,height:400) %>
+          <div class="show_board_up_image">
+            <%= image_tag(image, height:330) %>
+          </div>
           <% end %>
         <% end %>
       </p>
