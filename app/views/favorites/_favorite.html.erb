@@ -2,5 +2,5 @@
 <% if favorite.present? %>
   <%= link_to 'お気に入りをはずす',board_add_path(board), method: :delete, id: "favorite-button", remote: true, class: "fas fa-heart"%>
 <% else %>
-  </i><%= link_to 'お気に入り！', board_add_path(board), method: :post, id: "favorite-button", remote:true, class: "far fa-heart" %>
+  </i><%= link_to 'お気に入り！', board_add_path(board), method: :post, id: "favorite-button", remote: true, class: "far fa-heart" %>
 <% end %>

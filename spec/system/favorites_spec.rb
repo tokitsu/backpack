@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'ノートのコメント管理機能', type: :system do
+describe 'お気に入り機能', type: :system do
 
   let(:user_a) {FactoryBot.create(:user, name: 'userA', email: 'a@mail.com')}
   let(:user_b) {FactoryBot.create(:user, name: 'userB', email: 'b@mail.com')}
@@ -14,34 +14,19 @@ describe 'ノートのコメント管理機能', type: :system do
   end
 
   describe 'お気に入り機能' do
-    context 'ユーザーBがログインしている時' do
-      let(:login_user){user_b}
+    context 'ユーザーBがログインしているとき' do
+      let(:login_user) {user_b}
 
       before do
-        visit boards_path
+        visit board_path(board_a)
       end
 
-      it 'お気に入りに追加する' do
+      it 'お気に入りを追加する' do
+
         click_link 'お気に入り！'
 
         expect(page).to have_content 'お気に入りをはずす'
-      end
 
-      it 'お気に入りを削除する' do
-        click_link 'お気に入り！'
-
-        click_link 'お気に入りをはずす'
-
-        expect(page).to have_content 'お気に入り！'
-
-      end
-
-      it 'お気に入りページに追加されている' do
-        click_link 'お気に入り！'
-
-        visit favorites_path
-
-        expect(page).to have_content 'ノートA'
       end
     end
   end
