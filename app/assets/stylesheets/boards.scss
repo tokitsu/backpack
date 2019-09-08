@@ -23,9 +23,14 @@
 .board_user{
   float:left;
   text-align: center;
+  width: 100px;
 }
 
-.board_name{
+.board_user_image{
+  text-align: center;
+}
+
+.board_user_name{
   text-align: center;
   font-size: 14px;
 }

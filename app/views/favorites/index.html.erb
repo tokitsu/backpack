@@ -3,12 +3,16 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <% if favorite.board.user.image.attached? %>
-          <%=link_to image_tag(favorite.board.user.image,height:55), favorite.board.user %>
-        <% else %>
-          <%= link_to image_tag('human.jpeg', width: 40), favorite.board.user %>
-        <% end %>
-      <div class= 'board_name'><%= favorite.board.user.name %></div>
+        <div class="board_user_image">
+          <% if favorite.board.user.image.attached? %>
+            <%=link_to image_tag(favorite.board.user.image,height:55), favorite.board.user %>
+          <% else %>
+            <%= link_to image_tag('human.jpeg', width: 40), favorite.board.user %>
+          <% end %>
+        </div>
+        <div class= 'board_user_name'>
+          <%= favorite.board.user.name %>
+        </div>
       </div>
       <div class="board_title">
         <%= favorite.board.title %><br>

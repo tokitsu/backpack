@@ -29,12 +29,14 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <% if board.user.image.attached? %>
-          <%=link_to image_tag(board.user.image,height:55), board.user %>
-        <% else %>
-          <%= link_to image_tag('human.jpeg', width: 40), board.user %>
-        <% end %>
-        <div class= 'board_name'>
+        <div class="board_user_image">
+          <% if board.user.image.attached? %>
+            <%=link_to image_tag(board.user.image,height:55), board.user %>
+          <% else %>
+            <%= link_to image_tag('human.jpeg', width: 40), board.user %>
+          <% end %>
+        </div>
+        <div class= 'board_user_name'>
           <%= board.user.name %>
         </div>
       </div>
