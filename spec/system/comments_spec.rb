@@ -22,9 +22,10 @@ describe 'ノートのコメント管理機能', type: :system do
       end
 
       it 'コメント投稿が成功する' do
+
         fill_in 'comment[comment]', with: 'コメントA'
 
-        click_button 'コメントする'
+        click_button 'コメントする', remote: true
 
         expect(page).to have_content 'コメントA'
       end
@@ -34,7 +35,7 @@ describe 'ノートのコメント管理機能', type: :system do
 
         click_button 'コメントする'
 
-        click_link '削除'
+        click_link '削除', local: false
 
         expect(page).not_to have_content 'コメントA'
       end
