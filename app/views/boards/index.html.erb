@@ -59,7 +59,9 @@
         <p class="card-left">
           <% if board.images.attached? %>
             <% board.images.each do |image| %>
-              <%= image_tag(image,height:200) %>
+              <div class="board_up_image">
+                <%= image_tag(image,width:400) %>
+              </div>
             <% end %>
           <% end %>
         </p>
