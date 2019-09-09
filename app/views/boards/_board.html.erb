@@ -24,7 +24,7 @@
   <li class="list-group-item">
     <div class="board_body">
       <p class="card-text"><%= simple_format(@board.body) %></p>
-      <p class="card-left">
+      <p class="card-left"></p>
         <% if @board.images.attached? %>
           <% @board.images.each do |image| %>
           <div class="board_up_image">
@@ -32,7 +32,6 @@
             </div>
           <% end %>
         <% end %>
-      </p>
     </div>
   </li>
   <li class="list-group-item">

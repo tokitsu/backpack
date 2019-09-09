@@ -30,19 +30,14 @@
       <div class="board_body">
         <p class="card-text"><%= simple_format(favorite.board.body) %>
         </p>
-        <p class="card-left">
+        <p class="card-left"></p>
           <% if favorite.board.images.attached? %>
             <% favorite.board.images.each do |image| %>
               <div class="board_up_image">
-<<<<<<< HEAD
                 <%= image_tag(image,width:400) %>
-=======
-                <%= image_tag(image, width:400) %>
->>>>>>> issues/23
               </div>
             <% end %>
           <% end %>
-        </p>
       </div>
     </li>
     <li class="list-group-item">

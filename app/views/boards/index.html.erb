@@ -56,28 +56,23 @@
     <li class="list-group-item">
       <div class="board_body">
         <p class="card-text"><%= simple_format(board.body) %></p>
-        <p class="card-left">
-          <% if board.images.attached? %>
-            <% board.images.each do |image| %>
-              <div class="board_up_image">
-<<<<<<< HEAD
-                <%= image_tag(image,width:400) %>
-=======
-                <%= image_tag(image, width:400) %>
->>>>>>> issues/23
-              </div>
+          <p class="card-left"></p>
+            <% if board.images.attached? %>
+              <% board.images.each do |image| %>
+                <div class="board_up_image">
+                  <%= image_tag(image,width:400) %>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
-        </p>
       </div>
     </li>
     <li class="list-group-item">
       <% unless @current_user.id == board.user_id %>
-      <div class="board_favorite">
-        <div id="favorite_btn_<%= board.id %>">
-          <%= render partial: "favorites/favorite", locals: {board: board} %>
+        <div class="board_favorite">
+          <div id="favorite_btn_<%= board.id %>">
+            <%= render partial: "favorites/favorite", locals: {board: board} %>
+          </div>
         </div>
-      </div>
         <div class="board_comment">
           <%= link_to 'コメントする', board_path(board), class:"far fa-comment"%>
         </div>

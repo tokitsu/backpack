@@ -87,19 +87,14 @@
     <li class="list-group-item">
       <div class="board_body">
         <p class="card-text"><%= simple_format(board.body) %></p>
-        <p class="card-left">
-          <% if board.images.attached? %>
-            <% board.images.each do |image| %>
-              <div class="board_up_image">
-<<<<<<< HEAD
-                <%= image_tag(image,width:400) %>
-=======
-                <%= image_tag(image, width:400) %>
->>>>>>> issues/23
-              </div>
-            <% end %>
+        <p class="card-left"></p>
+        <% if board.images.attached? %>
+          <% board.images.each do |image| %>
+            <div class="board_up_image">
+              <%= image_tag(image,width:400) %>
+            </div>
           <% end %>
-        </p>
+        <% end %>
       </div>
     </li>
     <li class="list-group-item">
