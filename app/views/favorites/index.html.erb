@@ -33,7 +33,9 @@
         <p class="card-left">
           <% if favorite.board.images.attached? %>
             <% favorite.board.images.each do |image| %>
-              <%= image_tag(image,height:200) %>
+              <div class="board_up_image">
+                <%= image_tag(image, width:400) %>
+              </div>
             <% end %>
           <% end %>
         </p>

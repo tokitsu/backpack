@@ -62,6 +62,11 @@
   min-height: 100px
 }
 
+.board_up_image{
+  text-align: center;
+  margin-bottom:10px;
+}
+
 .board_favorite{
   float:left;
   width: 250px;
@@ -69,8 +74,4 @@
 
 .board_comment{
   float:left;
-}
-
-.show_board_up_image{
-  text-align: center
 }
