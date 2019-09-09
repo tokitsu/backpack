@@ -61,14 +61,16 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <% if board.user.image.attached? %>
-          <%= image_tag(board.user.image,height:55)%>
-        <% else %>
-          <%= image_tag 'human.jpeg', width: 50 %>
-        <% end %>
-      <div class= 'board_name'>
-        <%= board.user.name %>
-      </div>
+        <div class="board_user_image">
+          <% if board.user.image.attached? %>
+            <%= image_tag(board.user.image,height:55)%>
+          <% else %>
+            <%= image_tag 'human.jpeg', width: 50 %>
+          <% end %>
+        </div>
+        <div class= 'board_user_name'>
+          <%= board.user.name %>
+        </div>
       </div>
       <div class="board_title">
         <%= board.title %><br>
@@ -85,13 +87,14 @@
     <li class="list-group-item">
       <div class="board_body">
         <p class="card-text"><%= simple_format(board.body) %></p>
-        <p class="card-left">
-          <% if board.images.attached? %>
-            <% board.images.each do |image| %>
-              <%= image_tag(image,height:200) %>
-            <% end %>
+        <p class="card-left"></p>
+        <% if board.images.attached? %>
+          <% board.images.each do |image| %>
+            <div class="board_up_image">
+              <%= image_tag(image,width:400) %>
+            </div>
           <% end %>
-        </p>
+        <% end %>
       </div>
     </li>
     <li class="list-group-item">

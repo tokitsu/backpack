@@ -1,13 +1,12 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home_header{
-  height: 55px;
+.home_all{
+  position: relative;
 }
 
-.home_introduction{
-  background-color:black;
-  height: 5px;
+.home_header{
+  height: 55px;
 }
 
 .home_concept{
@@ -58,11 +57,109 @@ font-family: "Ravi Prakash", cursive;
 
 .start_button{
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .test_button{
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 100px;
+  padding-bottom: 30px;
+}
+
+.how_to_use{
+  font-family: "Ravi Prakash", cursive;
+  text-align: center;
+  background-color: white;
+  font-family: serif;
+
+}
+
+.how_to_use_apprication{
+  font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-top: 2px solid gray;
+    padding-top: 40px;
+    font-family: "Ravi Prakash", cursive;
+}
+
+.note-concept{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.note-introduction{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+.comment_concept{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.comment_introduction{
+  font-size: 15px;
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+}
+
+.make_comment{
+  margin-top:50px;
+}
+
+.sample_image{
+  border: 3px solid forestgreen;
+  border-radius: 15px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.other_function{
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.function_explain{
+  padding-bottom: 50px;
+}
+
+.conversation_funtion{
+  font-size: 20px;
+}
+
+.favorite_function{
+  font-size: 20px;
+}
+
+.search_function{
+  font-size: 20px;
+}
+
+.question_function{
+  font-size: 20px;
+}
+
+.function_image{
+  margin-top: 10px;
+}
+
+.other_function_introduction{
+  font-size: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+
+.test_button2{
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 80px;
 }

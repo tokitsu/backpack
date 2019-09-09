@@ -16,6 +16,7 @@
 #
 
 class Favorite < ApplicationRecord
+  default_scope -> { order(updated_at: :desc) }
   belongs_to :user
   belongs_to :board, counter_cache: :favorites_count
 end

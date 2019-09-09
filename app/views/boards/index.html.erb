@@ -29,12 +29,14 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="board_user">
-        <% if board.user.image.attached? %>
-          <%=link_to image_tag(board.user.image,height:55), board.user %>
-        <% else %>
-          <%= link_to image_tag('human.jpeg', width: 40), board.user %>
-        <% end %>
-        <div class= 'board_name'>
+        <div class="board_user_image">
+          <% if board.user.image.attached? %>
+            <%=link_to image_tag(board.user.image,height:55), board.user %>
+          <% else %>
+            <%= link_to image_tag('human.jpeg', width: 40), board.user %>
+          <% end %>
+        </div>
+        <div class= 'board_user_name'>
           <%= board.user.name %>
         </div>
       </div>
@@ -54,22 +56,23 @@
     <li class="list-group-item">
       <div class="board_body">
         <p class="card-text"><%= simple_format(board.body) %></p>
-        <p class="card-left">
-          <% if board.images.attached? %>
-            <% board.images.each do |image| %>
-              <%= image_tag(image,height:200) %>
+          <p class="card-left"></p>
+            <% if board.images.attached? %>
+              <% board.images.each do |image| %>
+                <div class="board_up_image">
+                  <%= image_tag(image,width:400) %>
+                </div>
+              <% end %>
             <% end %>
-          <% end %>
-        </p>
       </div>
     </li>
     <li class="list-group-item">
       <% unless @current_user.id == board.user_id %>
-      <div class="board_favorite">
-        <div id="favorite_btn_<%= board.id %>">
-          <%= render partial: "favorites/favorite", locals: {board: board} %>
+        <div class="board_favorite">
+          <div id="favorite_btn_<%= board.id %>">
+            <%= render partial: "favorites/favorite", locals: {board: board} %>
+          </div>
         </div>
-      </div>
         <div class="board_comment">
           <%= link_to 'コメントする', board_path(board), class:"far fa-comment"%>
         </div>
