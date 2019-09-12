@@ -5,6 +5,8 @@
 <div class="message_segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
+    <ul class="list-group">
+      <li class="list-group-item">
         <div class="message_user">
           <div class="message_user_image">
             <% if message.user.image.attached? %>
@@ -17,8 +19,6 @@
             <%= message.user.name %>
           </div>
         </div>
-        <ul class="list-group">
-          <li class="list-group-item">
         <div class="message_body">
           <%= simple_format(message.body) %><br>
         </div>
