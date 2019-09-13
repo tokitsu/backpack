@@ -1,4 +1,4 @@
-# BACKPACKER's note  
+# BACKPACKER's note
 
 
 旅をする人の情報共有を目的としたアプリケーションです。  
