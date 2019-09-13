@@ -7,7 +7,7 @@ class BoardsController < ApplicationController
   def index
     @user = @current_user
     @search = Board.ransack(params[:q])
-    @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]) : Board.all
+    @boards = params[:tag_id].present? ? Tag.find(params[:tag_id]).boards : Board.all
     @boards = @boards.page(params[:page])
   end
 
