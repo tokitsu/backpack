@@ -5,17 +5,15 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-
 <% if @current_user == @user %>
-<div class="edit_profile_link">
-  <%= link_to 'プロフィールを編集する', edit_user_path(@user.id), class:'btn btn-outline-success'%>
-</div>
+  <div class="edit_profile_link">
+    <%= link_to 'プロフィールを編集する', edit_user_path(@user.id), class:'btn btn-outline-success'%>
+  </div>
 <% else %>
-<div class="edit_profile_link">
-  <%= link_to 'メッセージする', conversations_path(sender_id: @current_user.id, recipient_id: @user.id), method: :post, class:'btn btn-outline-success' %>
-</div>
+  <div class="edit_profile_link">
+    <%= link_to 'メッセージする', conversations_path(sender_id: @current_user.id, recipient_id: @user.id), method: :post, class:'btn btn-outline-success' %>
+  </div>
 <% end %>
-
 <div class="profile_image">
   <% if @user.image.attached? %>
     <%= image_tag(@user.image,width:200) %>
@@ -23,7 +21,6 @@
     <%= image_tag 'human.jpeg', width:160 %>
   <% end %>
 </div>
-
 <ul class="list-group profile_flame2">
   <li class="list-group-item">
     名前 : <%= @user.name %>
@@ -47,16 +44,12 @@
     <%= link_to 'ユーザー管理画面', admin_users_path, class:'btn btn-outline-danger'%> : <%= @current_user.name %>は全てのユーザーを管理する権限があります
   </div>
 <% end %>
-
 <br><br><br>
 <div class="user_boards">
   最近の投稿
 </div>
 <hr style="width:700px; background-color:#888888;">
 <br><br>
-
-
-
 <% @user.boards.each do |board| %>
   <ul class="list-group">
     <li class="list-group-item">
@@ -74,9 +67,9 @@
       </div>
       <div class="board_title">
         <%= board.title %><br>
-      <p class="board_update">
-        <%= board.updated_at.to_s(:datetime_jp)%>
-      </p>
+        <p class="board_update">
+          <%= board.updated_at.to_s(:datetime_jp)%>
+        </p>
       </div>
       <div class="board_tag">
         <% board.tags.each do |tag| %>

@@ -1,36 +1,34 @@
 <% if @over_ten %>
   <%= link_to '以前のメッセージ', '?m=all' %>
 <% end %>
-
 <div class="message_segment">
   <% @messages.each do |message| %>
     <% if message.body.present? %>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <div class="message_user">
-          <div class="message_user_image">
-            <% if message.user.image.attached? %>
-              <%= image_tag(message.user.image,height:45)%>
-            <% else %>
-              <%= image_tag 'human.jpeg', width: 50 %>
-            <% end %>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="message_user">
+            <div class="message_user_image">
+              <% if message.user.image.attached? %>
+                <%= image_tag(message.user.image,height:45)%>
+              <% else %>
+                <%= image_tag 'human.jpeg', width: 50 %>
+              <% end %>
+            </div>
+            <div class="message_user_name">
+              <%= message.user.name %>
+            </div>
           </div>
-          <div class="message_user_name">
-            <%= message.user.name %>
+          <div class="message_body">
+            <%= simple_format(message.body) %><br>
           </div>
-        </div>
-        <div class="message_body">
-          <%= simple_format(message.body) %><br>
-        </div>
-        <div class="message_time">
-          <%= message.created_at.to_s(:datetime_jp) %>
-        </div>
-      </li>
-    </ul>
+          <div class="message_time">
+            <%= message.created_at.to_s(:datetime_jp) %>
+          </div>
+        </li>
+      </ul>
     <% end %>
   <% end %>
 </div>
-
 <%= form_with(model: [@conversation, @message]) do |f| %>
   <div class="field">
     <%= f.text_area :body, class: "form-control" %>

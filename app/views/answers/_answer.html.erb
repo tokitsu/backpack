@@ -1,5 +1,7 @@
 <div class="p-comment__item">
-  <p><%= simple_format(answer.body) %></p>
+  <p>
+    <%= simple_format(answer.body) %>
+  </p>
   <div class="p-comment__bottomLine">
     <span><%= answer.user.name %></span>
     <span><%= answer.created_at.to_s(:datetime_jp) %></span>

@@ -4,16 +4,16 @@
   <ul class="list-group">
     <li class="list-group-item">
       <div class="admin_users_name">
-      <%= link_to user.name, user %>
+        <%= link_to user.name, user %>
       </div>
       <div class="admin_users_message">
-      <%= link_to 'メッセージ', conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: :post %>
+        <%= link_to 'メッセージ', conversations_path(sender_id: @current_user.id, recipient_id: user.id), method: :post %>
       </div>
       <div class="admin_users_delete">
-      <%= link_to '削除', admin_user_path(user), method: :delete, data: {confirm: '削除してよろしいですか？'} %>
+        <%= link_to '削除', admin_user_path(user), method: :delete, data: {confirm: '削除してよろしいですか？'} %>
       </div>
       <div class="admin_users_admin">
-      管理者権限　：　<%= user.admin %>
+        管理者権限　：　<%= user.admin %>
       </div>
     </li>
   </ul>

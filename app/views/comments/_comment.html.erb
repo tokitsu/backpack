@@ -1,12 +1,12 @@
 <div class="p-comment__item">
-    <p><%= simple_format(comment.comment) %></p>
-    <div class="p-comment__bottomLine">
-      <span><%= comment.user.name %></span>
-      <span><%= comment.created_at.to_s(:datetime_jp) %></span>
-      <div class="comment_delete">
-        <% if @current_user == comment.user %>
-          <%= link_to '削除', comment, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
-        <% end %>
-      </div>
+  <p><%= simple_format(comment.comment) %></p>
+  <div class="p-comment__bottomLine">
+    <span><%= comment.user.name %></span>
+    <span><%= comment.created_at.to_s(:datetime_jp) %></span>
+    <div class="comment_delete">
+      <% if @current_user == comment.user %>
+        <%= link_to '削除', comment, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
+      <% end %>
     </div>
+  </div>
 </div>
