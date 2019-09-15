@@ -4,7 +4,6 @@ class FavoritesController < ApplicationController
 
   def index
     @favorites = @current_user.favorites.page(params[:page])
-
   end
 
   def create

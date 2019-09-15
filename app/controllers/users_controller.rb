@@ -50,7 +50,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-  params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :age, :sex, :favorite_country, :country_you_want_to_go, :introduction, :admin)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :age, :sex, :favorite_country, :country_you_want_to_go, :introduction, :admin)
   end
 
   def collect_user
@@ -59,5 +59,4 @@ class UsersController < ApplicationController
     redirect_to user_path(@current_user)
     end
   end
-
 end
