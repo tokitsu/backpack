@@ -66,7 +66,6 @@ RSpec.describe User, type: :model do
       email: 'toto@mail.com',
       password: 'totototo'
       )
-
     @user = User.new(
     name: 'momo',
     email: 'toto@mail.com',
@@ -76,5 +75,5 @@ RSpec.describe User, type: :model do
     expect(@user.valid?).to eq(false)
   end
 
-  
+
 end

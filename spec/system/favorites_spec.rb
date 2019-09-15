@@ -23,12 +23,9 @@ describe 'お気に入り機能', type: :system do
 
       it 'お気に入りを追加する' do
 
-        save_and_open_page
-
-        click_link 'お気に入り！'
+        click_link 'お気に入り！', js: true
 
         expect(page).to have_content 'お気に入りをはずす'
-
       end
     end
   end
