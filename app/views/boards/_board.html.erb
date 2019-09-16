@@ -6,14 +6,16 @@
       <% else %>
         <%= link_to image_tag('human.jpeg', width: 40), board.user %>
       <% end %>
-    <div class= 'board_name'><%= @board.user.name %></div>
+      <div class= 'board_name'>
+        <%= @board.user.name %>
+      </div>
     </div>
     <div class="board_title">
       <%= @board.title %><br>
-    <p class="board_update">
-      <%= @board.updated_at.to_s(:datetime_jp)%>　　
-      <%= @board.country%>　<%= @board.city%>
-    </p>
+      <p class="board_update">
+        <%= @board.updated_at.to_s(:datetime_jp)%>　　
+        <%= @board.country%>　<%= @board.city%>
+      </p>
     </div>
     <div class="board_tag">
       <% @board.tags.each do |tag| %>
@@ -25,13 +27,13 @@
     <div class="board_body">
       <p class="card-text"><%= simple_format(@board.body) %></p>
       <p class="card-left"></p>
-        <% if @board.images.attached? %>
-          <% @board.images.each do |image| %>
+      <% if @board.images.attached? %>
+        <% @board.images.each do |image| %>
           <div class="board_up_image">
-              <%= image_tag(image, width:400) %>
-            </div>
-          <% end %>
+            <%= image_tag(image, width:400) %>
+          </div>
         <% end %>
+      <% end %>
     </div>
   </li>
   <li class="list-group-item">
@@ -48,4 +50,4 @@
       </div>
     <% end %>
   </li>
-</ul><br>
+</ul>

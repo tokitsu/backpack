@@ -22,7 +22,6 @@ describe 'ノートのコメント管理機能', type: :system do
       end
 
       it 'コメント投稿が成功する' do
-
         fill_in 'comment[comment]', with: 'コメントA'
 
         click_button 'コメントする', remote: true

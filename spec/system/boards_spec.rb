@@ -50,7 +50,6 @@ describe 'ノート管理機能', type: :system do
   end
 
   describe '一覧' do
-
     context 'ユーザーAでログインしている時' do
       let(:login_user) {user_a}
 

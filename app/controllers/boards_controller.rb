@@ -60,7 +60,6 @@ class BoardsController < ApplicationController
     redirect_to boards_path, flash: { notice: "「 #{@board.title}」のノートが削除されました"}
   end
 
-
   private
 
   def board_params

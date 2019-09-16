@@ -16,9 +16,9 @@
       </div>
       <div class="board_title">
         <%= favorite.board.title %><br>
-      <p class="board_update">
-        <%= favorite.board.updated_at.to_s(:datetime_jp)%>
-      </p>
+        <p class="board_update">
+          <%= favorite.board.updated_at.to_s(:datetime_jp)%>
+        </p>
       </div>
       <div class="board_tag">
         <% favorite.board.tags.each do |tag| %>
@@ -28,16 +28,17 @@
     </li>
     <li class="list-group-item">
       <div class="board_body">
-        <p class="card-text"><%= simple_format(favorite.board.body) %>
+        <p class="card-text">
+          <%= simple_format(favorite.board.body) %>
         </p>
         <p class="card-left"></p>
-          <% if favorite.board.images.attached? %>
-            <% favorite.board.images.each do |image| %>
-              <div class="board_up_image">
-                <%= image_tag(image,width:400) %>
-              </div>
-            <% end %>
+        <% if favorite.board.images.attached? %>
+          <% favorite.board.images.each do |image| %>
+            <div class="board_up_image">
+              <%= image_tag(image,width:400) %>
+            </div>
           <% end %>
+        <% end %>
       </div>
     </li>
     <li class="list-group-item">
@@ -46,5 +47,4 @@
   </ul><br>
   <% end %>
 </div>
-
 <%= paginate @favorites %>
