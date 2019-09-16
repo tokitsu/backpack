@@ -4,7 +4,7 @@
 
 ## サイトURL
 
-http://backpackers-note.xyz/
+http://backpackers-note.xyz
 
 ## 環境
 
